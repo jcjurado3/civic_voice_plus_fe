@@ -24,8 +24,7 @@ jobs:
       - run:
           name: push to Heroku
           command: |
-            git remote add heroku "https://heroku:${HEROKU_API_KEY}@git.heroku.com/civic-voice-plus-fe.git"
-            git push heroku HEAD:main
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/civic-voice-plus-fe.git main
 
 workflows:
   test_my_app:
