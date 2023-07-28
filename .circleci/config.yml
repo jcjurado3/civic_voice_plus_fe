@@ -1,0 +1,38 @@
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@2.0.1
+  heroku: circleci/heroku@1.2.6
+
+jobs:
+  build:
+    docker:
+      - image: cimg/ruby:3.2.2
+    executor: ruby/default
+    steps:
+      - checkout
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - ruby/install-deps
+
+  deploy:
+    executor: heroku/default
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: push to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/civic-voice-plus-fe.git main
+
+workflows:
+  test_my_app:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
