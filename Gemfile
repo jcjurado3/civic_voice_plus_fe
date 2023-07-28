@@ -82,3 +82,4 @@ group :test do
   gem "orderly"
 end
 
+gem 'omniauth-google-oauth2'
