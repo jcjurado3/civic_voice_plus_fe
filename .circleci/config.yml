@@ -24,10 +24,14 @@ jobs:
   deploy: # this can be any name you choose
     executor: heroku/default
     steps:
-      - attach_workspace:
-          at: ~/project
-      - heroku/deploy-via-git:
-          force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
+      - build
+      - run:
+          name: push
+          command: git push "https://heroku:${HEROKU_API_KEY}@git.heroku.com/${HEROKU_APP_NAME}.git"
+      # - attach_workspace:
+      #     at: ~/project
+      # - heroku/deploy-via-git:
+      #     force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
