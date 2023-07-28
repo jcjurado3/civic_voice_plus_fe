@@ -19,6 +19,8 @@ jobs:
   deploy:
     executor: heroku/default
     steps:
+      - attach_workspace:
+          at: ~/project
       - run:
           name: push to Heroku
           command: |
