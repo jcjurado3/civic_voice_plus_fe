@@ -1,13 +1,13 @@
 require "rails_helper"
 
 RSpec.describe "dashboard index page" do 
-  before(:each) do
-    @user1 = User.create!(name: "tester")
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
-
-    visit dashboard_path
-  end
   describe "happy path" do
+    before(:each) do
+      @user1 = User.create!(name: "tester")
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
+  
+      visit dashboard_path
+    end
     it "has welcome message" do 
       expect(page).to have_content("Welcome #{@user1.name}")
     end
