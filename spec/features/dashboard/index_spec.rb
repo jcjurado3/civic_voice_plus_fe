@@ -8,6 +8,9 @@ RSpec.describe "dashboard index page" do
     visit dashboard_path
   end
   describe "happy path" do
+    it "has welcome message" do 
+      expect(page).to have_content("Welcome #{@user1.name}")
+    end
     it "has nav bar buttons" do 
       within("#nav-bar") do
         expect(page).to have_button("Home")
@@ -19,7 +22,22 @@ RSpec.describe "dashboard index page" do
 
     it "has edit my categories button" do
       within("#digest-section") do
-        expect(page).to have_button("Edit My Categories")
+        expect(page).to have_button("Choose My Categories")
+      end
+    end
+
+    it "has digest section with bills" do
+      within("#digest-section") do
+        expect(page).to have_content("Bill 1")
+        expect(page).to have_content("Bill 2")
+      end
+    end
+
+    it "has saved bill section" do
+      within("#saved-bills") do
+        expect(page).to have_content("Saved Bill 1")
+        expect(page).to have_content("Saved Bill 2")
+        save_and_open_page
       end
     end
   end

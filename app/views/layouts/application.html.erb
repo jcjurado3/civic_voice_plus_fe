@@ -12,8 +12,23 @@
   </head>
 
   <body>
+    <header>
+      <!-- Your header content goes here -->
+      <nav id="nav-bar">
+        <ul>
+          <li><a href="#home"><button>Home</button> </a></li>
+          <li><a href="#billsearch"><button>Search Bills</button></a></li>
+          <li><a href="#dashboard"><button>My Dashboard</button></a></li>
+          <li><a href="#signout"><button>Sign Out</button></a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
+    <footer>
+    <!-- Your footer content goes here -->
+    <p>&copy; 2023 CivicVoice+</p>
+  </footer>
   </body>
 </html>

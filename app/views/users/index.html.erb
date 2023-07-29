@@ -9,34 +9,26 @@
 </head>
 
 <body>
-  <header>
-    <!-- Your header content goes here -->
-    <nav id="nav-bar">
-    <h1>User Index Page</h1>      <ul>
-        <li><a href="#home"><button>Home</button> </a></li>
-        <li><a href="#billsearch"><button>Search Bills</button></a></li>
-        <li><a href="#dashboard"><button>My Dashboard</button></a></li>
-        <li><a href="#signout"><button>Sign Out</button></a></li>
-      </ul>
-    </nav>
-  </header>
+  <h1> Welcome <%= @user.name %> </h1> 
 
   <main>
     <!-- Your main content goes here -->
     <div id="digest-section">
-    <a href="#edit"><button>Edit My Categories</button></a>
-    <ul>
-      <li>Bill 1</li>
-      <li>Bill 2</li>
-      <li>Bill 3</li>
-    </ul>
+      <a href="#edit"><button>Choose My Categories</button></a>
+      <ul>
+        <li>Bill 1</li>
+        <li>Bill 2</li>
+        <li>Bill 3</li>
+      </ul>
     </div>
+    <aside id="saved-bills">
+      <ul>
+        <li>Saved Bill 1</li>
+        <li>Saved Bill 2</li>
+        <li>Saved Bill 3</li>
+      </ul>
+    </aside>
   </main>
-
-  <footer>
-    <!-- Your footer content goes here -->
-    <p>&copy; 2023 Your Website</p>
-  </footer>
 </body>
 
 </html>
