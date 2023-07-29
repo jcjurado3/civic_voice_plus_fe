@@ -23,6 +23,9 @@
         </ul>
       </nav>
     </header>
+    <% flash.each do |type, msg| %>
+      <%= content_tag :div, msg, class: type %>
+    <% end %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>

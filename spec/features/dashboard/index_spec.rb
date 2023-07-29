@@ -37,8 +37,17 @@ RSpec.describe "dashboard index page" do
       within("#saved-bills") do
         expect(page).to have_content("Saved Bill 1")
         expect(page).to have_content("Saved Bill 2")
-        save_and_open_page
       end
     end
   end
+  
+  describe "sad path" do
+    it "dashboard redirects if user is not logged in" do
+      visit dashboard_path
+
+      expect(page).to have_content("You must be logged in to view this page")
+      expect(current_path).to eq(root_path)
+    end
+  end
+
 end
