@@ -43,9 +43,6 @@ RSpec.describe "dashboard index page" do
 
       within("#digest-section") do
         expect(page).to have_button("Choose My Categories")
-        # save_and_open_page
-        
-
       end
     end
 

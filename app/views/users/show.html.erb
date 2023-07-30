@@ -1,0 +1,16 @@
+<body> 
+  <div>
+    <%= form_with(url: user_categories_path(@user), method: "post", local: true) do |form| %>
+      <% ["Healthcare", "Taxes", "Clean Energy"].each do |category| %>
+        <div>
+          <%= check_box_tag 'categories[]', category, @selected_categories.include?(category) %>
+          <%= category %>
+        </div>
+      <% end %>
+
+      <div>
+        <%= submit_tag "Save" %>
+      </div>
+    <% end %>
+  </div>
+</body>

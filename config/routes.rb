@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#index', as: 'dashboard'
 
   delete '/logout', to: 'sessions#destroy'
+
+  post '/user_categories', to: 'user_categories#create'
+
+  resources :users, only: [:show]
 end

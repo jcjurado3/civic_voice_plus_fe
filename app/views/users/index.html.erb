@@ -17,8 +17,8 @@
       <a href="#edit"><button>Choose My Categories</button></a>
       <div id="bill-digest">
         <h3> <strong> Digest</strong></h3>
-        <% if @user.categories.nil? %>
-          <%= button_to "select bill topics", "/user/:id"%>
+        <% if @digest_bills.blank? %>
+          <%= button_to "select bill topics", user_path(@user), method: :get %>
         <% else %>
           <% @digest_bills.each do |bill | %>
           <ul>
