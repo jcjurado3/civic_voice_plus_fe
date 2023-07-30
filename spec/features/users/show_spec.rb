@@ -12,8 +12,27 @@ RSpec.describe "User Show Page" do
       expect(page).to have_button("select bill topics")
 
       click_button("select bill topics")
-save_and_open_page
+
       expect(current_path).to eq(user_path(@user1))
+    end
+
+    it "select bill topics and save" do
+      visit user_path(@user1)
+
+      check("Healthcare")
+      check("Taxes")
+      select("Florida", from: "state")
+
+      click_button("Save")
+
+      expect(current_path).to eq(dashboard_path)
+
+      within("#digest-section") do
+        expect(page).to have_content("Digest")
+        expect(page).to have_content("Appropriations.")
+      end
+
+      expect(page).to_not have_button("select bill topics")
     end
   end
 end
