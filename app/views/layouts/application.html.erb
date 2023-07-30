@@ -16,10 +16,14 @@
       <!-- Your header content goes here -->
       <nav id="nav-bar">
         <ul>
-          <li><a href="#home"><button>Home</button> </a></li>
+          <li><a href="/welcome"><button>Home</button> </a></li>
           <li><a href="#billsearch"><button>Search Bills</button></a></li>
-          <li><a href="#dashboard"><button>My Dashboard</button></a></li>
-          <li><a href="#signout"><button>Sign Out</button></a></li>
+          <li><a href="/dashboard"><button>My Dashboard</button></a></li>
+          <% if current_user %>
+          <li><%= button_to "Sign Out", logout_path, method: :delete %></li>
+          <% else %>
+          <li><a href="/auth/google_oauth2"><button>Log In</button></a></li>
+          <% end %>
         </ul>
       </nav>
     </header>

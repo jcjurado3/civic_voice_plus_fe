@@ -15,17 +15,25 @@
     <!-- Your main content goes here -->
     <div id="digest-section">
       <a href="#edit"><button>Choose My Categories</button></a>
-      <ul>
-        <li>Bill 1</li>
-        <li>Bill 2</li>
-        <li>Bill 3</li>
-      </ul>
+      <div id="bill-digest">
+        <h3> <strong> Digest</strong></h3>
+        <% if @user.categories.nil? %>
+          <%= button_to "select bill topics", "/user/:id"%>
+        <% else %>
+          <% @digest_bills.each do |bill | %>
+          <ul>
+            <li> <%= bill.name %> <%= bill.status %> <%= bill.description %> </li>
+          </ul>
+          <% end %>
+        <% end %>
+      </div>
     </div>
     <aside id="saved-bills">
       <ul>
-        <li>Saved Bill 1</li>
-        <li>Saved Bill 2</li>
-        <li>Saved Bill 3</li>
+        <% @saved_bills.each do |bill | %>
+          <li> <%= bill.name %> </li>
+          <li> <%= bill.status %> </li>
+          <% end %>
       </ul>
     </aside>
   </main>
