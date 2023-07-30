@@ -9,6 +9,7 @@ RSpec.describe "User Show Page" do
     it "has select bill topics button" do
       visit dashboard_path
 
+      expect(page).to_not have_content("Edit My Categories")
       expect(page).to have_button("select bill topics")
 
       click_button("select bill topics")
@@ -32,6 +33,7 @@ RSpec.describe "User Show Page" do
         expect(page).to have_content("Appropriations.")
       end
 
+      expect(page).to have_content("Edit My Categories")
       expect(page).to_not have_button("select bill topics")
     end
   end
