@@ -27,6 +27,7 @@ RSpec.describe "dashboard index page" do
         expect(page).to have_button("Home")
         expect(page).to have_button("Search Bills")
         expect(page).to have_button("My Dashboard")
+        expect(page).to_not have_button("Log In")
         expect(page).to have_button("Sign Out")
       end  
     end
@@ -58,9 +59,20 @@ RSpec.describe "dashboard index page" do
     it "has digest section with bills" do
       visit dashboard_path
 
+      click_button("select bill topics")
+
+      check("Healthcare")
+      check("Taxes")
+      select("Florida", from: "state")
+
+      click_button("Save")
+
+      expect(current_path).to eq(dashboard_path)
+
       within("#digest-section") do
         expect(page).to have_content("Digest")
-        expect(page).to have_button("select bill topics")
+        expect(page).to_not have_button("select bill topics")
+        expect(page).to have_content("Appropriations.")
       end
     end
 

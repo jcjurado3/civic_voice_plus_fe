@@ -36,5 +36,36 @@ RSpec.describe "User Show Page" do
       expect(page).to have_content("Edit My Categories")
       expect(page).to_not have_button("select bill topics")
     end
+
+    it "can edit bill categories" do
+      visit user_path(@user1)
+
+      check("Healthcare")
+      check("Taxes")
+      select("Florida", from: "state")
+
+      click_button("Save")
+
+      expect(current_path).to eq(dashboard_path)
+
+      within("#digest-section") do
+        expect(page).to have_content("Digest")
+        expect(page).to have_content("Appropriations.")
+      end
+
+      expect(page).to click_button("Edit My Categories")
+
+      uncheck("Healthcare")
+
+      click_button("Save")
+
+      expect(current_path).to eq(dashboard_path)
+
+      within("#digest-section") do
+        expect(page).to have_content("Digest")
+        expect(page).to_not have_content("Appropriations.")
+        expect(page).to have_content("Property Tax Administration")
+      end
+    end
   end
 end
