@@ -3,13 +3,14 @@
     <%= form_with(url: user_categories_path(@user), method: "post", local: true) do |form| %>
       <% ["Healthcare", "Taxes", "Clean Energy"].each do |category| %>
         <div>
-          <%= check_box_tag 'categories[]', category, @selected_categories.include?(category) %>
+          <%= hidden_field_tag "categories[#{category}]", "0" %>
+          <%= check_box_tag "categories[#{category}]", "1", @selected_categories.include?(category) %>
           <%= category %>
         </div>
       <% end %>
 
       <%= select_tag 'state', options_for_select([
-          ['Select a state', '0'],
+          ['Everywhere', ''],
           ['Alabama', 'AL'],
           ['Alaska', 'AK'],
           ['Arizona', 'AZ'],
