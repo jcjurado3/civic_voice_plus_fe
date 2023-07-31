@@ -34,7 +34,7 @@ class CvpService
     end
   end
 
-  def get_url(url, params)
+  def get_url(url, params = {})
     response = conn.get(url, params)
     JSON.parse(response.body, symbolize_names: true)
   end
