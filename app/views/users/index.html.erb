@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Index Page</title>
+  <link rel="stylesheet" href="path/to/your/css/style.css">
+</head>
+
+<body>
+  <h1> Welcome <%= @user.name %> </h1> 
+
+  <main>
+    <!-- Your main content goes here -->
+    <div id="digest-section">
+      <a href="#edit"><button>Choose My Categories</button></a>
+      <div id="bill-digest">
+        <h3> <strong> Digest</strong></h3>
+        <% if @user.categories.nil? %>
+          <%= button_to "select bill topics", "/user/:id"%>
+        <% else %>
+          <% @digest_bills.each do |bill | %>
+          <ul>
+            <li> <%= bill.name %> <%= bill.status %> <%= bill.description %> </li>
+          </ul>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <aside id="saved-bills">
+      <ul>
+        <% @saved_bills.each do |bill | %>
+          <li> <%= bill.name %> </li>
+          <li> <%= bill.status %> </li>
+          <% end %>
+      </ul>
+    </aside>
+  </main>
+</body>
+
+</html>

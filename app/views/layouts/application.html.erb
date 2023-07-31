@@ -12,8 +12,30 @@
   </head>
 
   <body>
+    <header>
+      <!-- Your header content goes here -->
+      <nav id="nav-bar">
+        <ul>
+          <li><a href="/welcome"><button>Home</button> </a></li>
+          <li><a href="#billsearch"><button>Search Bills</button></a></li>
+          <li><a href="/dashboard"><button>My Dashboard</button></a></li>
+          <% if current_user %>
+          <li><%= button_to "Sign Out", logout_path, method: :delete %></li>
+          <% else %>
+          <li><a href="/auth/google_oauth2"><button>Log In</button></a></li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+    <% flash.each do |type, msg| %>
+      <%= content_tag :div, msg, class: type %>
+    <% end %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
+    <footer>
+    <!-- Your footer content goes here -->
+    <p>&copy; 2023 CivicVoice+</p>
+  </footer>
   </body>
 </html>
