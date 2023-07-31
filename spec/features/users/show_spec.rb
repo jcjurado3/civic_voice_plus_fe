@@ -75,7 +75,7 @@ RSpec.describe "User Show Page" do
     end
     it "has select bill topics button" do
       visit dashboard_path
-      save_and_open_page
+   
       expect(page).to_not have_content("Edit My Categories")
       expect(page).to have_button("select bill topics")
 
