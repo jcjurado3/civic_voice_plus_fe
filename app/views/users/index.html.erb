@@ -14,11 +14,13 @@
   <main>
     <!-- Your main content goes here -->
     <div id="digest-section">
-      <a href="#edit"><button>Choose My Categories</button></a>
+      <% if @selected_categories.any? %>
+        <%= link_to "Edit My Categories", user_path(@user) %>
+      <% end %>
       <div id="bill-digest">
         <h3> <strong> Digest</strong></h3>
-        <% if @user.categories.nil? %>
-          <%= button_to "select bill topics", "/user/:id"%>
+        <% if @digest_bills.blank? %>
+          <%= button_to "select bill topics", user_path(@user), method: :get %>
         <% else %>
           <% @digest_bills.each do |bill | %>
           <ul>
