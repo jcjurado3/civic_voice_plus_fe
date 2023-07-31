@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @all_categories = CategoryFacade.new.get_all_categories
     @selected_categories = CvpService.new.get_user_category(@user.id).map { |c| c[:category] }
   end
 end

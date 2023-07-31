@@ -5,15 +5,15 @@ class UserCategoriesController < ApplicationController
     categories = params[:categories]
 
     if categories.present?
-      selected_categories = categories.select { |category, selected| selected == "1" }.keys
-      deselected_categories = categories.select { |category, selected| selected == "0" }.keys
+      selected_categories = categories.select { |category_id, selected| selected == "1" }.keys.map(&:to_i)
+      deselected_categories = categories.select { |category_id, selected| selected == "0" }.keys.map(&:to_i)
 
-      selected_categories.each do |category|
-        CvpService.new.save_category(@user.id, category)
+      selected_categories.each do |category_id|
+        CvpService.new.save_category(@user.id, category_id)
       end
 
-      deselected_categories.each do |category|
-        CvpService.new.remove_category(@user.id, category)
+      deselected_categories.each do |category_id|
+        CvpService.new.remove_category(@user.id, category_id)
       end
       flash[:notice] = 'Categories saved successfully.'
     else
