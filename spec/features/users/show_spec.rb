@@ -10,10 +10,10 @@ RSpec.describe "User Show Page" do
 
       stub_request(:get, "https://civic-voice-plus-bfabe77935f8.herokuapp.com/api/v1/user_category")
       .with(query: { user_id: 245 })
-      .to_return(status: 200, body: '{"data":{"categories":["Healthcare", "Taxes"], "state":"Florida"}}', headers: {})
+      .to_return(status: 200, body: '{"data":{"categories":["healthcare", "education"], "state":"Florida"}}', headers: {})
 
       stub_request(:get, "https://civic-voice-plus-bfabe77935f8.herokuapp.com/api/v1/digest_bills")
-        .with(query: { user_id: 245, categories: ["Healthcare", "Taxes"], state: "Florida" })
+        .with(query: { user_id: 245, categories: ["healthcare", "education"], state: "Florida" })
         .to_return(status: 200, body: '{
               "data": [
                 {
@@ -69,7 +69,7 @@ RSpec.describe "User Show Page" do
         }', headers: {})
       stub_request(:get, "https://civic-voice-plus-bfabe77935f8.herokuapp.com/api/v1/user_category")
         .with(query: { user_id: 245 })
-        .to_return(status: 200, body: '{"data":{"categories":["Healthcare", "Taxes"], "state":"Florida"}}', headers: {})
+        .to_return(status: 200, body: '{"data":{"categories":["healthcare", "education"], "state":"Florida"}}', headers: {})
 
 
     end
@@ -87,8 +87,8 @@ RSpec.describe "User Show Page" do
     it "select bill topics and save" do
       visit user_path(@user1)
 
-      check("Healthcare")
-      check("Taxes")
+      check("healthcare")
+      check("education")
       select("Florida", from: "state")
       
       click_button("Save")
@@ -107,8 +107,8 @@ RSpec.describe "User Show Page" do
     it "can edit bill categories" do
       visit user_path(@user1)
 
-      check("Healthcare")
-      check("Taxes")
+      check("healthcare")
+      check("education")
       select("Florida", from: "state")
 
       click_button("Save")
@@ -122,7 +122,7 @@ RSpec.describe "User Show Page" do
 
       expect(page).to click_button("Edit My Categories")
 
-      uncheck("Healthcare")
+      uncheck("healthcare")
 
       click_button("Save")
 
