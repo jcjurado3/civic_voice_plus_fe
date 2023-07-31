@@ -25,6 +25,7 @@ class CvpService
   end
 
   def get_all_categories
+    params = {}
     get_url("api/v1/categories")
   end
 
