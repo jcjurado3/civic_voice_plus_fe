@@ -12,9 +12,8 @@
   <h1> Welcome <%= @user.name %> </h1> 
 
   <main>
-    <!-- Your main content goes here -->
     <div id="digest-section">
-      <% if @selected_categories.any? %>
+      <% if @selected_categories.to_a.any? %>
         <%= link_to "Edit My Categories", user_path(@user) %>
       <% end %>
       <div id="bill-digest">
@@ -31,6 +30,7 @@
       </div>
     </div>
     <aside id="saved-bills">
+    <h3> <strong> My Saved Bills</strong></h3>
       <ul>
         <% @saved_bills.each do |bill | %>
           <li> <%= bill.name %> </li>

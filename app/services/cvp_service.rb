@@ -14,6 +14,11 @@ class CvpService
     post_url("api/v1/user_category", params)
   end
 
+  def get_user_bills(user_id)
+    params = { user_id: user_id }
+    post_url("api/v1/user_bills", params)
+  end
+
   def conn
     Faraday.new(url: "https://civic-voice-plus-bfabe77935f8.herokuapp.com/") do |f|
     end
