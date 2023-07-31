@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#index', as: 'dashboard'
 
   delete '/logout', to: 'sessions#destroy'
+
+  resources :bills, only: [:index, :show] do
+    get '/page/:page', action: :index, on: :collection
+  end
+
+  resources :user_bills, only: [:index]
 end
