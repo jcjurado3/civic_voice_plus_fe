@@ -9,13 +9,13 @@ class CvpService
     get_url("api/v1/user_category", params)
   end
 
-  def save_category(user_id, category)
-    params = { user_id: user_id, category: category }
+  def save_category(user_id, category_id)
+    params = { user_id: user_id, category_id: category_id }
     post_url("api/v1/user_category", params)
   end
 
-  def remove_category(user_id, category)
-    params = { user_id: user_id, category: category }
+  def remove_category(user_id, category_id)
+    params = { user_id: user_id, category_id: category_id }
     delete_url("api/v1/user_category", params)
   end
 
@@ -24,12 +24,16 @@ class CvpService
     post_url("api/v1/user_bills", params)
   end
 
+  def get_all_categories
+    get_url("api/v1/categories")
+  end
+
   def conn
     Faraday.new(url: "https://civic-voice-plus-bfabe77935f8.herokuapp.com/") do |f|
     end
   end
 
-  def get_url(url, params = {})
+  def get_url(url, params)
     response = conn.get(url, params)
     JSON.parse(response.body, symbolize_names: true)
   end

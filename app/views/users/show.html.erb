@@ -1,11 +1,11 @@
 <body> 
   <div>
     <%= form_with(url: user_categories_path(@user), method: "post", local: true) do |form| %>
-      <% ["Healthcare", "Taxes", "Clean Energy"].each do |category| %>
+      <% @all_categories.each do |category| %>
         <div>
-          <%= hidden_field_tag "categories[#{category}]", "0" %>
-          <%= check_box_tag "categories[#{category}]", "1", @selected_categories.include?(category) %>
-          <%= category %>
+          <%= hidden_field_tag "categories[#{category.id}]", "0" %>
+          <%= check_box_tag "categories[#{category.id}]", "1", @selected_categories.include?(category.id) %>
+          <%= category.name %>
         </div>
       <% end %>
 
