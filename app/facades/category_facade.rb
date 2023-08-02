@@ -2,10 +2,15 @@ class CategoryFacade
   def get_all_categories
     categories_data ||= service.get_all_categories
 
-    categories = categories_data[:data]
+    if categories_data == "{}"
+      {}
+    else
+      categories = categories_data[:data]
 
-    categories.map do |category|
-      Category.new(category)
+      categories.map do |category|
+
+        Category.new(category)
+      end
     end
   end
 

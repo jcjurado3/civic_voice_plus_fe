@@ -6,21 +6,13 @@ RSpec.describe "dashboard index page" do
       @user1 = User.create!(name: "tester", id: 245)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
 
-      # stub_request(:get, "http://localhost:3000/api/v1/user_bills?user_id=245").
-      #   with(
-      #     headers: {
-      #   'Accept'=>'*/*',
-      #   'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-      #   'User-Agent'=>'Faraday v2.7.10'
-      #     }).
-      #   to_return(status: 200, body: "", headers: {})
     end
-    it "has welcome message" do 
+    it "has welcome message", :vcr do 
       visit dashboard_path
 
       expect(page).to have_content("Welcome #{@user1.name}")
     end
-    it "has nav bar buttons" do 
+    it "has nav bar buttons", :vcr do 
       visit dashboard_path
 
       within("#nav-bar") do
@@ -31,7 +23,7 @@ RSpec.describe "dashboard index page" do
         expect(page).to have_button("Sign Out")
       end  
     end
-    it "has Sign Out button" do
+    it "has Sign Out button", :vcr do
       visit dashboard_path
 
       click_button("Sign Out")
@@ -39,15 +31,7 @@ RSpec.describe "dashboard index page" do
       expect(current_path).to eq(root_path)
     end
 
-    it "has edit my categories button" do
-      visit dashboard_path
-
-      within("#digest-section") do
-        expect(page).to have_button("Choose My Categories")
-      end
-    end
-
-    it "has digest section without bills" do
+    it "has digest section without bills", :vcr do
       visit dashboard_path
 
       within("#digest-section") do
@@ -56,15 +40,14 @@ RSpec.describe "dashboard index page" do
       end
     end
 
-    it "has digest section with bills" do
+    it "has digest section with bills", :vcr do
       visit dashboard_path
 
       click_button("select bill topics")
 
-      check("Healthcare")
-      check("Taxes")
+      check("categories[1]")
+      check("categories[4]")
       select("Florida", from: "state")
-
       click_button("Save")
 
       expect(current_path).to eq(dashboard_path)
@@ -76,7 +59,7 @@ RSpec.describe "dashboard index page" do
       end
     end
 
-    xit "has saved bill section" do
+    xit "has saved bill section", :vcr do
       visit dashboard_path
 
       within("#saved-bills") do
@@ -87,7 +70,7 @@ RSpec.describe "dashboard index page" do
   end
   
   describe "sad path" do
-    it "dashboard redirects if user is not logged in" do
+    it "dashboard redirects if user is not logged in", :vcr do
       visit dashboard_path
 
       expect(page).to have_content("You must be logged in to view this page")

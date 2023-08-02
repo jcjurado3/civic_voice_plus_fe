@@ -4,8 +4,9 @@ class UserBill
               :status
 
   def initialize(data)
-    @name = data[:title]
-    @description = data[:description]
-    @status = data[:status]
+
+    @name = data[:attributes][:title]
+    @description = data[:attributes][:description]
+    @status = data[:attributes][:last_action]
   end
 end

@@ -1,58 +1,65 @@
 class CvpService
   def get_digest_bills(user_id, categories, state)
-    params = { user_id: user_id, categories: categories, state: state }
-    get_url("api/v1/digest_bills", params)
+    get_url("api/v1/bills?user_id=#{user_id}&query=#{categories}&state=#{state}")
   end
 
   def get_user_category(user_id)
-    params = { user_id: user_id }
-    get_url("api/v1/user_category", params)
+    get_url("/api/v1/user_categories?user_id=#{user_id}")
   end
 
   def save_category(user_id, category_id)
-    params = { user_id: user_id, category_id: category_id }
-    post_url("api/v1/user_category", params)
+    post_url("/api/v1/user_categories?user_id=#{user_id}&category_id=#{category_id}")
+  end
+
+  def save_state(user_id, state)
+    state_id = state.to_i
+    post_url("/api/v1/user_states?user_id=#{user_id}&state_id=#{state_id}")
   end
 
   def remove_category(user_id, category_id)
-    params = { user_id: user_id, category_id: category_id }
-    delete_url("api/v1/user_category", params)
+    delete_url("/api/v1/user_categories?user_id=#{user_id}&category_id=#{category_id}")
   end
 
   def get_user_bills(user_id)
-    params = { user_id: user_id }
-    post_url("api/v1/user_bills", params)
+    get_url("/api/v1/user_bills?user_id=#{user_id}")
   end
 
   def get_all_categories
-    get_url("api/v1/categories")
+    get_url("/api/v1/categories")
+  end
+
+  def get_user_state(user_id)
+    get_url("/api/v1/user_states?user_id=#{user_id}")
   end
 
   def conn
-    Faraday.new(url: "https://civic-voice-plus-bfabe77935f8.herokuapp.com/") do |f|
+    Faraday.new(url: "http://localhost:3000") do |f|
     end
   end
 
-  def get_url(url, params)
-    response = conn.get(url, params)
-    JSON.parse(response.body, symbolize_names: true)
-  end
-
-  def post_url(url, params)
-    response = conn.post do |req|
-      req.url url
-      req.headers['Content-Type'] = 'application/json'
-      req.body = params.to_json
+  def get_url(url)
+    response = conn.get(url)
+    if response.status == 404
+      "{}"
+    else
+      JSON.parse(response.body, symbolize_names: true)
     end
-    JSON.parse(response.body, symbolize_names: true)
   end
 
-  def delete_url(url, params)
+  def post_url(url)
+    # require 'pry'; binding.pry
+    response = conn.post(url)
+    # require 'pry'; binding.pry
+    # JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def delete_url(url)
+    # require 'pry'; binding.pry
     response = conn.delete do |req|
       req.url url
       req.headers['Content-Type'] = 'application/json'
-      req.body = params.to_json
     end
-    JSON.parse(response.body, symbolize_names: true)
+  
+    # JSON.parse(response.body, symbolize_names: true)
   end
 end
