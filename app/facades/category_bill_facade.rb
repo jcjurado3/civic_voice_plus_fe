@@ -5,13 +5,12 @@ class CategoryBillFacade
   end
 
   def get_user_category_bills
-    user_category_data ||= service.get_user_category(@user_id)
-
+    user_category_data = service.get_user_category(@user_id)
     if user_category_data == {:data=>[]}
       {}
     else
-# require 'pry'; binding.pry
-      categories = user_category_data[:data][:categories]
+      require 'pry'; binding.pry
+      categories = user_category_data[:data][0][:attributes][:name]
       state = user_category_data[:data][:state]
   
       digest_bills_data ||= service.get_digest_bills(@user_id, categories, state)

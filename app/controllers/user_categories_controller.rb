@@ -4,7 +4,10 @@ class UserCategoriesController < ApplicationController
 
     categories = params[:categories]
     state = params[:state]
-    
+    # require 'pry'; binding.pry
+    if state.present?
+      CvpService.new.save_state(@user.id, state)
+    end
     if categories.present?
       selected_categories = categories.select { |category_id, selected| selected == "1" }.keys.map(&:to_i)
       deselected_categories = categories.select { |category_id, selected| selected == "0" }.keys.map(&:to_i)

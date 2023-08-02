@@ -1,8 +1,8 @@
 class CvpService
   def get_digest_bills(user_id, categories, state)
-    require 'pry'; binding.pry
+
     params = { user_id: user_id, categories: categories, state: state }
-    get_url("api/v1/digest_bills", params)
+    get_url("api/v1/bills", params)
   end
 
   def get_user_category(user_id)
@@ -13,6 +13,12 @@ class CvpService
   def save_category(user_id, category_id)
     params = { user_id: user_id, category_id: category_id }
     post_url("api/v1/user_categories", params)
+  end
+
+  def save_state(user_id, state)
+    state_id = state.to_i
+    params = { user_id: user_id, state_id: state_id}
+    post_url("api/v1/user_states", params)
   end
 
   def remove_category(user_id, category_id)
