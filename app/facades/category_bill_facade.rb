@@ -6,15 +6,19 @@ class CategoryBillFacade
 
   def get_user_category_bills
     user_category_data = service.get_user_category(@user_id)
+    # require 'pry'; binding.pry
     if user_category_data == {:data=>[]}
       {}
     else
-      require 'pry'; binding.pry
-      categories = user_category_data[:data][0][:attributes][:name]
-      state = user_category_data[:data][:state]
-  
-      digest_bills_data ||= service.get_digest_bills(@user_id, categories, state)
-  
+      categories = []
+      user_category_data[:data].each do |category|
+        categories << category[:attributes][:name]
+      end
+      categories
+      state_results = CvpService.new.get_user_state(@user_id)
+      state = state_results[:data].first[:attributes][:state_abbr]
+      digest_bills_data = service.get_digest_bills(@user_id, categories, state)
+# require 'pry'; binding.pry
       digest_bills = digest_bills_data[:data]
   
       digest_bills.map do |bill|
