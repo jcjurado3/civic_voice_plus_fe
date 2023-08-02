@@ -27,7 +27,7 @@ RSpec.describe "User Show Page" do
       click_button("Save")
 
       expect(current_path).to eq(dashboard_path)
-save_and_open_page
+
       within("#digest-section") do
         expect(page).to have_content("Digest")
         expect(page).to have_content("Appropriations.")
