@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   post '/user_categories', to: 'user_categories#create'
 
   resources :users, only: [:show]
+
+  resources :bills, only: [:index, :show]
 end

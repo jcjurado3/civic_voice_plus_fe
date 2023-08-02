@@ -5,7 +5,7 @@
         <div>
           <%= hidden_field_tag "categories[#{category.id}]", "0" %>
           
-          <%= check_box_tag "categories[#{category.id}]", "1", @selected_categories.include?(category.id) %>
+          <%= check_box_tag "categories[#{category.id}]", "1", @selected_category_ids.include?(category.id.to_i) %>
           <%= category.name %>
         </div>
       <% end %>
@@ -63,7 +63,7 @@
           ['Wisconsin', 49],
           ['Wyoming', 50],
           ['Wyoming', 52]
-                              ]), include_blank: true %>
+                              ], @selected_state), include_blank: true %>
 
       <div>
         <%= submit_tag "Save" %>
