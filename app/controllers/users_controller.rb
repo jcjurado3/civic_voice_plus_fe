@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @user = current_user
     if @user.present?
       @digest_bills = CategoryBillFacade.new(@user.id).get_user_category_bills
+
       @saved_bills = UserBillFacade.new(@user.id).get_user_saved_bills
     else
       redirect_to root_path
@@ -13,6 +14,7 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @all_categories = CategoryFacade.new.get_all_categories
-    @selected_categories = CvpService.new.get_user_category(@user.id).map { |c| c[:category] }
+
+    @selected_categories = CategoryBillFacade.new(@user.id).get_user_category_bills.map { |c| c[:category] }
   end
 end

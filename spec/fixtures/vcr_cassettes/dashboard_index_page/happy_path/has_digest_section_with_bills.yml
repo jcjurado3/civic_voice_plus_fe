@@ -1,0 +1,1207 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/categories
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9fa76c7cb3e441c792915501961d0e5b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7ab931ab-87d7-4fe1-9ab9-7c5e49ef0357
+      X-Runtime:
+      - '0.004712'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=0.76, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=1.92
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"category","attributes":{"name":"artificial
+        intelligence"}},{"id":"2","type":"category","attributes":{"name":"cannabis"}},{"id":"3","type":"category","attributes":{"name":"climate"}},{"id":"4","type":"category","attributes":{"name":"conservation
+        energy"}},{"id":"5","type":"category","attributes":{"name":"education"}},{"id":"6","type":"category","attributes":{"name":"firearms"}},{"id":"7","type":"category","attributes":{"name":"gender"}},{"id":"8","type":"category","attributes":{"name":"healthcare"}},{"id":"9","type":"category","attributes":{"name":"housing"}},{"id":"10","type":"category","attributes":{"name":"insurance"}},{"id":"11","type":"category","attributes":{"name":"mental
+        health"}},{"id":"12","type":"category","attributes":{"name":"PFAS"}},{"id":"13","type":"category","attributes":{"name":"privacy"}},{"id":"14","type":"category","attributes":{"name":"retirement"}},{"id":"15","type":"category","attributes":{"name":"telemedicine"}},{"id":"16","type":"category","attributes":{"name":"workplace
+        safety"}}]}'
+  recorded_at: Tue, 01 Aug 2023 22:14:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 6618e7a8-886a-4a6f-a65e-e7b56f413751
+      X-Runtime:
+      - '0.005893'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6337'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [GET] \"/api/v1/user_categories\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":26160,"id":0,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":26160,"id":1,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":26160,"id":2,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":26160,"id":3,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":26160,"id":4,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":26160,"id":5,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":26160,"id":6,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":26160,"id":7,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":26160,"id":8,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":26160,"id":9,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":26160,"id":10,"trace":"rack
+        (2.2.7) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":26160,"id":11,"trace":"activesupport
+        (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":26160,"id":12,"trace":"actionpack (7.0.6)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":26160,"id":13,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":26160,"id":14,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":26160,"id":15,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":26160,"id":16,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":26160,"id":17,"trace":"rack
+        (2.2.7) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":26160,"id":18,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":26160,"id":19,"trace":"railties
+        (7.0.6) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":26160,"id":20,"trace":"puma
+        (5.6.6) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":26160,"id":21,"trace":"puma
+        (5.6.6) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":26160,"id":22,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":26160,"id":23,"trace":"puma
+        (5.6.6) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":26160,"id":24,"trace":"puma
+        (5.6.6) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":26160,"id":25,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":26160,"id":0,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":26160,"id":1,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":26160,"id":2,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":26160,"id":3,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":26160,"id":4,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":26160,"id":5,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":26160,"id":6,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":26160,"id":7,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":26160,"id":8,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":26160,"id":9,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":26160,"id":10,"trace":"rack
+        (2.2.7) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":26160,"id":11,"trace":"activesupport
+        (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":26160,"id":12,"trace":"actionpack (7.0.6)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":26160,"id":13,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":26160,"id":14,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":26160,"id":15,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":26160,"id":16,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":26160,"id":17,"trace":"rack
+        (2.2.7) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":26160,"id":18,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":26160,"id":19,"trace":"railties
+        (7.0.6) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":26160,"id":20,"trace":"puma
+        (5.6.6) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":26160,"id":21,"trace":"puma
+        (5.6.6) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":26160,"id":22,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":26160,"id":23,"trace":"puma
+        (5.6.6) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":26160,"id":24,"trace":"puma
+        (5.6.6) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":26160,"id":25,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 17187fcc-6172-4752-a262-21051d5e3912
+      X-Runtime:
+      - '0.004122'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.47, process_action.action_controller;dur=1.24
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/categories
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9fa76c7cb3e441c792915501961d0e5b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - eeb627c5-a100-49de-976a-7f94d14e5fce
+      X-Runtime:
+      - '0.006255'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=1.66, instantiation.active_record;dur=0.11,
+        process_action.action_controller;dur=2.93
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"category","attributes":{"name":"artificial
+        intelligence"}},{"id":"2","type":"category","attributes":{"name":"cannabis"}},{"id":"3","type":"category","attributes":{"name":"climate"}},{"id":"4","type":"category","attributes":{"name":"conservation
+        energy"}},{"id":"5","type":"category","attributes":{"name":"education"}},{"id":"6","type":"category","attributes":{"name":"firearms"}},{"id":"7","type":"category","attributes":{"name":"gender"}},{"id":"8","type":"category","attributes":{"name":"healthcare"}},{"id":"9","type":"category","attributes":{"name":"housing"}},{"id":"10","type":"category","attributes":{"name":"insurance"}},{"id":"11","type":"category","attributes":{"name":"mental
+        health"}},{"id":"12","type":"category","attributes":{"name":"PFAS"}},{"id":"13","type":"category","attributes":{"name":"privacy"}},{"id":"14","type":"category","attributes":{"name":"retirement"}},{"id":"15","type":"category","attributes":{"name":"telemedicine"}},{"id":"16","type":"category","attributes":{"name":"workplace
+        safety"}}]}'
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 6a6116c3-5c65-4403-980a-51c1eb380986
+      X-Runtime:
+      - '0.005722'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6337'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [GET] \"/api/v1/user_categories\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":26300,"id":0,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":26300,"id":1,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":26300,"id":2,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":26300,"id":3,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":26300,"id":4,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":26300,"id":5,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":26300,"id":6,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":26300,"id":7,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":26300,"id":8,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":26300,"id":9,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":26300,"id":10,"trace":"rack
+        (2.2.7) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":26300,"id":11,"trace":"activesupport
+        (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":26300,"id":12,"trace":"actionpack (7.0.6)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":26300,"id":13,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":26300,"id":14,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":26300,"id":15,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":26300,"id":16,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":26300,"id":17,"trace":"rack
+        (2.2.7) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":26300,"id":18,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":26300,"id":19,"trace":"railties
+        (7.0.6) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":26300,"id":20,"trace":"puma
+        (5.6.6) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":26300,"id":21,"trace":"puma
+        (5.6.6) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":26300,"id":22,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":26300,"id":23,"trace":"puma
+        (5.6.6) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":26300,"id":24,"trace":"puma
+        (5.6.6) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":26300,"id":25,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":26300,"id":0,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":26300,"id":1,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":26300,"id":2,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":26300,"id":3,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":26300,"id":4,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":26300,"id":5,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":26300,"id":6,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":26300,"id":7,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":26300,"id":8,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":26300,"id":9,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":26300,"id":10,"trace":"rack
+        (2.2.7) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":26300,"id":11,"trace":"activesupport
+        (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":26300,"id":12,"trace":"actionpack (7.0.6)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":26300,"id":13,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":26300,"id":14,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":26300,"id":15,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":26300,"id":16,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":26300,"id":17,"trace":"rack
+        (2.2.7) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":26300,"id":18,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":26300,"id":19,"trace":"railties
+        (7.0.6) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":26300,"id":20,"trace":"puma
+        (5.6.6) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":26300,"id":21,"trace":"puma
+        (5.6.6) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":26300,"id":22,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":26300,"id":23,"trace":"puma
+        (5.6.6) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":26300,"id":24,"trace":"puma
+        (5.6.6) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":26300,"id":25,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":1}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6acc61780752f782fbd73bba120f3e7b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 80009942-cb4a-438f-9007-9dda475d1ca7
+      X-Runtime:
+      - '0.005143'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.61, process_action.action_controller;dur=1.96
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"user_category","attributes":{"user_id":null,"category_id":null}}}'
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":4}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"6acc61780752f782fbd73bba120f3e7b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f20d9918-b9e5-45a7-8ed3-a6833121713e
+      X-Runtime:
+      - '0.004049'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.44, process_action.action_controller;dur=1.23
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"user_category","attributes":{"user_id":null,"category_id":null}}}'
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":2}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 87904f5e-ab0a-44c4-b782-37900b660d17
+      X-Runtime:
+      - '0.005903'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.91, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=2.86
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":3}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0a0b3e44-0dae-4868-893b-22ecb9319d83
+      X-Runtime:
+      - '0.003891'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.43, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.83
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":5}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 41396d0b-8c1f-4684-9c5a-95acb90847a5
+      X-Runtime:
+      - '0.003642'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.44, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.83
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":6}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - eb071557-4d19-4b26-bb5d-d940a0c8e981
+      X-Runtime:
+      - '0.003812'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.44, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.85
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":7}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 23ffafb7-4504-4b36-8fef-ed7791490fe4
+      X-Runtime:
+      - '0.003946'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.55, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.95
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":8}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b84f1221-01c7-46ad-b35b-bfa60d3a5098
+      X-Runtime:
+      - '0.005166'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.57, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.13
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":9}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 1f8dcf21-cfbc-40e3-a438-12308f2e9a45
+      X-Runtime:
+      - '0.009469'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.96, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=6.21
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":10}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e3e021b7-efd2-4fd8-ac9b-eed083bdaad1
+      X-Runtime:
+      - '0.020865'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.65, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=16.78
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":11}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - dcb68389-07dd-4d58-9fd6-3aa47025090a
+      X-Runtime:
+      - '0.008277'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.56, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=5.01
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":12}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 35d96b01-ae5b-45ea-bf6f-4a150063281c
+      X-Runtime:
+      - '0.012581'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.96, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=8.97
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":13}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5bf4ea4e-770d-44b2-9cc4-9d6f0da3e909
+      X-Runtime:
+      - '0.010408'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=0.52, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.17
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":14}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - e4dde60a-fac0-47a8-a2a6-7bba5a97360a
+      X-Runtime:
+      - '0.004557'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.47, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.92
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":15}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 03a2990f-9893-4010-9e53-c2fc1c819d34
+      X-Runtime:
+      - '0.003887'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=0.45, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=0.83
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/api/v1/user_categories
+    body:
+      encoding: UTF-8
+      string: '{"user_id":245,"category_id":16}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 2fe49f3d-05a8-42e0-81a0-612bedae2eb4
+      X-Runtime:
+      - '0.004598'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.70, instantiation.active_record;dur=0.01,
+        process_action.action_controller;dur=1.21
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - cd030bcf-124c-4d05-ae58-54ec3129f14c
+      X-Runtime:
+      - '0.006046'
+      Server-Timing:
+      - ''
+      Content-Length:
+      - '6337'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [GET] \"/api/v1/user_categories\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"exception_object_id":27000,"id":0,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":27000,"id":1,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":27000,"id":2,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":27000,"id":3,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":27000,"id":4,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":27000,"id":5,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":27000,"id":6,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":27000,"id":7,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":27000,"id":8,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":27000,"id":9,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":27000,"id":10,"trace":"rack
+        (2.2.7) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":27000,"id":11,"trace":"activesupport
+        (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":27000,"id":12,"trace":"actionpack (7.0.6)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":27000,"id":13,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":27000,"id":14,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":27000,"id":15,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":27000,"id":16,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":27000,"id":17,"trace":"rack
+        (2.2.7) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":27000,"id":18,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":27000,"id":19,"trace":"railties
+        (7.0.6) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":27000,"id":20,"trace":"puma
+        (5.6.6) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":27000,"id":21,"trace":"puma
+        (5.6.6) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":27000,"id":22,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":27000,"id":23,"trace":"puma
+        (5.6.6) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":27000,"id":24,"trace":"puma
+        (5.6.6) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":27000,"id":25,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":27000,"id":0,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":27000,"id":1,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":27000,"id":2,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":27000,"id":3,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":27000,"id":4,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":27000,"id":5,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":27000,"id":6,"trace":"activesupport
+        (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":27000,"id":7,"trace":"railties
+        (7.0.6) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":27000,"id":8,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":27000,"id":9,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":27000,"id":10,"trace":"rack
+        (2.2.7) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":27000,"id":11,"trace":"activesupport
+        (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"exception_object_id":27000,"id":12,"trace":"actionpack (7.0.6)
+        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":27000,"id":13,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":27000,"id":14,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":27000,"id":15,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":27000,"id":16,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":27000,"id":17,"trace":"rack
+        (2.2.7) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":27000,"id":18,"trace":"actionpack
+        (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":27000,"id":19,"trace":"railties
+        (7.0.6) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":27000,"id":20,"trace":"puma
+        (5.6.6) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":27000,"id":21,"trace":"puma
+        (5.6.6) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":27000,"id":22,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":27000,"id":23,"trace":"puma
+        (5.6.6) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":27000,"id":24,"trace":"puma
+        (5.6.6) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":27000,"id":25,"trace":"puma
+        (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e760cdef-fc08-420b-8ccd-9ea664a372a3
+      X-Runtime:
+      - '0.005835'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.46, process_action.action_controller;dur=1.29
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Tue, 01 Aug 2023 22:18:27 GMT
+recorded_with: VCR 6.2.0

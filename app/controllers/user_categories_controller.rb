@@ -3,7 +3,8 @@ class UserCategoriesController < ApplicationController
     @user = current_user
 
     categories = params[:categories]
-
+    state = params[:state]
+    
     if categories.present?
       selected_categories = categories.select { |category_id, selected| selected == "1" }.keys.map(&:to_i)
       deselected_categories = categories.select { |category_id, selected| selected == "0" }.keys.map(&:to_i)
@@ -20,6 +21,6 @@ class UserCategoriesController < ApplicationController
       flash[:alert] = 'No categories selected.'
     end
 
-    redirect_to user_path 
+    redirect_to dashboard_path
   end
 end

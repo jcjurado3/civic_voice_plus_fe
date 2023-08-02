@@ -4,6 +4,7 @@
       <% @all_categories.each do |category| %>
         <div>
           <%= hidden_field_tag "categories[#{category.id}]", "0" %>
+          
           <%= check_box_tag "categories[#{category.id}]", "1", @selected_categories.include?(category.id) %>
           <%= category.name %>
         </div>
