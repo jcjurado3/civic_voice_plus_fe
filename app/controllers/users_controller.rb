@@ -5,7 +5,6 @@ class UsersController < ApplicationController
       @digest_bills = CategoryBillFacade.new(@user.id).get_user_category_bills
       @selected_categories = CategoryBillFacade.new(@user.id).get_user_category_bills
       @saved_bills = UserBillFacade.new(@user.id).get_user_saved_bills
-      # require 'pry'; binding.pry
     else
       redirect_to root_path
       flash[:error] = "You must be logged in to view this page"
