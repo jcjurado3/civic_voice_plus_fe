@@ -67,12 +67,12 @@ class CvpService
   end
 
   def post_url(url)
-    response = dev_conn.post(url)
+    response = conn.post(url)
     JSON.parse(response.body, symbolize_names: true)
   end
 
   def get_url(url)
-    response = dev_conn.get(url)
+    response = conn.get(url)
     if response.status == 404
       "{}"
     else
@@ -81,11 +81,11 @@ class CvpService
   end
 
   def delete_url(url)
-    response = dev_conn.delete do |req|
+    response = conn.delete do |req|
       req.url url
       req.headers['Content-Type'] = 'application/json'
     end
-    response = dev_conn.get(url)
+    response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)
 
   end
