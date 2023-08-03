@@ -1,8 +1,7 @@
 class BillSearch
-  attr_reader :search_results#, :mock_search
+  attr_reader :search_results
 
   def initialize(data)
     @search_results = data[:data]
-    # @mock_search = data[:searchresult]
   end
 end
