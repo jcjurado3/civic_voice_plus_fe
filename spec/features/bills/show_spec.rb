@@ -7,20 +7,32 @@ RSpec.describe "bills show", type: :feature do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user1)
   end
 
-  it 'displays bills information' do
+  it 'displays bills information', :vcr do
     visit bill_path(1689711)
 
-    expect(page).to have_content("Bill Name: S0462")
-    expect(page).to have_content("Status: Died in Criminal Justice")
-    expect(page).to have_content("Description: Prohibiting the sale or transfer of an assault weapon 
-    or a large-capacity magazine; prohibiting possession of an assault weapon or a large-capacity magazine; 
-    requiring certificates of possession for assault weapons or large-capacity magazines lawfully possessed 
-    before a specified date; providing conditions for continued possession of such weapons or large-capacity 
-    magazines; providing enhanced criminal penalties for certain offenses when committed with an assault 
-    weapon or a large-capacity magazine, etc.")
-    expect(page).to have_link("See full text of bill")
+    expect(page).to have_content("Bill Name: Assault Weapons and Large-capacity Magazines")
+    expect(page).to have_content("Status: Introduced")
+    expect(page).to have_content("Summary: Prohibiting the sale or transfer of an assault weapon or a large-capacity magazine; prohibiting possession of an assault weapon or a large-capacity magazine; requiring certificates of possession for assault weapons or large-capacity magazines lawfully possessed before a specified date; providing conditions for continued possession of such weapons or large-capacity magazines; providing enhanced criminal penalties for certain offenses when committed with an assault weapon or a large-capacity magazine, etc.")
+    expect(page).to have_button("Full Text")
     expect(page).to have_content("Sen Lori Berman")
-    expect(page).to have_content('Berman@senate.gov') #maybe
+  end
+
+  it 'should display the party, email and an image of each representative sponsor', :vcr do
+    visit bill_path(1689711)
+
+    expect(page).to have_content('Democratic')
+    expect(page).to have_content('berman.lori.web@flsenate.gov')
+    expect(page).to have_xpath("//img[contains(@src,'s26_5339.jpg')]")
+  end
+
+  it "has a bookmark button to save a bill to a user", :vcr do
+    visit bills_path
+
+    fill_in(:search, with: "guns")
+    select("Florida", from: "state")
+    click_button("Search")
+
+    expect(page).to have_button("save S0462 to my dashboard") #<---bookmark fxn
   end
 end
 
