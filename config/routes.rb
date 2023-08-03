@@ -13,5 +13,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-  resources :bills, only: [:index, :show]
+  resources :bills, only: [:index, :show] do
+    get '/page/:page', action: :index, on: :collection
+  end
+
+  resources :user_bills, only: [:create, :destroy]
 end

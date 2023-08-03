@@ -32,9 +32,29 @@
     <aside id="saved-bills">
     <h3> <strong> My Saved Bills</strong></h3>
       <ul>
-        <% @saved_bills.each do |bill | %>
-          <li> <%= bill.name %> </li>
-          <li> <%= bill.status %> </li>
+        <% @saved_bills.each do |bill| %>
+          <li> Bill Name: <%= bill[:bill_number] %> </li>
+          <li> Bill Title: <%= bill[:title] %> </li>
+          <li> Bill Status: 
+            <% if bill[:status] == 1 %>
+              Introduced
+            <% end %>
+            <% if bill[:status] == 2 %>
+              Engrossed
+            <% end %>
+            <% if bill[:status] == 3 %>
+              Enrolled
+            <% end %>
+            <% if bill[:status] == 4 %>
+              Passed
+            <% end %>
+            <% if bill[:status] == 5 %>
+              Vetoed
+            <% end %>
+            <% if bill[:status] == 6 %>
+              Failed
+            <% end %>
+            </li>
           <% end %>
       </ul>
     </aside>

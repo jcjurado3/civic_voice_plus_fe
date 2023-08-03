@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%#= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -17,7 +17,7 @@
       <nav id="nav-bar">
         <ul>
           <li><a href="/welcome"><button>Home</button> </a></li>
-          <li><a href="#billsearch"><button>Search Bills</button></a></li>
+          <li><a href="/bills"><button>Search Bills</button></a></li>
           <li><a href="/dashboard"><button>My Dashboard</button></a></li>
           <% if current_user %>
           <li><%= button_to "Sign Out", logout_path, method: :delete %></li>
