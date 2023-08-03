@@ -25,7 +25,6 @@ class CategoryFacade
   def get_user_state(user_id)
     state_result = CvpService.new.get_user_state(user_id)
     if state_result != {:data=>[]}
-      # require 'pry'; binding.pry
       state = state_result[:data].first[:id].to_i
     end
   end
