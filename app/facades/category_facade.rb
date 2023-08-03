@@ -8,9 +8,9 @@ class CategoryFacade
     end
   end
   def get_all_categories
-    categories_data ||= service.get_all_categories
+    categories_data = service.get_all_categories
 
-    if categories_data == "{}"
+    if categories_data == {:data=>[]}
       {}
     else
       categories = categories_data[:data]
