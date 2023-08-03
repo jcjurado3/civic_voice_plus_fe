@@ -1,0 +1,238 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/bills?query=&state=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"9bef25957f8a0b45ff7b818293d79335"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8919843d-43e6-4d2e-a7ab-5e3d3b11e98e
+      X-Runtime:
+      - '0.497571'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.11, process_action.action_controller;dur=493.82
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"bill","attributes":{"state":"NC","bill_number":"H823","bill_id":1756429,"text_url":"https://legiscan.com/NC/text/H823/2023","last_action_date":"0000-00-00","last_action":"Ref
+        To Com On Rules and Operations of the Senate","title":"Choose Your School,
+        Choose Your Future","status":null,"description":null,"sponsors":null,"text":null}},{"id":"1","type":"bill","attributes":{"state":"AL","bill_number":"HR6","bill_id":1739919,"text_url":"https://legiscan.com/AL/text/HR6/2023/X1","last_action_date":"0001-01-01","last_action":"Prefiled","title":"Not
+        Available","status":null,"description":null,"sponsors":null,"text":null}},{"id":"2","type":"bill","attributes":{"state":"AL","bill_number":"HR13","bill_id":1740100,"text_url":"https://legiscan.com/AL/text/HR13/2023/X1","last_action_date":"0001-01-01","last_action":"Prefiled","title":"Not
+        Available","status":null,"description":null,"sponsors":null,"text":null}},{"id":"3","type":"bill","attributes":{"state":"AL","bill_number":"HR5","bill_id":1740116,"text_url":"https://legiscan.com/AL/text/HR5/2023/X1","last_action_date":"0001-01-01","last_action":"Prefiled","title":"Not
+        Available","status":null,"description":null,"sponsors":null,"text":null}},{"id":"4","type":"bill","attributes":{"state":"NJ","bill_number":"S893","bill_id":1562273,"text_url":"https://legiscan.com/NJ/text/S893/2022","last_action_date":null,"last_action":null,"title":"Governor
+        declarations, state/health emerg.-permit Legislature terminate certain","status":null,"description":null,"sponsors":null,"text":null}},{"id":"5","type":"bill","attributes":{"state":"NJ","bill_number":"S1289","bill_id":1577581,"text_url":"https://legiscan.com/NJ/text/S1289/2022","last_action_date":null,"last_action":null,"title":"Feminine
+        hygiene products-school districts provide, cert schools; State pay cost","status":null,"description":null,"sponsors":null,"text":null}},{"id":"6","type":"bill","attributes":{"state":"NJ","bill_number":"S1360","bill_id":1577922,"text_url":"https://legiscan.com/NJ/text/S1360/2022","last_action_date":null,"last_action":null,"title":"Pharmacy
+        benf managers-remove exception, self-insured health benf plans from law","status":null,"description":null,"sponsors":null,"text":null}},{"id":"7","type":"bill","attributes":{"state":"NJ","bill_number":"A2207","bill_id":1582888,"text_url":"https://legiscan.com/NJ/text/A2207/2022","last_action_date":null,"last_action":null,"title":"Military
+        svc. members, cert non-US-concerns civil svc exam \u0026 veterans preference","status":null,"description":null,"sponsors":null,"text":null}},{"id":"8","type":"bill","attributes":{"state":"NJ","bill_number":"A2674","bill_id":1584467,"text_url":"https://legiscan.com/NJ/text/A2674/2022","last_action_date":null,"last_action":null,"title":"Directs
+        DOT and NJT to study and report on transportation infrastructure needs in
+        coastal counties.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"9","type":"bill","attributes":{"state":"NJ","bill_number":"A7774","bill_id":1589590,"text_url":"https://legiscan.com/NJ/text/A7774/2022","last_action_date":null,"last_action":null,"title":"Permits
+        wineries to operate salesrooms in certain municipalities with restrictions
+        on the sale of alcoholic beverages.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"10","type":"bill","attributes":{"state":"NJ","bill_number":"SJR60","bill_id":1589782,"text_url":"https://legiscan.com/NJ/text/SJR60/2022","last_action_date":null,"last_action":null,"title":"Designates
+        month of March of each year as \"Irish-American Heritage Month\" in New Jersey.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"11","type":"bill","attributes":{"state":"NJ","bill_number":"A2882","bill_id":1589989,"text_url":"https://legiscan.com/NJ/text/A2882/2022","last_action_date":null,"last_action":null,"title":"Establishes
+        Helmets to Hardhats program in the DMVA; appropriates $400,000.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"12","type":"bill","attributes":{"state":"NJ","bill_number":"S1769","bill_id":1590089,"text_url":"https://legiscan.com/NJ/text/S1769/2022","last_action_date":null,"last_action":null,"title":"SNAP
+        participation-certain students exempt from 20 hour weekly work requirement","status":null,"description":null,"sponsors":null,"text":null}},{"id":"13","type":"bill","attributes":{"state":"NJ","bill_number":"A3085","bill_id":1590234,"text_url":"https://legiscan.com/NJ/text/A3085/2022","last_action_date":null,"last_action":null,"title":"Permits
+        counties to operate airports as county utilities; provides that bonds for
+        county and municipal airport purposes be issued in accordance with provisions
+        of \"Local Bond Law.\"","status":null,"description":null,"sponsors":null,"text":null}},{"id":"14","type":"bill","attributes":{"state":"NJ","bill_number":"S1901","bill_id":1597993,"text_url":"https://legiscan.com/NJ/text/S1901/2022","last_action_date":null,"last_action":null,"title":"Wine
+        making facilities, instructional-sell wine on premises at certain events","status":null,"description":null,"sponsors":null,"text":null}},{"id":"15","type":"bill","attributes":{"state":"NJ","bill_number":"S1989","bill_id":1598482,"text_url":"https://legiscan.com/NJ/text/S1989/2022","last_action_date":null,"last_action":null,"title":"Convenience
+        fees for electronic payments-authorize local government to impose","status":null,"description":null,"sponsors":null,"text":null}},{"id":"16","type":"bill","attributes":{"state":"NJ","bill_number":"S1934","bill_id":1598587,"text_url":"https://legiscan.com/NJ/text/S1934/2022","last_action_date":null,"last_action":null,"title":"Medicaid
+        per diem rate for certain assisted living residences-incrs over 3 years","status":null,"description":null,"sponsors":null,"text":null}},{"id":"17","type":"bill","attributes":{"state":"NJ","bill_number":"S2090","bill_id":1598984,"text_url":"https://legiscan.com/NJ/text/S2090/2022","last_action_date":null,"last_action":null,"title":"Allows
+        certain airports to carryover certain grant money into future years.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"18","type":"bill","attributes":{"state":"NJ","bill_number":"S2128","bill_id":1602132,"text_url":"https://legiscan.com/NJ/text/S2128/2022","last_action_date":null,"last_action":null,"title":"Horse-authorizes
+        creation of special license plate and commem. as State animal","status":null,"description":null,"sponsors":null,"text":null}},{"id":"19","type":"bill","attributes":{"state":"NJ","bill_number":"S2154","bill_id":1602215,"text_url":"https://legiscan.com/NJ/text/S2154/2022","last_action_date":null,"last_action":null,"title":"Interscholastic
+        athletics-public school student, not enrolled in sch participate","status":null,"description":null,"sponsors":null,"text":null}},{"id":"20","type":"bill","attributes":{"state":"NJ","bill_number":"A3812","bill_id":1610927,"text_url":"https://legiscan.com/NJ/text/A3812/2022","last_action_date":null,"last_action":null,"title":"Concerns
+        use of tents and other fixtures for outdoor dining on certain property.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"21","type":"bill","attributes":{"state":"NJ","bill_number":"S2489","bill_id":1619276,"text_url":"https://legiscan.com/NJ/text/S2489/2022","last_action_date":null,"last_action":null,"title":"Requires
+        DOLWD to advertise positions in Division of Unemployment and Temporary Disability
+        Insurance to public in competitive employment application process.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"22","type":"bill","attributes":{"state":"NJ","bill_number":"S2556","bill_id":1619443,"text_url":"https://legiscan.com/NJ/text/S2556/2022","last_action_date":null,"last_action":null,"title":"Provides
+        three-year sales and use tax exemption for sales of certain restaurant equipment.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"23","type":"bill","attributes":{"state":"NJ","bill_number":"S2605","bill_id":1619559,"text_url":"https://legiscan.com/NJ/text/S2605/2022","last_action_date":null,"last_action":null,"title":"Requires
+        school districts to provide instruction on prevention of Lyme Disease and
+        other tick-borne diseases and to develop policy concerning removal of ticks.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"24","type":"bill","attributes":{"state":"NJ","bill_number":"S2737","bill_id":1622656,"text_url":"https://legiscan.com/NJ/text/S2737/2022","last_action_date":null,"last_action":null,"title":"Authorizes
+        NJ Infrastructure Bank to expend certain sums to make loans for environmental
+        infrastructure projects for FY2023.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"25","type":"bill","attributes":{"state":"NJ","bill_number":"A4185","bill_id":1622934,"text_url":"https://legiscan.com/NJ/text/A4185/2022","last_action_date":null,"last_action":null,"title":"Expands
+        prescription monitoring program to include veterinarians.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"26","type":"bill","attributes":{"state":"NJ","bill_number":"S2806","bill_id":1623529,"text_url":"https://legiscan.com/NJ/text/S2806/2022","last_action_date":null,"last_action":null,"title":"Requires
+        health insurance carriers to provide coverage for hospitalizations resulting
+        from coronavirus disease 2019 without imposing cost-sharing requirements.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"27","type":"bill","attributes":{"state":"NJ","bill_number":"S2805","bill_id":1623623,"text_url":"https://legiscan.com/NJ/text/S2805/2022","last_action_date":null,"last_action":null,"title":"Prohibits
+        circumventing security measures for certain online ticket sales.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"28","type":"bill","attributes":{"state":"NJ","bill_number":"S2822","bill_id":1623855,"text_url":"https://legiscan.com/NJ/text/S2822/2022","last_action_date":null,"last_action":null,"title":"Requires
+        rear seat motor vehicle passenger 16 years of age or older to wear safety
+        belt; establishes certain reporting requirements.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"29","type":"bill","attributes":{"state":"NJ","bill_number":"S2911","bill_id":1625177,"text_url":"https://legiscan.com/NJ/text/S2911/2022","last_action_date":null,"last_action":null,"title":"Adds
+        16 coaches as additional representatives to Executive Committee of New Jersey
+        State Interscholastic Athletic Association.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"30","type":"bill","attributes":{"state":"NJ","bill_number":"S2913","bill_id":1625181,"text_url":"https://legiscan.com/NJ/text/S2913/2022","last_action_date":null,"last_action":null,"title":"Requires
+        New Jersey State Interscholastic Athletic Association to conduct Tournament
+        of Champions event in girls and boys lacrosse.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"31","type":"bill","attributes":{"state":"NJ","bill_number":"A4463","bill_id":1625992,"text_url":"https://legiscan.com/NJ/text/A4463/2022","last_action_date":null,"last_action":null,"title":"Provides
+        up to five years for land used for new or experimental crops to meet farmland
+        assessment income requirements.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"32","type":"bill","attributes":{"state":"NJ","bill_number":"A4636","bill_id":1629148,"text_url":"https://legiscan.com/NJ/text/A4636/2022","last_action_date":null,"last_action":null,"title":"Requires
+        children''s psychiatric facilities to have designated staff members visually
+        supervise patients 24 hours a day, seven days a week.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"33","type":"bill","attributes":{"state":"NJ","bill_number":"SCR130","bill_id":1633907,"text_url":"https://legiscan.com/NJ/text/SCR130/2022","last_action_date":null,"last_action":null,"title":"Urges
+        educational institutions in NJ to include veterans and active service members
+        in discussions about military, military values, and leadership.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"34","type":"bill","attributes":{"state":"NJ","bill_number":"A4956","bill_id":1635854,"text_url":"https://legiscan.com/NJ/text/A4956/2022","last_action_date":null,"last_action":null,"title":"Requires
+        State Planning Commission to adopt model ordinance for siting certain warehouses
+        and permits conforming updates to municipal master plans and zoning ordinances.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"35","type":"bill","attributes":{"state":"NJ","bill_number":"A5025","bill_id":1639013,"text_url":"https://legiscan.com/NJ/text/A5025/2022","last_action_date":null,"last_action":null,"title":"Establishes
+        presumption of pretrial detention for persons who commit carjacking, theft
+        of motor vehicle, or burglary.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"36","type":"bill","attributes":{"state":"AZ","bill_number":"SB1033","bill_id":1646446,"text_url":"https://legiscan.com/AZ/text/SB1033/2023","last_action_date":null,"last_action":null,"title":"TPT;
+        diapers; feminine hygiene; exemption.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"37","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1003","bill_id":1654846,"text_url":"https://legiscan.com/AZ/text/SCR1003/2023","last_action_date":null,"last_action":null,"title":"School
+        districts; expenditure limitation; repeal","status":null,"description":null,"sponsors":null,"text":null}},{"id":"38","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1004","bill_id":1655189,"text_url":"https://legiscan.com/AZ/text/SCR1004/2023","last_action_date":null,"last_action":null,"title":"Aggregate
+        expenditure limitation; school districts","status":null,"description":null,"sponsors":null,"text":null}},{"id":"39","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1005","bill_id":1655440,"text_url":"https://legiscan.com/AZ/text/SCR1005/2023","last_action_date":null,"last_action":null,"title":"School
+        districts; expenditure limit; authorization","status":null,"description":null,"sponsors":null,"text":null}},{"id":"40","type":"bill","attributes":{"state":"AZ","bill_number":"SB1042","bill_id":1655500,"text_url":"https://legiscan.com/AZ/text/SB1042/2023","last_action_date":null,"last_action":null,"title":"School
+        districts; aggregate expenditure limitation","status":null,"description":null,"sponsors":null,"text":null}},{"id":"41","type":"bill","attributes":{"state":"AZ","bill_number":"SB1043","bill_id":1655526,"text_url":"https://legiscan.com/AZ/text/SB1043/2023","last_action_date":null,"last_action":null,"title":"Expenditure
+        limitation; school districts; repeal","status":null,"description":null,"sponsors":null,"text":null}},{"id":"42","type":"bill","attributes":{"state":"AZ","bill_number":"SB1082","bill_id":1665826,"text_url":"https://legiscan.com/AZ/text/SB1082/2023","last_action_date":null,"last_action":null,"title":"Community
+        colleges; expenditure limitation.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"43","type":"bill","attributes":{"state":"AZ","bill_number":"SB1132","bill_id":1668739,"text_url":"https://legiscan.com/AZ/text/SB1132/2023","last_action_date":null,"last_action":null,"title":"Registrations;
+        counting procedures; observers; verification","status":null,"description":null,"sponsors":null,"text":null}},{"id":"44","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1008","bill_id":1673738,"text_url":"https://legiscan.com/AZ/text/SCR1008/2023","last_action_date":null,"last_action":null,"title":"Assyrian
+        New Year; recognizing.","status":null,"description":null,"sponsors":null,"text":null}},{"id":"45","type":"bill","attributes":{"state":"AZ","bill_number":"SB1192","bill_id":1676244,"text_url":"https://legiscan.com/AZ/text/SB1192/2023","last_action_date":null,"last_action":null,"title":"Appropriation;
+        fentanyl testing strips","status":null,"description":null,"sponsors":null,"text":null}},{"id":"46","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1012","bill_id":1678229,"text_url":"https://legiscan.com/AZ/text/SCR1012/2023","last_action_date":null,"last_action":null,"title":"Employment
+        First; disabilities","status":null,"description":null,"sponsors":null,"text":null}},{"id":"47","type":"bill","attributes":{"state":"AZ","bill_number":"SB1233","bill_id":1678357,"text_url":"https://legiscan.com/AZ/text/SB1233/2023","last_action_date":null,"last_action":null,"title":"Students;
+        unpaid school meal fees","status":null,"description":null,"sponsors":null,"text":null}},{"id":"48","type":"bill","attributes":{"state":"AZ","bill_number":"SB1279","bill_id":1680801,"text_url":"https://legiscan.com/AZ/text/SB1279/2023","last_action_date":null,"last_action":null,"title":"STO
+        scholarships; ESAs; tuition; fees","status":null,"description":null,"sponsors":null,"text":null}},{"id":"49","type":"bill","attributes":{"state":"AZ","bill_number":"SB1266","bill_id":1680860,"text_url":"https://legiscan.com/AZ/text/SB1266/2023","last_action_date":null,"last_action":null,"title":"Qualified
+        schools; fingerprinting requirements; penalties","status":null,"description":null,"sponsors":null,"text":null}}]}'
+  recorded_at: Wed, 02 Aug 2023 00:04:50 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/bills?query=guns&state=FL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"1a29ee3cb50dffbf8b58677061ad37a3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6d1647e9-c96b-4f42-91d6-e9f0ebd3c5b8
+      X-Runtime:
+      - '0.240870'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.14, process_action.action_controller;dur=235.77
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"bill","attributes":{"state":"FL","bill_number":"S0462","bill_id":1689711,"text_url":"https://legiscan.com/FL/text/S0462/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice","title":"Assault Weapons and Large-capacity Magazines","status":null,"description":null,"sponsors":null,"text":null}},{"id":"1","type":"bill","attributes":{"state":"FL","bill_number":"H0543","bill_id":1685150,"text_url":"https://legiscan.com/FL/text/H0543/2023","last_action_date":"2023-04-03","last_action":"Chapter
+        No. 2023-18; companion bill(s) passed, see HB 7025 (Ch. 2023-19)","title":"Public
+        Safety","status":null,"description":null,"sponsors":null,"text":null}},{"id":"2","type":"bill","attributes":{"state":"FL","bill_number":"H0221","bill_id":1661617,"text_url":"https://legiscan.com/FL/text/H0221/2023","last_action_date":"2023-05-01","last_action":"Laid
+        on Table; companion bill(s) passed, see CS/SB 214 (Ch. 2023-79)","title":"Sales
+        of Firearms and Ammunition","status":null,"description":null,"sponsors":null,"text":null}},{"id":"3","type":"bill","attributes":{"state":"FL","bill_number":"S0214","bill_id":1661830,"text_url":"https://legiscan.com/FL/text/S0214/2023","last_action_date":"2023-05-15","last_action":"Chapter
+        No. 2023-79","title":"Sales of Firearms and Ammunition","status":null,"description":null,"sponsors":null,"text":null}},{"id":"4","type":"bill","attributes":{"state":"FL","bill_number":"S0150","bill_id":1702208,"text_url":"https://legiscan.com/FL/text/S0150/2023","last_action_date":"2023-03-29","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/HB 543 (Ch. 2023-18)","title":"Public
+        Safety","status":null,"description":null,"sponsors":null,"text":null}},{"id":"5","type":"bill","attributes":{"state":"FL","bill_number":"H1513","bill_id":1727255,"text_url":"https://legiscan.com/FL/text/H1513/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice Subcommittee","title":"Weapons And Firearms","status":null,"description":null,"sponsors":null,"text":null}},{"id":"6","type":"bill","attributes":{"state":"FL","bill_number":"S1456","bill_id":1725283,"text_url":"https://legiscan.com/FL/text/S1456/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/HB 1465 (Ch. 2023-87)","title":"Firearm
+        Offenses","status":null,"description":null,"sponsors":null,"text":null}},{"id":"7","type":"bill","attributes":{"state":"FL","bill_number":"S0368","bill_id":1678434,"text_url":"https://legiscan.com/FL/text/S0368/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice","title":"Machine Guns","status":null,"description":null,"sponsors":null,"text":null}},{"id":"8","type":"bill","attributes":{"state":"FL","bill_number":"H0883","bill_id":1710591,"text_url":"https://legiscan.com/FL/text/H0883/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice Subcommittee","title":"Machine Guns","status":null,"description":null,"sponsors":null,"text":null}},{"id":"9","type":"bill","attributes":{"state":"FL","bill_number":"H1465","bill_id":1726670,"text_url":"https://legiscan.com/FL/text/H1465/2023","last_action_date":"2023-05-17","last_action":"Chapter
+        No. 2023-87","title":"Firearm and Destructive Device Offenses","status":null,"description":null,"sponsors":null,"text":null}},{"id":"10","type":"bill","attributes":{"state":"FL","bill_number":"S0384","bill_id":1679358,"text_url":"https://legiscan.com/FL/text/S0384/2023","last_action_date":"2023-06-06","last_action":"Chapter
+        No. 2023-190","title":"Violent Offenses Committed Against Criminal Defense
+        Attorneys","status":null,"description":null,"sponsors":null,"text":null}},{"id":"11","type":"bill","attributes":{"state":"FL","bill_number":"S1478","bill_id":1725620,"text_url":"https://legiscan.com/FL/text/S1478/2023","last_action_date":"2023-06-27","last_action":"Vetoed
+        by Governor","title":"Criminal Sentencing","status":null,"description":null,"sponsors":null,"text":null}},{"id":"12","type":"bill","attributes":{"state":"FL","bill_number":"H0571","bill_id":1689628,"text_url":"https://legiscan.com/FL/text/H0571/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice Subcommittee","title":"Storage of Firearms in Private
+        Conveyances and Vessels","status":null,"description":null,"sponsors":null,"text":null}},{"id":"13","type":"bill","attributes":{"state":"FL","bill_number":"H0495","bill_id":1677414,"text_url":"https://legiscan.com/FL/text/H0495/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice Subcommittee","title":"Commission on Public Safety in
+        Urban and Inner-City Communities","status":null,"description":null,"sponsors":null,"text":null}},{"id":"14","type":"bill","attributes":{"state":"FL","bill_number":"S1464","bill_id":1725444,"text_url":"https://legiscan.com/FL/text/S1464/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice","title":"Commission on Public Safety in Urban and Inner-City
+        Communities","status":null,"description":null,"sponsors":null,"text":null}},{"id":"15","type":"bill","attributes":{"state":"FL","bill_number":"H0579","bill_id":1689552,"text_url":"https://legiscan.com/FL/text/H0579/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice Subcommittee","title":"Assault Weapons and Large-capacity
+        Magazines","status":null,"description":null,"sponsors":null,"text":null}},{"id":"16","type":"bill","attributes":{"state":"FL","bill_number":"S0130","bill_id":1643236,"text_url":"https://legiscan.com/FL/text/S0130/2023","last_action_date":"2023-05-25","last_action":"Chapter
+        No. 2023-112","title":"Domestic Violence","status":null,"description":null,"sponsors":null,"text":null}},{"id":"17","type":"bill","attributes":{"state":"FL","bill_number":"H0097","bill_id":1641383,"text_url":"https://legiscan.com/FL/text/H0097/2023","last_action_date":"2023-04-18","last_action":"Laid
+        on Table; companion bill(s) passed, see CS/CS/SB 130 (Ch. 2023-112)","title":"Domestic
+        Violence","status":null,"description":null,"sponsors":null,"text":null}},{"id":"18","type":"bill","attributes":{"state":"FL","bill_number":"H1263","bill_id":1722690,"text_url":"https://legiscan.com/FL/text/H1263/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table","title":"Criminal Sentencing","status":null,"description":null,"sponsors":null,"text":null}},{"id":"19","type":"bill","attributes":{"state":"FL","bill_number":"H0071","bill_id":1639688,"text_url":"https://legiscan.com/FL/text/H0071/2023","last_action_date":"2023-04-13","last_action":"Laid
+        on Table; companion bill(s) passed, see CS/SB 384 (Ch. 2023-190)","title":"Violent
+        Offenses Committed Against Criminal Defense Attorneys","status":null,"description":null,"sponsors":null,"text":null}},{"id":"20","type":"bill","attributes":{"state":"FL","bill_number":"S1602","bill_id":1726807,"text_url":"https://legiscan.com/FL/text/S1602/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice, companion bill(s) passed, see CS/HB 543 (Ch. 2023-18)","title":"Storage
+        of Firearms in Private Conveyances and Vessels","status":null,"description":null,"sponsors":null,"text":null}},{"id":"21","type":"bill","attributes":{"state":"FL","bill_number":"H1233","bill_id":1722241,"text_url":"https://legiscan.com/FL/text/H1233/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Judiciary Committee","title":"Drug-enhancement Zones","status":null,"description":null,"sponsors":null,"text":null}},{"id":"22","type":"bill","attributes":{"state":"FL","bill_number":"H0659","bill_id":1700412,"text_url":"https://legiscan.com/FL/text/H0659/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Judiciary Committee","title":"Sexually Transmissible Diseases","status":null,"description":null,"sponsors":null,"text":null}},{"id":"23","type":"bill","attributes":{"state":"FL","bill_number":"H1047","bill_id":1718424,"text_url":"https://legiscan.com/FL/text/H1047/2023","last_action_date":"2023-05-23","last_action":"Chapter
+        No. 2023-110","title":"Offenses Against Certain Animals","status":null,"description":null,"sponsors":null,"text":null}},{"id":"24","type":"bill","attributes":{"state":"FL","bill_number":"H0603","bill_id":1693511,"text_url":"https://legiscan.com/FL/text/H0603/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table; companion bill(s) passed, see CS/SB 232 (Ch. 2023-133)","title":"Exploitation
+        of Vulnerable Persons","status":null,"description":null,"sponsors":null,"text":null}},{"id":"25","type":"bill","attributes":{"state":"FL","bill_number":"S0486","bill_id":1691657,"text_url":"https://legiscan.com/FL/text/S0486/2023","last_action_date":"2023-04-28","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/HB 431 (Ch. 2023-123)","title":"Solicitation
+        of Minors to Commit Lewd or Lascivious Acts","status":null,"description":null,"sponsors":null,"text":null}},{"id":"26","type":"bill","attributes":{"state":"FL","bill_number":"S0568","bill_id":1698524,"text_url":"https://legiscan.com/FL/text/S0568/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table, companion bill(s) passed, see HB 825 (Ch. 2023-128)","title":"Assault
+        or Battery on Hospital Personnel","status":null,"description":null,"sponsors":null,"text":null}},{"id":"27","type":"bill","attributes":{"state":"FL","bill_number":"H0497","bill_id":1678125,"text_url":"https://legiscan.com/FL/text/H0497/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice Subcommittee","title":"Pub. Meetings/Commission on Public
+        Safety in Urban and Inner-City Communities","status":null,"description":null,"sponsors":null,"text":null}},{"id":"28","type":"bill","attributes":{"state":"FL","bill_number":"S0656","bill_id":1701951,"text_url":"https://legiscan.com/FL/text/S0656/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Judiciary","title":"Unlawful Possession of Firearms, Ammunition, or Electric
+        Weapons or Devices","status":null,"description":null,"sponsors":null,"text":null}},{"id":"29","type":"bill","attributes":{"state":"FL","bill_number":"H1273","bill_id":1722786,"text_url":"https://legiscan.com/FL/text/H1273/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice Subcommittee","title":"Juvenile Justice","status":null,"description":null,"sponsors":null,"text":null}},{"id":"30","type":"bill","attributes":{"state":"FL","bill_number":"S1462","bill_id":1725578,"text_url":"https://legiscan.com/FL/text/S1462/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice","title":"Public Meetings/Commission on Public Safety
+        in Urban and Inner-City Communities","status":null,"description":null,"sponsors":null,"text":null}},{"id":"31","type":"bill","attributes":{"state":"FL","bill_number":"S1520","bill_id":1726496,"text_url":"https://legiscan.com/FL/text/S1520/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Judiciary","title":"Controlled Substances","status":null,"description":null,"sponsors":null,"text":null}},{"id":"32","type":"bill","attributes":{"state":"FL","bill_number":"S1522","bill_id":1726248,"text_url":"https://legiscan.com/FL/text/S1522/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Health Policy","title":"HIV Prevention Justice Act","status":null,"description":null,"sponsors":null,"text":null}},{"id":"33","type":"bill","attributes":{"state":"FL","bill_number":"H0245","bill_id":1665185,"text_url":"https://legiscan.com/FL/text/H0245/2023","last_action_date":"2023-02-02","last_action":"Withdrawn
+        prior to introduction","title":"Offenses Committed Against Religious Service
+        Participants","status":null,"description":null,"sponsors":null,"text":null}},{"id":"34","type":"bill","attributes":{"state":"FL","bill_number":"H0431","bill_id":1677228,"text_url":"https://legiscan.com/FL/text/H0431/2023","last_action_date":"2023-05-25","last_action":"Chapter
+        No. 2023-123","title":"Solicitation of Minors to Commit Lewd or Lascivious
+        Act","status":null,"description":null,"sponsors":null,"text":null}},{"id":"35","type":"bill","attributes":{"state":"FL","bill_number":"S0206","bill_id":1660878,"text_url":"https://legiscan.com/FL/text/S0206/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice","title":"Criminal Rehabilitation","status":null,"description":null,"sponsors":null,"text":null}},{"id":"36","type":"bill","attributes":{"state":"FL","bill_number":"H0115","bill_id":1643051,"text_url":"https://legiscan.com/FL/text/H0115/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Criminal Justice Subcommittee","title":"Criminal Rehabilitation","status":null,"description":null,"sponsors":null,"text":null}},{"id":"37","type":"bill","attributes":{"state":"FL","bill_number":"S1576","bill_id":1726315,"text_url":"https://legiscan.com/FL/text/S1576/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Agriculture","title":"Legalization of Recreational Marijuana","status":null,"description":null,"sponsors":null,"text":null}},{"id":"38","type":"bill","attributes":{"state":"FL","bill_number":"S0232","bill_id":1689806,"text_url":"https://legiscan.com/FL/text/S0232/2023","last_action_date":"2023-05-26","last_action":"Chapter
+        No. 2023-133","title":"Exploitation of Vulnerable Persons","status":null,"description":null,"sponsors":null,"text":null}},{"id":"39","type":"bill","attributes":{"state":"FL","bill_number":"S2500","bill_id":1746175,"text_url":"https://legiscan.com/FL/text/S2500/2023","last_action_date":"2023-06-16","last_action":"Chapter
+        No. 2023-239, companion bill(s) passed, see CS/CS/HB 1285 (Ch. 2023-167),
+        HB 5101 (Ch. 2023-245), HB 5303 (Ch. 2023-246), SB 2502 (Ch. 2023-240), SB
+        2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243), SB 7018
+        (Ch. 2023-244), CS/SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"Appropriations","status":null,"description":null,"sponsors":null,"text":null}},{"id":"40","type":"bill","attributes":{"state":"FL","bill_number":"H5001","bill_id":1749049,"text_url":"https://legiscan.com/FL/text/H5001/2023","last_action_date":"2023-04-04","last_action":"Laid
+        on Table; companion bill(s) passed, see SB 2500 (Ch. 2023-239), CS/CS/HB 1285
+        (Ch. 2023-167), HB 5101 (Ch. 2023-245), HB 5303 (Ch. 2023-246), SB 2502 (Ch.
+        2023-240), SB 2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243),
+        SB 7018 (Ch. 2023-244), SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"General
+        Appropriations Act","status":null,"description":null,"sponsors":null,"text":null}}]}'
+  recorded_at: Wed, 02 Aug 2023 00:04:50 GMT
+recorded_with: VCR 6.2.0

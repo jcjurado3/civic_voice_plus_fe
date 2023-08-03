@@ -17,13 +17,15 @@ class CategoryBillFacade
       categories = categories.join(' or ')
       categories
       state_results = CvpService.new.get_user_state(@user_id)
-      state = state_results[:data].first[:attributes][:state_abbr]
-      digest_bills_data = service.get_digest_bills(@user_id, categories, state)
-
-      digest_bills = digest_bills_data[:data]
+      if state_results != "{}"
+        state = state_results[:data].first[:attributes][:state_abbr]
+        digest_bills_data = service.get_digest_bills(@user_id, categories, state)
   
-      digest_bills.map do |bill|
-        UserBill.new(bill)
+        digest_bills = digest_bills_data[:data]
+    
+        digest_bills.map do |bill|
+          UserBill.new(bill)
+        end
       end
     end
     

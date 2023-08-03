@@ -1,4 +1,9 @@
 class CvpService
+  def dev_conn
+    Faraday.new(url: "http://localhost:3000") do |f|
+    end
+  end
+
   def get_digest_bills(user_id, categories, state)
     get_url("api/v1/bills?user_id=#{user_id}&query=#{categories}&state=#{state}")
   end
@@ -14,6 +19,14 @@ class CvpService
   def save_state(user_id, state)
     state_id = state.to_i
     post_url("/api/v1/user_states?user_id=#{user_id}&state_id=#{state_id}")
+  end
+
+  def save_bill(user_id, bill_id)
+    post_url("/api/v1/user_bills?user_id=#{user_id}&bill_id=#{bill_id}")
+  end
+
+  def unsave_bill(user_id, bill_id)
+    delete_url("/api/v1/user_bills?user_id=#{user_id}&bill_id=#{bill_id}")
   end
 
   def remove_category(user_id, category_id)
@@ -32,13 +45,34 @@ class CvpService
     get_url("/api/v1/user_states?user_id=#{user_id}")
   end
 
-  def conn
-    Faraday.new(url: "http://localhost:3000") do |f|
+  def search_url(state, search)
+    get_url("/api/v1/bills?state=#{state}&query=#{search}")
+  end
+
+  def bill_url(bill_id)
+    get_url("/api/v1/bills/#{bill_id}")
+  end
+  
+  def member_url(bill_id)
+    get_url("/api/v1/members/#{bill_id}")
+  end
+
+  def save_bills(user_id, bill_id)
+    params = { user_id: user_id, bill_id: bill_id }
+    post_url("api/v1/user_bills", params)
+  end
+
+  def post_url(url, params)
+    response = dev_conn.post do |req|
+      req.url url
+      req.headers['Content-Type'] = 'application/json'
+      req.body = params.to_json
     end
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   def get_url(url)
-    response = conn.get(url)
+    response = dev_conn.get(url)
     if response.status == 404
       "{}"
     else
@@ -47,19 +81,16 @@ class CvpService
   end
 
   def post_url(url)
-    # require 'pry'; binding.pry
-    response = conn.post(url)
-    # require 'pry'; binding.pry
-    # JSON.parse(response.body, symbolize_names: true)
+    response = dev_conn.post(url)
   end
 
   def delete_url(url)
-    # require 'pry'; binding.pry
-    response = conn.delete do |req|
+    response = dev_conn.delete do |req|
       req.url url
       req.headers['Content-Type'] = 'application/json'
     end
-  
-    # JSON.parse(response.body, symbolize_names: true)
+    response = dev_conn.get(url)
+    JSON.parse(response.body, symbolize_names: true)
+
   end
 end
