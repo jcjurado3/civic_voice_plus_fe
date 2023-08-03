@@ -9,7 +9,7 @@ require_relative '../config/environment'
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require 'json'
-# require 'webmock/rspec'
+require 'webmock/rspec'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -75,7 +75,7 @@ VCR.configure do |config|
   config.hook_into :webmock
   config.configure_rspec_metadata!
   # config.filter_sensitive_data('api_key') { ENV['api_key'] }
-  # config.default_cassette_options = { :allow_playback_repeats => true }
+  config.default_cassette_options = { :allow_playback_repeats => true }
   # config.default_cassette_options = { re_record_interval: 7.days}
 end
 

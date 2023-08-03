@@ -53,6 +53,9 @@ gem "bootsnap", require: false
 
 gem "figaro"
 gem "faraday"
+gem 'kaminari'
+gem 'api-pagination'
+gem 'active_model_serializers'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -82,3 +85,4 @@ group :test do
   gem "orderly"
 end
 
+gem 'omniauth-google-oauth2'

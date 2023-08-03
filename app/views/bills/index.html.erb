@@ -1,0 +1,29 @@
+<br />
+<%= form_with url: bills_path, method: :get, local: true do |f| %>
+  <%= f.label :search, "Search by topic" %>
+  <%= f.text_field :search %>
+  <%= f.label :state, "Select region" %>
+  <%= f.select :state, options_for_select(us_states, '') %>
+
+  <%= f.submit 'Search' %>
+<% end %>
+<br /><br />
+<% if !params[:search].nil? %>
+  <center><b style="border: solid black; padding:50px; float:left">
+    <b style="font-size:30px;">Search Results</b>
+    <% @results.each do |result| %>
+      <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
+      <p>Description: <%= result[:attributes][:title] %></p>
+      <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
+        <%= f.hidden_field :user_id, value: @user.id %>
+        <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
+        <%= f.submit "save #{result[:attributes][:bill_number]} to my dashboard" %>
+      <% end %>
+      <%= form_with url: user_bill_path("#{result[:attributes][:bill_number]}"), method: :delete, local: true do |f| %>
+        <%= f.hidden_field :user_id, value: @user.id %>
+        <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
+        <%= f.submit "unsave #{result[:attributes][:bill_number]} to my dashboard" %>
+      <% end %>
+    <% end %>
+  </b>
+<% end %>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Index Page</title>
+  <link rel="stylesheet" href="path/to/your/css/style.css">
+</head>
+
+<body>
+  <h1> Welcome <%= @user.name %> </h1> 
+
+  <main>
+    <div id="digest-section">
+      <% if @selected_categories.to_a.any? %>
+        <%= link_to "Edit My Categories", user_path(@user) %>
+      <% end %>
+      <div id="bill-digest">
+        <h3> <strong> Digest</strong></h3>
+        <% if @digest_bills.blank? %>
+          <%= button_to "select bill topics", user_path(@user), method: :get %>
+        <% else %>
+          <% @digest_bills.each do |bill| %>
+          <ul>
+            <li> <%= link_to bill.name, bill_path(bill.bill_id) %> <%= bill.status %> <%= bill.description %> </li>
+          </ul>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <aside id="saved-bills">
+    <h3> <strong> My Saved Bills</strong></h3>
+      <ul>
+        <% @saved_bills.each do |bill| %>
+          <li> Bill Name: <%= bill[:bill_number] %> </li>
+          <li> Bill Title: <%= bill[:title] %> </li>
+          <li> Bill Status: 
+            <% if bill[:status] == 1 %>
+              Introduced
+            <% end %>
+            <% if bill[:status] == 2 %>
+              Engrossed
+            <% end %>
+            <% if bill[:status] == 3 %>
+              Enrolled
+            <% end %>
+            <% if bill[:status] == 4 %>
+              Passed
+            <% end %>
+            <% if bill[:status] == 5 %>
+              Vetoed
+            <% end %>
+            <% if bill[:status] == 6 %>
+              Failed
+            <% end %>
+            </li>
+          <% end %>
+      </ul>
+    </aside>
+  </main>
+</body>
+
+</html>

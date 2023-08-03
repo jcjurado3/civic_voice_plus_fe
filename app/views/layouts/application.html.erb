@@ -5,15 +5,37 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%#= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <header>
+      <!-- Your header content goes here -->
+      <nav id="nav-bar">
+        <ul>
+          <li><a href="/"><button>Home</button> </a></li>
+          <% if current_user %>
+          <li><a href="/bills"><button>Search Bills</button></a></li>
+          <li><a href="/dashboard"><button>My Dashboard</button></a></li>
+          <li><%= button_to "Sign Out", logout_path, method: :delete %></li>
+          <% else %>
+          <li><a href="/auth/google_oauth2"><button>Log In</button></a></li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+    <% flash.each do |type, msg| %>
+      <%= content_tag :div, msg, class: type %>
+    <% end %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
+    <footer>
+    <!-- Your footer content goes here -->
+    <p>&copy; 2023 CivicVoice+</p>
+  </footer>
   </body>
 </html>
