@@ -3,7 +3,7 @@ class Category
               :id
 
   def initialize(data)
-    @name = data[:name]
+    @name = data[:attributes][:name]
     @id   = data[:id]
   end
 end

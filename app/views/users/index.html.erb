@@ -21,9 +21,9 @@
         <% if @digest_bills.blank? %>
           <%= button_to "select bill topics", user_path(@user), method: :get %>
         <% else %>
-          <% @digest_bills.each do |bill | %>
+          <% @digest_bills.each do |bill| %>
           <ul>
-            <li> <%= bill.name %> <%= bill.status %> <%= bill.description %> </li>
+            <li> <%= link_to bill.name, bill_path(bill.bill_id) %> <%= bill.status %> <%= bill.description %> </li>
           </ul>
           <% end %>
         <% end %>
