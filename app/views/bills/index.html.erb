@@ -8,18 +8,18 @@
 
   <%= f.submit 'Search' %>
 <% end %>
-<br /><br /> 
-
+<br /><br />
 <% if !params[:search].nil? %>
   <center><b style="border: solid black; padding:50px; float:left">
     <b style="font-size:30px;">Search Results</b>
-    <% @results.drop(1).each do |result| %>
-      <p>Bill Name: <%= link_to "#{result[1][:bill_number]}", bill_path(result[1][:bill_id]) %></p>
-      <p>Description: <%= result[1][:title] %></p>
+    <% @results.each do |result| %>
+    <%# require 'pry'; binding.pry %>
+      <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
+      <p>Description: <%= result[:attributes][:title] %></p>
       <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
         <%= f.hidden_field :user_id, value: @user.id %>
-        <%= f.hidden_field :bill_id, value: "#{result[1][:bill_id]}" %>
-        <%= f.submit "save #{result[1][:bill_number]} to my dashboard" %>
+        <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
+        <%= f.submit "save #{result[:attributes][:bill_number]} to my dashboard" %>
       <% end %>
     <% end %>
   </b>
