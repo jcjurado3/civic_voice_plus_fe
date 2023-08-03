@@ -12,7 +12,6 @@
   <center><b style="border: solid black; padding:50px; float:left">
     <b style="font-size:30px;">Search Results</b>
     <% @results.each do |result| %>
-    <%# require 'pry'; binding.pry %>
       <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
       <p>Description: <%= result[:attributes][:title] %></p>
       <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
