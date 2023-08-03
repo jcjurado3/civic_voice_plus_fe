@@ -1,0 +1,33 @@
+<center><%= image_tag "https://njpsa.org/wp-content/uploads/2019/09/law-books-gavel.jpg" %></center>
+<br />
+<b>
+<p>Bill Name: <%= @result[:title] %></p>
+<%= form_with url: user_bills_path, method: :post, local: true do |f| %>
+  <%= f.hidden_field :user_id, value: @user.id %>
+  <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
+  <%= f.submit "save #{@result[:bill_number]} to my dashboard" %>
+<% end %>
+<%= button_to 'Remove', user_bills_path, method: :destroy %>
+<br />
+Status: <%= @result[:text][0][:type] %>
+<br /><br>
+Summary: <%= @result[:description] %>  
+<% bill_num = @result[:bill_id] %>
+<% state = @result[:state] %>
+<% doc_id = @result[:text][0][:doc_id] %>
+<h3>Want to know more? <%= button_to 'Full Text', "https://legiscan.com/#{state}/text/#{bill_num}/id/#{doc_id}" %></h3>
+</b>
+<h2 style="float:left; background-color:darkblue; color:white; border: solid brown 10px;">Sponsors of the bill</h2>
+<br />
+<ul style="float:left; padding:20px;">
+  <% @members[0..3].each do |member| %>
+    <li>Sen/Rep <%= member[:attributes][:full_name]%>
+    <br />
+    <%#= image_tag member[:image_url] %>
+    Party: <%= member[:attributes][:party] %>
+    <br />
+    Email: <%= member[:attributes][:email] %></li>
+  <% end %>
+</ul>
+<br /><br>
+<%= image_tag "https://www.thenation.com/wp-content/uploads/2020/11/HS_BERNIE-SANDERS-e1605214405460.png" %>

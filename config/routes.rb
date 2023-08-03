@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     get '/page/:page', action: :index, on: :collection
   end
 
-  resources :user_bills, only: [:index]
+  resources :user_bills, only: [:create, :destroy]
 end
