@@ -6,7 +6,6 @@ class CategoryBillFacade
 
   def get_user_category_bills
     user_category_data = service.get_user_category(@user_id)
-    # require 'pry'; binding.pry
     if user_category_data == {:data=>[]}
       {}
     else
