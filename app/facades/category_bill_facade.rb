@@ -16,7 +16,7 @@ class CategoryBillFacade
       categories = categories.join(' or ')
       categories
       state_results = CvpService.new.get_user_state(@user_id)
-      if state_results != "{}"
+      if state_results != {:data=>[]}
         state = state_results[:data].first[:attributes][:state_abbr]
         digest_bills_data = service.get_digest_bills(@user_id, categories, state)
   
