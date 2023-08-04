@@ -63,7 +63,7 @@ CivicVoicePlus ("CV+") is a civic data tool which aims to educate and inform use
 
 The front end application handles user interaction through the browser, and is built on Rails with HTML and CSS styling. It is responsible for user authentication and authorization, and consumes RESTful endpoints exposed through the back end application to deliver data about search results, saved bills, and bill details to the views. The front end is also responsible for passing specific data through via JSON requests to perform CRUD actions in the back end database (ex. saving a bill for a specific user).
 
-INSERT LINK TO Production Website
+Our Production Site is available [here](https://civic-voice-plus-fe.onrender.com/)
 
 Github repositories:
 * Front End: [![Github][Github]][project-fe-gh-url]
@@ -138,9 +138,9 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 <details>
 <summary> `route: "/"`</summary>
 <br>
-
-![main_page_logged_in](<app/assets/images/main page logged in.png>)
-![main page for logged in user](<app/assets/images/main page _ user.png>)
+ <img src="app/assets/images/main_page_visitor.png" alt="visitor login">
+ <img src="app/assets/images/main_page_logged_in.png" alt="user login 1">
+ <img src="app/assets/images/main_page_user.png" alt="user login 2">
 
 </details>
 <br>
@@ -148,7 +148,7 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 <summary>`route: "/dashboard" `</summary>
 <br>
 
-   (insert photo of dashboard page)
+ <img src="app/assets/images/dashboard.png" alt="user dashboard">
 
 </details>
 <br>
@@ -156,7 +156,8 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 <summary>`route: "/users/:id`</summary>
 <br>
 
-(insert photo of users show (edit profile) page)
+ <img src="app/assets/images/user edit categories.png" alt="user show edit categories">
+
 
 </details>
 <br>
@@ -164,7 +165,8 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 <summary>`route: "/bills"`</summary>
 <br>
 
-(insert photo of bills index search page)
+ <img src="app/assets/images/bills search.png" alt="bill index search">
+
 
 </details>
 <br>
@@ -173,8 +175,8 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 <summary>`route: "/bills/:id`</summary>
 <br>
 
-![bill show page](<app/assets/images/bill show page1.png>)
-![bill show page sponsors](<app/assets/images/bill show page 2.png>)
+ <img src="app/assets/images/bill show page1.png" alt="bill show page1">
+ <img src="app/assets/images/bill show page 2.png" alt="bill show page2">
 
 
 </details>
@@ -189,6 +191,10 @@ As part of the Consultancy project requirements, the CivicVoicePlus team challen
 ### Caching
 * Challenge: Two of the API endpoints that expose data for the front end of our application rely on both database queries and external API calls, which significantly slowed down the processing time and resulted in a less-than-ideal experience for our users. Additionally, we were hitting rate limits on our API endpoints.
 * Solution: We decided cache our bill endpoints and save bills to our database since this is frequent endpoints and there are so many bills to render on both a users dashboard as well as bills show pages. We used the Rails.cache syntax and some helpful documentation to cache these requests on the back end. We decided not to implement caching for other API calls that would change frequently, such as the request to get all saved bills for a specific user.
+
+### Mobile Friendly Design
+* Challenge: In designing and styling the front end, we knew we wanted our app to be able to account for various browser sizes that allow a user to take their bill search and tracking on the go, wherever they may be!
+* Solution: Utilizing Tailwind, we added flex containers to allow for various size browsers and made sure to test that our app's functionality was still successful!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
