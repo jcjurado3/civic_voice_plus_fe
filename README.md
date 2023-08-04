@@ -105,12 +105,12 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 ### Front End Repository
 1. Clone this repo `git clone git@github.com:jcjurado3/civic_voice_plus_fe.git`
 1. Register for a google oauth key [here](https://developers.google.com/identity/protocols/oauth2)
-1. Navigate to the local repository: `cd civic_voice_plus_fe``
-1. Run: bundle install
-1. Run: rails db:{create,migrate}
-1. Run: bundle exec figaro install
-1. Add GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, MAPQUEST_KEY, and NEW_RELIC_LICENSE_KEY to config/application.yml file
-1. Run: rails s to start rails server
+1. Navigate to the local repository: `cd civic_voice_plus_fe`
+1. Run: `bundle install`
+1. Run: `rails db:{create,migrate}`
+1. Run: `bundle exec figaro install`
+1. Add `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` to config/application.yml file
+1. Run: `rails s `to start rails server
 1. Visit: http://localhost:5000/
 
 
