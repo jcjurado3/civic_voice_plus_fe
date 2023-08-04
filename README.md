@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jcjurado3/civic_voice_plus_fe">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="app/assets/images/cvp_logo.png" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">CivicVoice+</h3>
@@ -139,7 +139,8 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 <summary> `route: "/"`</summary>
 <br>
 
-(insert photo of welcome page)
+![main_page_logged_in](<app/assets/images/main page logged in.png>)
+![main page for logged in user](<app/assets/images/main page _ user.png>)
 
 </details>
 <br>
@@ -172,7 +173,9 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 <summary>`route: "/bills/:id`</summary>
 <br>
 
-(insert photo of bills show page)
+![bill show page](<app/assets/images/bill show page1.png>)
+![bill show page sponsors](<app/assets/images/bill show page 2.png>)
+
 
 </details>
 <br>
