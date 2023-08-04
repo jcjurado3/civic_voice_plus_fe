@@ -1,5 +1,85 @@
-<h1>CivicVoicePlus</h1></br></br>
+<style>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* You can choose a different trendy font */
+}
 
-<div id="Login">
-  <%= link_to "Login", "/auth/google_oauth2" %>
-</div> <br>
+.above-fold,
+.empower-change {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.image-container,
+.images-container {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.images-container img:first-child {
+  margin-bottom: 5px; /* Stagger the images */
+}
+
+.content-container {
+  flex: 2;
+  padding: 20px;
+  font-size: 18px; /* Larger font size for content */
+}
+
+h1, h2 {
+  font-size: 36px; /* Larger font size for headers */
+  color: #333;
+}
+
+.login-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px; /* Larger font size for button */
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.section-separator {
+  border-bottom: 1px solid #ccc;
+  margin: 40px 0;
+}
+
+</style>
+
+<div class="container">
+  <section class="above-fold">
+    <div class="image-container">
+      <%= image_tag 'home_page.png', alt: 'Description of the image' %>
+    </div>
+    <div class="content-container">
+      <h1>Discover Bills That Matter</h1>
+      <p>At CivicVoice+, we understand the vital role that well-informed citizens play in shaping our government and society. Take charge of your civic engagement journey like never before.</p>
+      <%= link_to "Login", "/auth/google_oauth2", class: "py-1 px-10 bg-transparent text-black font-semibold border border-black  hover:bg-black hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 mb-4 " %>
+    </div>
+  </section>
+<div class="section-separator"></div>
+  <section class="empower-change">
+    <div class="images-container">
+      <%= image_tag 'person.png', alt: 'Description of the first image' %>
+      <%= image_tag 'vote_matters.png', alt: 'Description of the second image' %>
+    </div>
+    <div class="content-container">
+      <h2>Empower Change</h2>
+      <p>Select bill categories that matter most to you and create a personalized dashboard feed. Easily track the progress of bills that pique your interest, and stay up-to-date with legislative activities at the local, state, and federal levels. Our user-friendly interface ensures you never miss a beat! Uncover the legislation that aligns with your interests and concerns in a snap.</p>
+    </div>
+  </section>
+
+</div>

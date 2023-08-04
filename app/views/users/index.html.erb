@@ -7,36 +7,44 @@
   <title>User Index Page</title>
   <link rel="stylesheet" href="path/to/your/css/style.css">
 </head>
+<body class="bg-white text-black">
+  <div class="container mx-auto px-4">
+    <h1 class="text-2xl font-bold mb-4"> Welcome <%= @user.name %> </h1>
 
-<body>
-  <h1> Welcome <%= @user.name %> </h1> 
-
-  <main>
-    <div id="digest-section">
-      <% if @selected_categories.to_a.any? %>
-        <%= link_to "Edit My Categories", user_path(@user) %>
-      <% end %>
-      <div id="bill-digest">
-        <h3> <strong> Digest</strong></h3>
-        <% if @digest_bills.blank? %>
-          <%= button_to "select bill topics", user_path(@user), method: :get %>
-        <% else %>
-          <% @digest_bills.each do |bill| %>
-          <ul>
-            <li> <%= link_to bill.name, bill_path(bill.bill_id) %> <%= bill.status %> <%= bill.description %> </li>
-          </ul>
-          <% end %>
+    <main class="flex">
+      <div id="digest-section" class="w-2/3 pr-4">
+        <% if @selected_categories.to_a.any? %>
+          <%= link_to "Edit My Categories", user_path(@user),
+          class: "py-1 px-10 bg-transparent text-black font-semibold border border-black  hover:bg-black hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 mb-4 float-right" %>
         <% end %>
+        <div id="bill-digest">
+          <h3 class="text-2xl font-bold mb-2"> <strong> Digest</strong></h3>
+          <% if @digest_bills.blank? %>
+            <%= button_to "select bill topics", user_path(@user), method: :get, class: "py-1 px-10 bg-transparent text-black font-semibold border border-black  hover:bg-black hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 mb-4 float-center" %>
+          <% else %>
+            <% @digest_bills.each do |bill| %>
+              <ul class="mb-2">
+                <li> <strong>Bill Title: <%= link_to bill.name, bill_path(bill.bill_id) %> </strong>
+                <br>
+                <strong> Status:</strong> <%= bill.status %>
+                <br>
+                <strong> Quick Glance:</strong> <%= bill.description %> </li>
+              </ul>
+              <% unless bill.equal?(@digest_bills.last) %>
+                <hr class="my-2"> <!-- This adds a horizontal line between each bill -->
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <aside id="saved-bills">
-    <h3> <strong> My Saved Bills</strong></h3>
-      <ul>
-        <% @saved_bills.each do |bill| %>
-          <li> Bill Name: <%= bill[:bill_number] %> </li>
-          <li> Bill Title: <%= bill[:title] %> </li>
-          <li> Bill Status: 
-            <% if bill[:status] == 1 %>
+      <aside id="saved-bills" class="w-1/3 pl-4">
+        <h3 class="text-2xl font-bold mb-2"> <strong> My Saved Bills</strong></h3>
+        <ul>
+          <% @saved_bills.each do |bill| %>
+            <li class="mb-1"><%= link_to "Bill Name: #{bill[:bill_number]}", bill_path(bill[:bill_id]) %></li>
+            <li class="mb-1"> Bill Title: <%= bill[:title] %> </li>
+            <li class="mb-1"> Bill Status:
+              <% if bill[:status] == 1 %>
               Introduced
             <% end %>
             <% if bill[:status] == 2 %>
@@ -56,9 +64,10 @@
             <% end %>
             </li>
           <% end %>
-      </ul>
-    </aside>
-  </main>
+        </ul>
+      </aside>
+    </main>
+  </div>
 </body>
 
 </html>

@@ -19,7 +19,7 @@ class CategoryBillFacade
       if state_results != {:data=>[]}
         state = state_results[:data].first[:attributes][:state_abbr]
         digest_bills_data = service.get_digest_bills(@user_id, categories, state)
-  
+  # require 'pry'; binding.pry
         digest_bills = digest_bills_data[:data]
     
         digest_bills.map do |bill|

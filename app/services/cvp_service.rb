@@ -1,14 +1,14 @@
 class CvpService
-  def dev_conn
+  def conn
     Faraday.new(url: "http://localhost:3000") do |f|
     end
   end
-  
-  def conn
+
+  def d_conn
     Faraday.new(url: "https://civic-voice-plus-api.onrender.com") do |f|
     end
   end
-  
+
   def get_digest_bills(user_id, categories, state)
     get_url("/api/v1/bills?user_id=#{user_id}&query=#{categories}&state=#{state}")
   end
@@ -57,7 +57,7 @@ class CvpService
   def bill_url(bill_id)
     get_url("/api/v1/bills/#{bill_id}")
   end
-  
+
   def member_url(bill_id)
     get_url("/api/v1/members/#{bill_id}")
   end
@@ -67,15 +67,19 @@ class CvpService
   end
 
   def post_url(url)
+    # require 'pry'; binding.pry
+
     response = conn.post(url)
-    JSON.parse(response.body, symbolize_names: true)
+    # JSON.parse(response.body, symbolize_names: true)
   end
 
   def get_url(url)
+    # require 'pry'; binding.pry
     response = conn.get(url)
-    if response.status == 404
-      "{}"
+    if response.body == ""
+
     else
+    
       JSON.parse(response.body, symbolize_names: true)
     end
   end
@@ -87,6 +91,5 @@ class CvpService
     end
     response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)
-
   end
 end
