@@ -136,29 +136,10 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 <!-- Endpoints -->
 ## Endpoints
 <details>
-<summary>GET <code>/api/v1/bills?state=''&query=''</code></summary>
+<summary> `route: "/"`</summary>
 <br>
 
-    {
-      "data": [
-        {
-        "id": "0",
-        "type": "bill",
-        "attributes": {
-            "state": "FL",
-            "bill_number": "H1234",
-            "bill_id": 1234567,
-            "text_url": "https://legiscan.com/FL/text/H1234/2023",
-            "last_action_date": "2023-07-07",
-            "last_action": "Chapter No. 2023-123",
-            "title": "HealthCare District Chapter, Healthcare",
-            "status": null,
-            "description": null,
-            "sponsors": null,
-            "texts": null
-            }
-        }, ...]}
-
+(insert photo of welcome page)
 
 </details>
 <br>
