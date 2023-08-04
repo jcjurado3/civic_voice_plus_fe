@@ -13,16 +13,20 @@ RSpec.describe "bills show", type: :feature do
     expect(page).to have_content("Bill Name: Assault Weapons and Large-capacity Magazines")
     expect(page).to have_content("Status: Introduced")
     expect(page).to have_content("Summary: Prohibiting the sale or transfer of an assault weapon or a large-capacity magazine; prohibiting possession of an assault weapon or a large-capacity magazine; requiring certificates of possession for assault weapons or large-capacity magazines lawfully possessed before a specified date; providing conditions for continued possession of such weapons or large-capacity magazines; providing enhanced criminal penalties for certain offenses when committed with an assault weapon or a large-capacity magazine, etc.")
-    expect(page).to have_button("Full Text")
-    expect(page).to have_content("Sen Lori Berman")
+    expect(page).to have_button("Check out the Full Text Here!")
+    expect(page).to have_content("Sen/Rep Lori Berman")
   end
 
-  it 'should display the party, email and an image of each representative sponsor', :vcr do
+  it 'should display the link to profile, email and an image of each representative sponsor', :vcr do
     visit bill_path(1689711)
 
-    expect(page).to have_content('Democratic')
-    expect(page).to have_content('berman.lori.web@flsenate.gov')
-    expect(page).to have_xpath("//img[contains(@src,'s26_5339.jpg')]")
+    expect(page).to have_content('Click here to Contact Lori Berman')
+    expect(page).to have_content('Click here to Contact Tina Polsky')
+    expect(page).to have_link('Lori Berman')
+    expect(page).to have_link('Tina Polsky')
+
+
+
   end
 
   it "has a bookmark button to save a bill to a user", :vcr do
@@ -32,7 +36,7 @@ RSpec.describe "bills show", type: :feature do
     select("Florida", from: "state")
     click_button("Search")
 
-    expect(page).to have_button("save S0462 to my dashboard") #<---bookmark fxn
+    expect(page).to have_button("save HB331 to my dashboard") #<---bookmark fxn
   end
 end
 

@@ -35,17 +35,17 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"a76b656fe47c89758ef7a88f1186742a"
+      - W/"177c3c32b3879be828ea2aa8d72be560"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8e6c8c53-a780-4e89-abd3-085b51dcc772
+      - 8f2023d6-dd84-4f03-ae84-e3983108dfba
       X-Runtime:
-      - '0.298474'
+      - '0.392565'
       Server-Timing:
-      - start_processing.action_controller;dur=0.09, cache_read.active_support;dur=0.02,
-        cache_generate.active_support;dur=171.48, cache_write.active_support;dur=0.60,
-        sql.active_record;dur=87.21, instantiation.active_record;dur=1.86, process_action.action_controller;dur=293.57
+      - start_processing.action_controller;dur=0.08, cache_read.active_support;dur=0.08,
+        cache_generate.active_support;dur=269.02, cache_write.active_support;dur=1.48,
+        sql.active_record;dur=88.69, instantiation.active_record;dur=1.86, process_action.action_controller;dur=388.15
       Transfer-Encoding:
       - chunked
     body:
@@ -103,22 +103,33 @@ http_interactions:
         State Planning Commission to adopt model ordinance for siting certain warehouses
         and permits conforming updates to municipal master plans and zoning ordinances.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"35","type":"bill","attributes":{"state":"NJ","bill_number":"A5025","bill_id":1639013,"text_url":"https://legiscan.com/NJ/text/A5025/2022","last_action_date":null,"last_action":null,"title":"Establishes
         presumption of pretrial detention for persons who commit carjacking, theft
-        of motor vehicle, or burglary.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"36","type":"bill","attributes":{"state":"AZ","bill_number":"SB1033","bill_id":1646446,"text_url":"https://legiscan.com/AZ/text/SB1033/2023","last_action_date":null,"last_action":null,"title":"TPT;
-        diapers; feminine hygiene; exemption.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"37","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1003","bill_id":1654846,"text_url":"https://legiscan.com/AZ/text/SCR1003/2023","last_action_date":null,"last_action":null,"title":"School
-        districts; expenditure limitation; repeal","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"38","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1004","bill_id":1655189,"text_url":"https://legiscan.com/AZ/text/SCR1004/2023","last_action_date":null,"last_action":null,"title":"Aggregate
-        expenditure limitation; school districts","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"39","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1005","bill_id":1655440,"text_url":"https://legiscan.com/AZ/text/SCR1005/2023","last_action_date":null,"last_action":null,"title":"School
-        districts; expenditure limit; authorization","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"40","type":"bill","attributes":{"state":"AZ","bill_number":"SB1042","bill_id":1655500,"text_url":"https://legiscan.com/AZ/text/SB1042/2023","last_action_date":null,"last_action":null,"title":"School
-        districts; aggregate expenditure limitation","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"41","type":"bill","attributes":{"state":"AZ","bill_number":"SB1043","bill_id":1655526,"text_url":"https://legiscan.com/AZ/text/SB1043/2023","last_action_date":null,"last_action":null,"title":"Expenditure
-        limitation; school districts; repeal","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"42","type":"bill","attributes":{"state":"AZ","bill_number":"SB1082","bill_id":1665826,"text_url":"https://legiscan.com/AZ/text/SB1082/2023","last_action_date":null,"last_action":null,"title":"Community
-        colleges; expenditure limitation.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"43","type":"bill","attributes":{"state":"AZ","bill_number":"SB1132","bill_id":1668739,"text_url":"https://legiscan.com/AZ/text/SB1132/2023","last_action_date":null,"last_action":null,"title":"Registrations;
-        counting procedures; observers; verification","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"44","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1008","bill_id":1673738,"text_url":"https://legiscan.com/AZ/text/SCR1008/2023","last_action_date":null,"last_action":null,"title":"Assyrian
-        New Year; recognizing.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"45","type":"bill","attributes":{"state":"AZ","bill_number":"SB1192","bill_id":1676244,"text_url":"https://legiscan.com/AZ/text/SB1192/2023","last_action_date":null,"last_action":null,"title":"Appropriation;
-        fentanyl testing strips","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"46","type":"bill","attributes":{"state":"AZ","bill_number":"SCR1012","bill_id":1678229,"text_url":"https://legiscan.com/AZ/text/SCR1012/2023","last_action_date":null,"last_action":null,"title":"Employment
-        First; disabilities","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"47","type":"bill","attributes":{"state":"AZ","bill_number":"SB1233","bill_id":1678357,"text_url":"https://legiscan.com/AZ/text/SB1233/2023","last_action_date":null,"last_action":null,"title":"Students;
-        unpaid school meal fees","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"48","type":"bill","attributes":{"state":"AZ","bill_number":"SB1279","bill_id":1680801,"text_url":"https://legiscan.com/AZ/text/SB1279/2023","last_action_date":null,"last_action":null,"title":"STO
-        scholarships; ESAs; tuition; fees","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"49","type":"bill","attributes":{"state":"AZ","bill_number":"SB1266","bill_id":1680860,"text_url":"https://legiscan.com/AZ/text/SB1266/2023","last_action_date":null,"last_action":null,"title":"Qualified
-        schools; fingerprinting requirements; penalties","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:54 GMT
+        of motor vehicle, or burglary.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"36","type":"bill","attributes":{"state":"NJ","bill_number":"SR111","bill_id":1693106,"text_url":"https://legiscan.com/NJ/text/SR111/2022","last_action_date":null,"last_action":null,"title":"Urges
+        Congress to establish national infrastructure bank.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"37","type":"bill","attributes":{"state":"NJ","bill_number":"A5196","bill_id":1705123,"text_url":"https://legiscan.com/NJ/text/A5196/2022","last_action_date":null,"last_action":null,"title":"Requires
+        warning label for water beads.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"38","type":"bill","attributes":{"state":"NY","bill_number":"A42686","bill_id":1706740,"text_url":"https://legiscan.com/NY/text/A42686/2023","last_action_date":null,"last_action":null,"title":"Allows
+        authorized representatives to apply for identification cards on behalf of
+        qualified applicants.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"39","type":"bill","attributes":{"state":"NJ","bill_number":"S3696","bill_id":1721719,"text_url":"https://legiscan.com/NJ/text/S3696/2022","last_action_date":null,"last_action":null,"title":"Exempts
+        election worker compensation from taxation.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"40","type":"bill","attributes":{"state":"IN","bill_number":"HCR0012","bill_id":1728428,"text_url":"https://legiscan.com/IN/text/HCR0012/2023","last_action_date":null,"last_action":null,"title":"Recognizing
+        \"Farmworker and Farmer Awareness Week\" and the work of Proteus, Inc.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"41","type":"bill","attributes":{"state":"FL","bill_number":"H7043","bill_id":1745234,"text_url":"https://legiscan.com/FL/text/H7043/2023","last_action_date":null,"last_action":null,"title":"Capitol
+        Complex","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"42","type":"bill","attributes":{"state":"NY","bill_number":"A57431","bill_id":1746309,"text_url":"https://legiscan.com/NY/text/A57431/2023","last_action_date":null,"last_action":null,"title":"Directs
+        the department of veterans'' services to establish and operate an electronic
+        database of the number of openings in each of the 4 state veterans'' homes
+        and the number of persons on the waiting list for each such veterans'' home.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"43","type":"bill","attributes":{"state":"NJ","bill_number":"A5359","bill_id":1746684,"text_url":"https://legiscan.com/NJ/text/A5359/2022","last_action_date":null,"last_action":null,"title":"Provides
+        that 10-year term does not apply to lease of certain municipal properties
+        unless they are waterfront properties or related to waterfront concessions.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"44","type":"bill","attributes":{"state":"NJ","bill_number":"S3813","bill_id":1761931,"text_url":"https://legiscan.com/NJ/text/S3813/2022","last_action_date":null,"last_action":null,"title":"Permits
+        teacher, and professional staff member who provides special services, who
+        retired from TPAF to return to employment for up to two years without reenrollment
+        in TPAF if employment commences during 2023-2024 and 2024-2025 school years.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"45","type":"bill","attributes":{"state":"NJ","bill_number":"S3832","bill_id":1762179,"text_url":"https://legiscan.com/NJ/text/S3832/2022","last_action_date":null,"last_action":null,"title":"Urges
+        restaurants to include warnings against use of mobile ordering features while
+        driving.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"46","type":"bill","attributes":{"state":"NY","bill_number":"A75111","bill_id":1768587,"text_url":"https://legiscan.com/NY/text/A75111/2023","last_action_date":null,"last_action":null,"title":"Authorizes
+        a tax abatement for alterations and improvements to multiple dwellings for
+        purposes of preserving habitability in affordable housing.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"47","type":"bill","attributes":{"state":"NY","bill_number":"A17778","bill_id":1772485,"text_url":"https://legiscan.com/NY/text/A17778/2023","last_action_date":null,"last_action":null,"title":"Relates
+        to requiring affordable housing projects to calculate and only use the area
+        median income for the specific county that the project is located in for determining
+        affordability.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"48","type":"bill","attributes":{"state":"NY","bill_number":"A17779","bill_id":1772488,"text_url":"https://legiscan.com/NY/text/A17779/2023","last_action_date":null,"last_action":null,"title":"Requires
+        paid sick leave does not count against other paid time off.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"49","type":"bill","attributes":{"state":"NY","bill_number":"A17777","bill_id":1772491,"text_url":"https://legiscan.com/NY/text/A17777/2023","last_action_date":null,"last_action":null,"title":"Relates
+        to the extension of an order of protection for aggravating circumstances;
+        allows for a lifetime order of protection.","status":null,"description":null,"sponsors":null,"texts":null}}]}'
+  recorded_at: Fri, 04 Aug 2023 17:49:47 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/bills?query=guns&state=9
@@ -158,13 +169,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 728141c6-54e8-4b6f-af97-40d54babb781
+      - bf7615e9-13ac-40a6-ae31-e147e9e052bf
       X-Runtime:
-      - '0.259683'
+      - '0.375187'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, cache_read.active_support;dur=0.02,
-        cache_generate.active_support;dur=182.74, cache_write.active_support;dur=1.08,
-        sql.active_record;dur=52.65, instantiation.active_record;dur=1.12, process_action.action_controller;dur=255.72
+      - start_processing.action_controller;dur=0.06, cache_read.active_support;dur=0.03,
+        cache_generate.active_support;dur=268.53, cache_write.active_support;dur=3.75,
+        sql.active_record;dur=65.62, instantiation.active_record;dur=1.92, process_action.action_controller;dur=371.56
       Transfer-Encoding:
       - chunked
     body:
@@ -288,5 +299,5 @@ http_interactions:
         report required, and money appropriated.","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"49","type":"bill","attributes":{"state":"MN","bill_number":"SF3196","bill_id":1749665,"text_url":"https://legiscan.com/MN/text/SF3196/2023","last_action_date":"2023-03-30","last_action":"Referred
         to Health and Human Services","title":"Establishment of a pilot program to
         reduce trauma from gun violence and appropriation for program","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:54 GMT
+  recorded_at: Fri, 04 Aug 2023 17:49:47 GMT
 recorded_with: VCR 6.2.0

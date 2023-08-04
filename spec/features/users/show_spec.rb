@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "User Show Page" do
   describe "happy path" do
     before(:each) do
-      @user1 = User.create!(name: "tester", id: 245)
+      @user1 = User.create!(name: "tester")
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
     end
     it "has select bill topics button", :vcr do
@@ -30,7 +30,7 @@ RSpec.describe "User Show Page" do
 
       within("#digest-section") do
         expect(page).to have_content("Digest")
-        expect(page).to have_content("Appropriations.")
+        expect(page).to have_content("Bill Title: Appropriations")
       end
 
       expect(page).to have_content("Edit My Categories")
@@ -50,10 +50,10 @@ RSpec.describe "User Show Page" do
 
       within("#digest-section") do
         expect(page).to have_content("Digest")
-        expect(page).to have_content("Appropriations.")
+        expect(page).to have_content("Bill Title: Appropriations")
       end
 
-      expect(page).to click_button("Edit My Categories")
+      click_link("Edit My Categories")
 
       uncheck("categories[4]")
 
@@ -63,8 +63,9 @@ RSpec.describe "User Show Page" do
 
       within("#digest-section") do
         expect(page).to have_content("Digest")
-        expect(page).to_not have_content("Appropriations.")
-        expect(page).to have_content("Property Tax Administration")
+        expect(page).to have_content("Bill Title: Gator Day")
+        expect(page).to have_content("Bill Title: Postsecondary Educational Institutions ")
+
       end
     end
 

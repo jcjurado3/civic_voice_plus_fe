@@ -6,8 +6,8 @@ RSpec.describe "landing page" do
   end
 
   it 'has a link to log in' do
-    within "#Login" do
-      expect(page).to have_content("Login")
-    end
+
+      expect(page).to have_link("Login")
+
   end
 end
