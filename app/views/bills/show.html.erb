@@ -81,8 +81,12 @@ h1, h2 {
         <br />
         <ul style="float:left; padding:20px;">
           <% @result[:sponsors][0..3].each do |sponsor| %>
-            <li>Sen/Rep <%= sponsor[:name]%></li>
-            <li>Click here to Contact <%= link_to "#{sponsor[:name]}", "https://ballotpedia.org/#{sponsor[:ballotpedia]}" %></li><br />
+            <% if sponsor[:name].downcase.include?("association" || "committee" || "department") %>
+              <li>Department: <%= sponsor[:name] %> | No Contact Info Available at This Time </li>
+            <% else %>
+              <li>Sen/Rep <%= sponsor[:name]%></li>
+              <li>Click here to Contact <%= link_to "#{sponsor[:name]}", "https://ballotpedia.org/#{sponsor[:ballotpedia]}" %></li><br />
+            <% end %>
           <% end %><br />
         </ul>
         <br /><br>
