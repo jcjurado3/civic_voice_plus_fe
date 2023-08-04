@@ -1,5 +1,6 @@
 class BillFacade
   def bill_search(state, topic)
+
     BillSearch.new(service.search_url(state, topic))
   end
 

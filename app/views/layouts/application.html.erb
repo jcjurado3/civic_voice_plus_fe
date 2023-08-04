@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CivicVoicePlusFe</title>
+    <title>CivicVoicePlus</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%#= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.2/tailwind.min.css">
   </head>
 
   <body>
-    <header>
-      <!-- Your header content goes here -->
-      <nav id="nav-bar">
-        <ul>
-          <li><a href="/"><button>Home</button> </a></li>
-          <% if current_user %>
-          <li><a href="/bills"><button>Search Bills</button></a></li>
-          <li><a href="/dashboard"><button>My Dashboard</button></a></li>
-          <li><%= button_to "Sign Out", logout_path, method: :delete %></li>
-          <% else %>
-          <li><a href="/auth/google_oauth2"><button>Log In</button></a></li>
-          <% end %>
-        </ul>
-      </nav>
-    </header>
+  <style>
+    @media(max-width:1520px) {
+        .left-svg {
+            display: none;
+        }
+    }
+
+    #nav-mobile-btn.close span:first-child {
+        transform: rotate(45deg);
+        top: 4px;
+        position: relative;
+        background: #a0aec0;
+    }
+  
+    #nav-mobile-btn.close span:nth-child(2) {
+        transform: rotate(-45deg);
+        margin-top: 0px;
+        background: #a0aec0;
+    }
+
+    .logo-large {
+    width: 250px; /* or whatever size you want */
+    height: auto; /* maintains the aspect ratio */
+}
+
+.flash {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.flash.notice {
+  background-color: #d4edda; /* Light green */
+  color: #155724; /* Dark green */
+}
+
+.flash.alert {
+  background-color: #f8d7da; /* Light red */
+  color: #721c24; /* Dark red */
+}
+  </style>
+    <header class="top-0 z-50 w-full h-20 bg-black flex items-center justify-between">
+    <a href="/" class="relative flex items-center h-full font-black leading-none">
+        <%= image_tag 'cvp_logo.png', title: "CivicVoice+ Logo", class: "logo logo-large" %>
+    </a>
+    <nav id="nav-bar" class="text-white bg-black flex items-center h-20">
+        <div class="flex items-center justify-end space-x-4">
+            <a href="/" class="relative flex items-center h-full font-black leading-none"><button>Home</button></a>
+            <% if current_user %>
+            <a href="/bills" class="relative z-4 inline-block w-auto h-full py-2 text-sm font-bold leading-none text-center transition-all duration-200 border-2 border-white rounded shadow-md text-white hover:bg-white hover:text-black"><button>Search Bills</button></a>
+            <a href="/dashboard" class="relative z-40 inline-block w-auto h-full py-2 text-sm font-bold leading-none text-center transition-all duration-200 border-2 border-white rounded shadow-md text-white hover:bg-white hover:text-black"><button>My Dashboard</button></a>
+            <%= button_to "Sign Out", logout_path, method: :delete, class: "relative z-40 inline-block w-auto h-full py-2 text-sm font-bold leading-none text-center transition-all duration-200 border-2 border-white rounded shadow-md text-white hover:bg-white hover:text-black" %>
+            <% else %>
+            <a href="/auth/google_oauth2" class="relative z-40 inline-block w-[132px] h-full py-2 text-sm font-bold leading-none text-center transition-all duration-200 border-2 border-white rounded shadow-md text-white hover:bg-white hover:text-black"><button>Log In</button></a>
+            <% end %>
+        </div>
+    </nav>
+</header>
     <% flash.each do |type, msg| %>
-      <%= content_tag :div, msg, class: type %>
-    <% end %>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
+  <%= content_tag :div, msg, class: "flash #{type}" %>
+<% end %>
+<main class="container mx-auto mt-28 px-5 flex">
+  <%= yield %>
     </main>
     <footer>
     <!-- Your footer content goes here -->

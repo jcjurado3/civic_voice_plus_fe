@@ -77,6 +77,8 @@ VCR.configure do |config|
   # config.filter_sensitive_data('api_key') { ENV['api_key'] }
   config.default_cassette_options = { :allow_playback_repeats => true }
   # config.default_cassette_options = { re_record_interval: 7.days}
+  config.filter_sensitive_data('GOOGLE_CLIENT_ID') { ENV['GOOGLE_CLIENT_ID'] }
+  config.filter_sensitive_data('GOOGLE_CLIENT_SECRET') { ENV['GOOGLE_CLIENT_SECRET'] }
 end
 
 Shoulda::Matchers.configure do |config|

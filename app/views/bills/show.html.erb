@@ -7,14 +7,18 @@
   <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
   <%= f.submit "save #{@result[:bill_number]} to my dashboard" %>
 <% end %>
-<%= button_to 'Remove', user_bills_path, method: :destroy %>
+<%= form_with url: user_bill_path("#{@result[:bill_number]}"), method: :delete, local: true do |f| %>
+        <%= f.hidden_field :user_id, value: @user.id %>
+        <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
+        <%= f.submit "unsave #{@result[:bill_number]} to my dashboard" %>
+      <% end %>
 <br />
-Status: <%= @result[:text][0][:type] %>
+Status: <%= @result[:texts][0][:type] %>
 <br /><br>
 Summary: <%= @result[:description] %>  
 <% bill_num = @result[:bill_id] %>
 <% state = @result[:state] %>
-<% doc_id = @result[:text][0][:doc_id] %>
+<% doc_id = @result[:texts][0][:doc_id] %>
 <h3>Want to know more? <%= button_to 'Full Text', "https://legiscan.com/#{state}/text/#{bill_num}/id/#{doc_id}" %></h3>
 </b>
 <h2 style="float:left; background-color:darkblue; color:white; border: solid brown 10px;">Sponsors of the bill</h2>

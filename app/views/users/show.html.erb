@@ -1,20 +1,40 @@
+<style>
+.custom-checkbox .peer:checked + .custom-label .custom-box {
+  background-color: #07120e; /* Change to your desired color */
+  border-color: #ebedec; /* Change to your desired color */
+}
+
+.custom-checkbox .peer:checked + .custom-label .custom-box::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: relative;
+  top: 1px;
+  left: 2px;
+}
+</style>
 <body> 
   <div>
     <%= form_with(url: user_categories_path(@user), method: "post", local: true) do |form| %>
-      <% @all_categories.each do |category| %>
-        <div>
-          <%= hidden_field_tag "categories[#{category.id}]", "0" %>
-          
-          <%= check_box_tag "categories[#{category.id}]", "1", @selected_category_ids.include?(category.id.to_i) %>
-          <%= category.name %>
-        </div>
-      <% end %>
+  <% @all_categories.each do |category| %>
+    <div class="custom-checkbox flex items-center bg-black p-2">
+      <%= hidden_field_tag "categories[#{category.id}]", "0" %>
+      <%= check_box_tag "categories[#{category.id}]", "1", @selected_category_ids.include?(category.id.to_i), class: "hidden peer", id: "category_#{category.id}" %>
+      <label for="category_<%= category.id %>" class="custom-label flex items-center justify-center text-white cursor-pointer">
+        <span class="custom-box border border-white rounded w-6 h-6 mr-2"></span>
+        <%= category.name %>
+      </label>
+    </div>
+  <% end %>
+  <%= select_tag 'state', options_for_select(us_states, @selected_state), include_blank: false, class: "w-full h-full transition-all duration-300 text-black" %>
+<div class="mt-4">
+  <%= submit_tag "Save", class: "py-1 px-10 bg-transparent text-black font-semibold border border-black  hover:bg-black hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 mb-4 float-right" %>
+</div>
+<% end %>
 
-      <%= select_tag 'state', options_for_select(us_states, @selected_state), include_blank: true %>
-
-      <div>
-        <%= submit_tag "Save" %>
-      </div>
-    <% end %>
   </div>
 </body>
