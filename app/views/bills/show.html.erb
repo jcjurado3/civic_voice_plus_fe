@@ -1,37 +1,95 @@
-<center><%= image_tag "https://njpsa.org/wp-content/uploads/2019/09/law-books-gavel.jpg" %></center>
-<br />
-<b>
-<p>Bill Name: <%= @result[:title] %></p>
-<%= form_with url: user_bills_path, method: :post, local: true do |f| %>
-  <%= f.hidden_field :user_id, value: @user.id %>
-  <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
-  <%= f.submit "save #{@result[:bill_number]} to my dashboard" %>
-<% end %>
-<%= form_with url: user_bill_path("#{@result[:bill_number]}"), method: :delete, local: true do |f| %>
-        <%= f.hidden_field :user_id, value: @user.id %>
-        <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
-        <%= f.submit "unsave #{@result[:bill_number]} to my dashboard" %>
-      <% end %>
-<br />
-Status: <%= @result[:texts][0][:type] %>
-<br /><br>
-Summary: <%= @result[:description] %>  
-<% bill_num = @result[:bill_id] %>
-<% state = @result[:state] %>
-<% doc_id = @result[:texts][0][:doc_id] %>
-<h3>Want to know more? <%= button_to 'Full Text', "https://legiscan.com/#{state}/text/#{bill_num}/id/#{doc_id}" %></h3>
-</b>
-<h2 style="float:left; background-color:darkblue; color:white; border: solid brown 10px;">Sponsors of the bill</h2>
-<br />
-<ul style="float:left; padding:20px;">
-  <% @members[0..3].each do |member| %>
-    <li>Sen/Rep <%= member[:attributes][:full_name]%>
+<style>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* You can choose a different trendy font */
+}
+
+.above-fold,
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.image-container,
+.images-container {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.images-container img:first-child {
+  margin-bottom: 5px; /* Stagger the images */
+}
+
+.content-container {
+  flex: 2;
+  padding: 20px;
+  font-size: 18px; /* Larger font size for content */
+}
+
+h1, h2 {
+  font-size: 36px; /* Larger font size for headers */
+  color: #333;
+}
+
+.section-separator {
+  border-bottom: 1px solid #ccc;
+  margin: 40px 0;
+}
+
+</style>
+
+<div class="container">
+  <div class="image-container">
+    <%= image_tag "https://njpsa.org/wp-content/uploads/2019/09/law-books-gavel.jpg", alt: "law-books-gavel" %>
+  </div>
+    <br /><br>
+
+  <div class="content-container">
+    <h2>Bill Name: <%= @result[:title] %></h2>
+    <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
+      <%= f.hidden_field :user_id, value: @user.id %>
+      <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
+      <%= f.submit "save #{@result[:bill_number]} to my dashboard" %>
+    <% end %>
+    <%= form_with url: user_bill_path("#{@result[:bill_number]}"), method: :delete, local: true do |f| %>
+            <%= f.hidden_field :user_id, value: @user.id %>
+            <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
+            <%= f.submit "unsave #{@result[:bill_number]} to my dashboard" %>
+          <% end %>
     <br />
-    <%#= image_tag member[:image_url] %>
-    Party: <%= member[:attributes][:party] %>
-    <br />
-    Email: <%= member[:attributes][:email] %></li>
-  <% end %>
-</ul>
-<br /><br>
-<%= image_tag "https://www.thenation.com/wp-content/uploads/2020/11/HS_BERNIE-SANDERS-e1605214405460.png" %>
+    Status: <%= @result[:texts][0][:type] %>
+    <br /><br>
+    Summary: <%= @result[:description] %>
+    <br /><br>
+
+    <% bill_num = @result[:bill_id] %>
+    <% state = @result[:state] %>
+    <% doc_id = @result[:texts][0][:doc_id] %>
+    <h3>Want to know more? <%= button_to 'Check out the Full Text Here!', "https://legiscan.com/#{state}/text/#{bill_num}/id/#{doc_id}" %></h3>
+  </div>
+
+  <div class="section-separator"></div>
+    <section class="sponsors">
+      <div class="content-container">
+        <h2>Sponsors of the bill</h2>
+
+        <br />
+        <ul style="float:left; padding:20px;">
+          <% @result[:sponsors][0..3].each do |sponsor| %>
+            <li>Sen/Rep <%= sponsor[:name]%></li>
+            <li>Contact <%= link_to "#{sponsor[:name]}", "https://ballotpedia.org/#{sponsor[:ballotpedia]}" %></li>
+          <% end %><br /><br>
+        </ul><br /><br>
+        <br /><br>
+        <div class="images-container">
+          <%= image_tag "cartoon megaphone.png", alt: "cartoon person with megaphone" %>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

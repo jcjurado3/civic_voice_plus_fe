@@ -15,79 +15,413 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 200
+      message: OK
     headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"c85546ddb064ca2bb349fb139beb22b6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c6b7f3af-42a4-468e-97ac-e005ce359725
+      - d138eaac-7b7f-40eb-b84c-a77cd9abc479
       X-Runtime:
-      - '0.008982'
+      - '0.005848'
       Server-Timing:
-      - ''
-      Content-Length:
-      - '6337'
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.32, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=2.52
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
-      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
-        No route matches [GET] \"/api/v1/user_categories\"\u003e","traces":{"Application
-        Trace":[],"Framework Trace":[{"exception_object_id":26000,"id":0,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":26000,"id":1,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":26000,"id":2,"trace":"railties
-        (7.0.6) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":26000,"id":3,"trace":"railties
-        (7.0.6) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":26000,"id":4,"trace":"activesupport
-        (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":26000,"id":5,"trace":"activesupport
-        (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":26000,"id":6,"trace":"activesupport
-        (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":26000,"id":7,"trace":"railties
-        (7.0.6) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":26000,"id":8,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":26000,"id":9,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":26000,"id":10,"trace":"rack
-        (2.2.7) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":26000,"id":11,"trace":"activesupport
-        (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"exception_object_id":26000,"id":12,"trace":"actionpack (7.0.6)
-        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":26000,"id":13,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":26000,"id":14,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":26000,"id":15,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":26000,"id":16,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":26000,"id":17,"trace":"rack
-        (2.2.7) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":26000,"id":18,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":26000,"id":19,"trace":"railties
-        (7.0.6) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":26000,"id":20,"trace":"puma
-        (5.6.6) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":26000,"id":21,"trace":"puma
-        (5.6.6) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":26000,"id":22,"trace":"puma
-        (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":26000,"id":23,"trace":"puma
-        (5.6.6) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":26000,"id":24,"trace":"puma
-        (5.6.6) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":26000,"id":25,"trace":"puma
-        (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}],"Full Trace":[{"exception_object_id":26000,"id":0,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call''"},{"exception_object_id":26000,"id":1,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call''"},{"exception_object_id":26000,"id":2,"trace":"railties
-        (7.0.6) lib/rails/rack/logger.rb:40:in `call_app''"},{"exception_object_id":26000,"id":3,"trace":"railties
-        (7.0.6) lib/rails/rack/logger.rb:25:in `block in call''"},{"exception_object_id":26000,"id":4,"trace":"activesupport
-        (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged''"},{"exception_object_id":26000,"id":5,"trace":"activesupport
-        (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged''"},{"exception_object_id":26000,"id":6,"trace":"activesupport
-        (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged''"},{"exception_object_id":26000,"id":7,"trace":"railties
-        (7.0.6) lib/rails/rack/logger.rb:25:in `call''"},{"exception_object_id":26000,"id":8,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call''"},{"exception_object_id":26000,"id":9,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call''"},{"exception_object_id":26000,"id":10,"trace":"rack
-        (2.2.7) lib/rack/runtime.rb:22:in `call''"},{"exception_object_id":26000,"id":11,"trace":"activesupport
-        (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"exception_object_id":26000,"id":12,"trace":"actionpack (7.0.6)
-        lib/action_dispatch/middleware/server_timing.rb:61:in `block in call''"},{"exception_object_id":26000,"id":13,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events''"},{"exception_object_id":26000,"id":14,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call''"},{"exception_object_id":26000,"id":15,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"exception_object_id":26000,"id":16,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call''"},{"exception_object_id":26000,"id":17,"trace":"rack
-        (2.2.7) lib/rack/sendfile.rb:110:in `call''"},{"exception_object_id":26000,"id":18,"trace":"actionpack
-        (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call''"},{"exception_object_id":26000,"id":19,"trace":"railties
-        (7.0.6) lib/rails/engine.rb:530:in `call''"},{"exception_object_id":26000,"id":20,"trace":"puma
-        (5.6.6) lib/puma/configuration.rb:252:in `call''"},{"exception_object_id":26000,"id":21,"trace":"puma
-        (5.6.6) lib/puma/request.rb:77:in `block in handle_request''"},{"exception_object_id":26000,"id":22,"trace":"puma
-        (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown''"},{"exception_object_id":26000,"id":23,"trace":"puma
-        (5.6.6) lib/puma/request.rb:76:in `handle_request''"},{"exception_object_id":26000,"id":24,"trace":"puma
-        (5.6.6) lib/puma/server.rb:443:in `process_client''"},{"exception_object_id":26000,"id":25,"trace":"puma
-        (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread''"}]}}'
-  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+      string: '{"data":[{"id":"1","type":"category","attributes":{"name":"artificial
+        intelligence"}},{"id":"4","type":"category","attributes":{"name":"conservation
+        energy"}}]}'
+  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_states?user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"39a3aa958d90e136d703bc1878c53fe3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f0eeecf3-ca49-4add-81ee-7d7f11ea1b8d
+      X-Runtime:
+      - '0.006268'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.03, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.10
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"9","type":"state","attributes":{"state_abbr":"FL","state_name":"Florida"}}]}'
+  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/bills?query=artificial%20intelligence%20or%20conservation%20energy&state=FL&user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"cf885f46365d2034fb44461b6cceb6c1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0bc7582d-dbc5-46bd-a956-5f94f4ef9d6d
+      X-Runtime:
+      - '0.210227'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, cache_read.active_support;dur=0.01,
+        cache_generate.active_support;dur=171.92, cache_write.active_support;dur=0.42,
+        sql.active_record;dur=19.90, instantiation.active_record;dur=0.77, process_action.action_controller;dur=206.78
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"bill","attributes":{"state":"FL","bill_number":"S2500","bill_id":1746175,"text_url":"https://legiscan.com/FL/text/S2500/2023","last_action_date":"2023-06-16","last_action":"Chapter
+        No. 2023-239, companion bill(s) passed, see CS/CS/HB 1285 (Ch. 2023-167),
+        HB 5101 (Ch. 2023-245), HB 5303 (Ch. 2023-246), SB 2502 (Ch. 2023-240), SB
+        2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243), SB 7018
+        (Ch. 2023-244), CS/SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"Appropriations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"1","type":"bill","attributes":{"state":"FL","bill_number":"H5001","bill_id":1749049,"text_url":"https://legiscan.com/FL/text/H5001/2023","last_action_date":"2023-04-04","last_action":"Laid
+        on Table; companion bill(s) passed, see SB 2500 (Ch. 2023-239), CS/CS/HB 1285
+        (Ch. 2023-167), HB 5101 (Ch. 2023-245), HB 5303 (Ch. 2023-246), SB 2502 (Ch.
+        2023-240), SB 2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243),
+        SB 7018 (Ch. 2023-244), SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"General
+        Appropriations Act","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"2","type":"bill","attributes":{"state":"FL","bill_number":"H8039","bill_id":1754732,"text_url":"https://legiscan.com/FL/text/H8039/2023","last_action_date":"2023-04-12","last_action":"Adopted
+        by Publication","title":"Gator Day","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"3","type":"bill","attributes":{"state":"FL","bill_number":"H0999","bill_id":1716623,"text_url":"https://legiscan.com/FL/text/H0999/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table; companion bill(s) passed, see CS/HB 1035 (Ch. 2023-38), CS/CS/CS/SB
+        266 (Ch. 2023-82)","title":"Postsecondary Educational Institutions","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"4","type":"bill","attributes":{"state":"FL","bill_number":"S0266","bill_id":1723029,"text_url":"https://legiscan.com/FL/text/S0266/2023","last_action_date":"2023-05-16","last_action":"Chapter
+        No. 2023-82, companion bill(s) passed, see CS/HB 1035 (Ch. 2023-38)","title":"Higher
+        Education","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"5","type":"bill","attributes":{"state":"FL","bill_number":"S1730","bill_id":1749221,"text_url":"https://legiscan.com/FL/text/S1730/2023","last_action_date":"2023-04-12","last_action":"Adopted,
+        companion bill(s) passed, see HR 8039 (Adopted)","title":"Gator Day","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"6","type":"bill","attributes":{"state":"FL","bill_number":"S1740","bill_id":1756757,"text_url":"https://legiscan.com/FL/text/S1740/2023","last_action_date":"2023-04-19","last_action":"Adopted","title":"Keiser
+        University Day","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"7","type":"bill","attributes":{"state":"FL","bill_number":"H1259","bill_id":1722774,"text_url":"https://legiscan.com/FL/text/H1259/2023","last_action_date":"2023-05-12","last_action":"Chapter
+        No. 2023-69","title":"Education","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"8","type":"bill","attributes":{"state":"FL","bill_number":"H1151","bill_id":1720544,"text_url":"https://legiscan.com/FL/text/H1151/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Commerce Committee","title":"Financing Improvements to Real Property","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"9","type":"bill","attributes":{"state":"FL","bill_number":"H0669","bill_id":1700870,"text_url":"https://legiscan.com/FL/text/H0669/2023","last_action_date":"2023-05-05","last_action":"Died
+        on Second Reading Calendar","title":"Improvements to Real Property","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"10","type":"bill","attributes":{"state":"FL","bill_number":"S0950","bill_id":1715103,"text_url":"https://legiscan.com/FL/text/S0950/2023","last_action_date":"2023-05-05","last_action":"Died
+        on Second Reading Calendar","title":"Improvements to Real Property","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"11","type":"bill","attributes":{"state":"FL","bill_number":"H0235","bill_id":1665056,"text_url":"https://legiscan.com/FL/text/H0235/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Commerce Committee","title":"Alternative Mobility Funding Systems","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"12","type":"bill","attributes":{"state":"FL","bill_number":"S0810","bill_id":1708343,"text_url":"https://legiscan.com/FL/text/S0810/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Community Affairs","title":"Financing Improvements to Real Property","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"13","type":"bill","attributes":{"state":"FL","bill_number":"H0885","bill_id":1710576,"text_url":"https://legiscan.com/FL/text/H0885/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Ways \u0026 Means Committee","title":"Authorized Use of Discretionary Sales
+        Surtaxes","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"14","type":"bill","attributes":{"state":"FL","bill_number":"S0882","bill_id":1710966,"text_url":"https://legiscan.com/FL/text/S0882/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Community Affairs","title":"Local Government Infrastructure Surtax","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"15","type":"bill","attributes":{"state":"FL","bill_number":"H0439","bill_id":1677209,"text_url":"https://legiscan.com/FL/text/H0439/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table; companion bill(s) passed, see CS/CS/SB 1604 (Ch. 2023-31)","title":"Land
+        Use and Development Regulations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"16","type":"bill","attributes":{"state":"FL","bill_number":"S0350","bill_id":1677234,"text_url":"https://legiscan.com/FL/text/S0350/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Community Affairs","title":"Alternative Mobility Funding Systems","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"17","type":"bill","attributes":{"state":"FL","bill_number":"S1666","bill_id":1726862,"text_url":"https://legiscan.com/FL/text/S1666/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Military and Veterans Affairs, Space, and Domestic Security","title":"Marine
+        Encroachment on Spaceflight and Military Operations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"18","type":"bill","attributes":{"state":"FL","bill_number":"H1491","bill_id":1727553,"text_url":"https://legiscan.com/FL/text/H1491/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Local Administration, Federal Affairs \u0026 Special Districts Subcommittee","title":"Marine
+        Encroachment on Spaceflight and Military Operations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"19","type":"bill","attributes":{"state":"FL","bill_number":"H0005","bill_id":1728157,"text_url":"https://legiscan.com/FL/text/H0005/2023","last_action_date":"2023-06-01","last_action":"Chapter
+        No. 2023-173; companion bill(s) passed, see HB 5303 (Ch. 2023-246), CS/HB
+        7041 (Ch. 2023-200)","title":"Economic Programs","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"20","type":"bill","attributes":{"state":"FL","bill_number":"S1664","bill_id":1726991,"text_url":"https://legiscan.com/FL/text/S1664/2023","last_action_date":"2023-05-03","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/CS/HB 5 (Ch. 2023-173), HB 5303
+        (Ch. 2023-246), CS/HB 7041 (Ch. 2023-200), CS/SB 106 (Ch. 2023-20)","title":"Economic
+        Programs","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"21","type":"bill","attributes":{"state":"FL","bill_number":"S1632","bill_id":1726776,"text_url":"https://legiscan.com/FL/text/S1632/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/CS/HB 1379 (Ch. 2023-169), CS/CS/HB
+        1279 (Ch. 2023-154)","title":"Environmental Protection","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"22","type":"bill","attributes":{"state":"FL","bill_number":"S1604","bill_id":1726644,"text_url":"https://legiscan.com/FL/text/S1604/2023","last_action_date":"2023-05-08","last_action":"Chapter
+        No. 2023-31","title":"Land Use and Development Regulations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"23","type":"bill","attributes":{"state":"FL","bill_number":"H1379","bill_id":1725863,"text_url":"https://legiscan.com/FL/text/H1379/2023","last_action_date":"2023-06-01","last_action":"Chapter
+        No. 2023-169","title":"Environmental Protection","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"24","type":"bill","attributes":{"state":"FL","bill_number":"H1611","bill_id":1728704,"text_url":"https://legiscan.com/FL/text/H1611/2023","last_action_date":"2023-07-07","last_action":"Chapter
+        No. 2023-346","title":"City of Bartow, Polk County","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"25","type":"bill","attributes":{"state":"FL","bill_number":"S0122","bill_id":1642921,"text_url":"https://legiscan.com/FL/text/S0122/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Finance and Tax","title":"Revised Limitation on Increases of Homestead
+        Property Tax Assessments","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"26","type":"bill","attributes":{"state":"FL","bill_number":"H1209","bill_id":1721434,"text_url":"https://legiscan.com/FL/text/H1209/2023","last_action_date":"2023-06-07","last_action":"Chapter
+        No. 2023-202","title":"Rural Development","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"27","type":"bill","attributes":{"state":"FL","bill_number":"S0032","bill_id":1701440,"text_url":"https://legiscan.com/FL/text/S0032/2023","last_action_date":"2023-03-27","last_action":"Chapter
+        No. 2023-8","title":"Florida Statutes","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"28","type":"bill","attributes":{"state":"FL","bill_number":"H1175","bill_id":1721105,"text_url":"https://legiscan.com/FL/text/H1175/2023","last_action_date":"2023-07-07","last_action":"Chapter
+        No. 2023-337","title":"Sarasota County","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"29","type":"bill","attributes":{"state":"FL","bill_number":"H1083","bill_id":1719625,"text_url":"https://legiscan.com/FL/text/H1083/2023","last_action_date":"2023-07-07","last_action":"Chapter
+        No. 2023-335","title":"Manatee County","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"30","type":"bill","attributes":{"state":"FL","bill_number":"H7011","bill_id":1719409,"text_url":"https://legiscan.com/FL/text/H7011/2023","last_action_date":"2023-03-16","last_action":"Laid
+        on Table; companion bill(s) passed, see SB 32 (Ch. 2023-8)","title":"Florida
+        Statutes","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"31","type":"bill","attributes":{"state":"FL","bill_number":"H0425","bill_id":1677330,"text_url":"https://legiscan.com/FL/text/H0425/2023","last_action_date":"2023-06-06","last_action":"Chapter
+        No. 2023-197; companion bill(s) passed, see CS/CS/CS/HB 1305 (Ch. 2023-70)","title":"Transportation","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"32","type":"bill","attributes":{"state":"FL","bill_number":"H0009","bill_id":1696141,"text_url":"https://legiscan.com/FL/text/H0009/2023/X2","last_action_date":"2023-03-16","last_action":"Chapter
+        No. 2023-5","title":"Reedy Creek Improvement District, Orange and Osceola
+        Counties","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"33","type":"bill","attributes":{"state":"FL","bill_number":"S0064","bill_id":1638337,"text_url":"https://legiscan.com/FL/text/S0064/2023","last_action_date":"2023-05-03","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/CS/CS/HB 425 (Ch. 2023-197), CS/CS/CS/HB
+        1305 (Ch. 2023-70)","title":"Transportation","status":null,"description":null,"sponsors":null,"texts":null}}]}'
+  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"c85546ddb064ca2bb349fb139beb22b6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0ffedcc5-624b-483f-b81c-df410f2988c7
+      X-Runtime:
+      - '0.005846'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=1.12, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=2.29
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"category","attributes":{"name":"artificial
+        intelligence"}},{"id":"4","type":"category","attributes":{"name":"conservation
+        energy"}}]}'
+  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_states?user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"39a3aa958d90e136d703bc1878c53fe3"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 67109763-5990-4665-ae9d-9d6f0706f5cc
+      X-Runtime:
+      - '0.007061'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=1.03, instantiation.active_record;dur=0.03,
+        process_action.action_controller;dur=2.27
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"9","type":"state","attributes":{"state_abbr":"FL","state_name":"Florida"}}]}'
+  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/bills?query=artificial%20intelligence%20or%20conservation%20energy&state=FL&user_id=245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"cf885f46365d2034fb44461b6cceb6c1"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c6311c60-dbfd-4414-a68e-7141b37a3565
+      X-Runtime:
+      - '0.220801'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, cache_read.active_support;dur=0.01,
+        cache_generate.active_support;dur=183.43, cache_write.active_support;dur=0.51,
+        sql.active_record;dur=20.84, instantiation.active_record;dur=1.23, process_action.action_controller;dur=217.50
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"bill","attributes":{"state":"FL","bill_number":"S2500","bill_id":1746175,"text_url":"https://legiscan.com/FL/text/S2500/2023","last_action_date":"2023-06-16","last_action":"Chapter
+        No. 2023-239, companion bill(s) passed, see CS/CS/HB 1285 (Ch. 2023-167),
+        HB 5101 (Ch. 2023-245), HB 5303 (Ch. 2023-246), SB 2502 (Ch. 2023-240), SB
+        2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243), SB 7018
+        (Ch. 2023-244), CS/SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"Appropriations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"1","type":"bill","attributes":{"state":"FL","bill_number":"H5001","bill_id":1749049,"text_url":"https://legiscan.com/FL/text/H5001/2023","last_action_date":"2023-04-04","last_action":"Laid
+        on Table; companion bill(s) passed, see SB 2500 (Ch. 2023-239), CS/CS/HB 1285
+        (Ch. 2023-167), HB 5101 (Ch. 2023-245), HB 5303 (Ch. 2023-246), SB 2502 (Ch.
+        2023-240), SB 2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243),
+        SB 7018 (Ch. 2023-244), SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"General
+        Appropriations Act","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"2","type":"bill","attributes":{"state":"FL","bill_number":"H8039","bill_id":1754732,"text_url":"https://legiscan.com/FL/text/H8039/2023","last_action_date":"2023-04-12","last_action":"Adopted
+        by Publication","title":"Gator Day","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"3","type":"bill","attributes":{"state":"FL","bill_number":"H0999","bill_id":1716623,"text_url":"https://legiscan.com/FL/text/H0999/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table; companion bill(s) passed, see CS/HB 1035 (Ch. 2023-38), CS/CS/CS/SB
+        266 (Ch. 2023-82)","title":"Postsecondary Educational Institutions","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"4","type":"bill","attributes":{"state":"FL","bill_number":"S0266","bill_id":1723029,"text_url":"https://legiscan.com/FL/text/S0266/2023","last_action_date":"2023-05-16","last_action":"Chapter
+        No. 2023-82, companion bill(s) passed, see CS/HB 1035 (Ch. 2023-38)","title":"Higher
+        Education","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"5","type":"bill","attributes":{"state":"FL","bill_number":"S1730","bill_id":1749221,"text_url":"https://legiscan.com/FL/text/S1730/2023","last_action_date":"2023-04-12","last_action":"Adopted,
+        companion bill(s) passed, see HR 8039 (Adopted)","title":"Gator Day","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"6","type":"bill","attributes":{"state":"FL","bill_number":"S1740","bill_id":1756757,"text_url":"https://legiscan.com/FL/text/S1740/2023","last_action_date":"2023-04-19","last_action":"Adopted","title":"Keiser
+        University Day","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"7","type":"bill","attributes":{"state":"FL","bill_number":"H1259","bill_id":1722774,"text_url":"https://legiscan.com/FL/text/H1259/2023","last_action_date":"2023-05-12","last_action":"Chapter
+        No. 2023-69","title":"Education","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"8","type":"bill","attributes":{"state":"FL","bill_number":"H1151","bill_id":1720544,"text_url":"https://legiscan.com/FL/text/H1151/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Commerce Committee","title":"Financing Improvements to Real Property","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"9","type":"bill","attributes":{"state":"FL","bill_number":"H0669","bill_id":1700870,"text_url":"https://legiscan.com/FL/text/H0669/2023","last_action_date":"2023-05-05","last_action":"Died
+        on Second Reading Calendar","title":"Improvements to Real Property","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"10","type":"bill","attributes":{"state":"FL","bill_number":"S0950","bill_id":1715103,"text_url":"https://legiscan.com/FL/text/S0950/2023","last_action_date":"2023-05-05","last_action":"Died
+        on Second Reading Calendar","title":"Improvements to Real Property","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"11","type":"bill","attributes":{"state":"FL","bill_number":"H0235","bill_id":1665056,"text_url":"https://legiscan.com/FL/text/H0235/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Commerce Committee","title":"Alternative Mobility Funding Systems","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"12","type":"bill","attributes":{"state":"FL","bill_number":"S0810","bill_id":1708343,"text_url":"https://legiscan.com/FL/text/S0810/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Community Affairs","title":"Financing Improvements to Real Property","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"13","type":"bill","attributes":{"state":"FL","bill_number":"H0885","bill_id":1710576,"text_url":"https://legiscan.com/FL/text/H0885/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Ways \u0026 Means Committee","title":"Authorized Use of Discretionary Sales
+        Surtaxes","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"14","type":"bill","attributes":{"state":"FL","bill_number":"S0882","bill_id":1710966,"text_url":"https://legiscan.com/FL/text/S0882/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Community Affairs","title":"Local Government Infrastructure Surtax","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"15","type":"bill","attributes":{"state":"FL","bill_number":"H0439","bill_id":1677209,"text_url":"https://legiscan.com/FL/text/H0439/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table; companion bill(s) passed, see CS/CS/SB 1604 (Ch. 2023-31)","title":"Land
+        Use and Development Regulations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"16","type":"bill","attributes":{"state":"FL","bill_number":"S0350","bill_id":1677234,"text_url":"https://legiscan.com/FL/text/S0350/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Community Affairs","title":"Alternative Mobility Funding Systems","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"17","type":"bill","attributes":{"state":"FL","bill_number":"S1666","bill_id":1726862,"text_url":"https://legiscan.com/FL/text/S1666/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Military and Veterans Affairs, Space, and Domestic Security","title":"Marine
+        Encroachment on Spaceflight and Military Operations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"18","type":"bill","attributes":{"state":"FL","bill_number":"H1491","bill_id":1727553,"text_url":"https://legiscan.com/FL/text/H1491/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Local Administration, Federal Affairs \u0026 Special Districts Subcommittee","title":"Marine
+        Encroachment on Spaceflight and Military Operations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"19","type":"bill","attributes":{"state":"FL","bill_number":"H0005","bill_id":1728157,"text_url":"https://legiscan.com/FL/text/H0005/2023","last_action_date":"2023-06-01","last_action":"Chapter
+        No. 2023-173; companion bill(s) passed, see HB 5303 (Ch. 2023-246), CS/HB
+        7041 (Ch. 2023-200)","title":"Economic Programs","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"20","type":"bill","attributes":{"state":"FL","bill_number":"S1664","bill_id":1726991,"text_url":"https://legiscan.com/FL/text/S1664/2023","last_action_date":"2023-05-03","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/CS/HB 5 (Ch. 2023-173), HB 5303
+        (Ch. 2023-246), CS/HB 7041 (Ch. 2023-200), CS/SB 106 (Ch. 2023-20)","title":"Economic
+        Programs","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"21","type":"bill","attributes":{"state":"FL","bill_number":"S1632","bill_id":1726776,"text_url":"https://legiscan.com/FL/text/S1632/2023","last_action_date":"2023-05-02","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/CS/HB 1379 (Ch. 2023-169), CS/CS/HB
+        1279 (Ch. 2023-154)","title":"Environmental Protection","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"22","type":"bill","attributes":{"state":"FL","bill_number":"S1604","bill_id":1726644,"text_url":"https://legiscan.com/FL/text/S1604/2023","last_action_date":"2023-05-08","last_action":"Chapter
+        No. 2023-31","title":"Land Use and Development Regulations","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"23","type":"bill","attributes":{"state":"FL","bill_number":"H1379","bill_id":1725863,"text_url":"https://legiscan.com/FL/text/H1379/2023","last_action_date":"2023-06-01","last_action":"Chapter
+        No. 2023-169","title":"Environmental Protection","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"24","type":"bill","attributes":{"state":"FL","bill_number":"H1611","bill_id":1728704,"text_url":"https://legiscan.com/FL/text/H1611/2023","last_action_date":"2023-07-07","last_action":"Chapter
+        No. 2023-346","title":"City of Bartow, Polk County","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"25","type":"bill","attributes":{"state":"FL","bill_number":"S0122","bill_id":1642921,"text_url":"https://legiscan.com/FL/text/S0122/2023","last_action_date":"2023-05-05","last_action":"Died
+        in Finance and Tax","title":"Revised Limitation on Increases of Homestead
+        Property Tax Assessments","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"26","type":"bill","attributes":{"state":"FL","bill_number":"H1209","bill_id":1721434,"text_url":"https://legiscan.com/FL/text/H1209/2023","last_action_date":"2023-06-07","last_action":"Chapter
+        No. 2023-202","title":"Rural Development","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"27","type":"bill","attributes":{"state":"FL","bill_number":"S0032","bill_id":1701440,"text_url":"https://legiscan.com/FL/text/S0032/2023","last_action_date":"2023-03-27","last_action":"Chapter
+        No. 2023-8","title":"Florida Statutes","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"28","type":"bill","attributes":{"state":"FL","bill_number":"H1175","bill_id":1721105,"text_url":"https://legiscan.com/FL/text/H1175/2023","last_action_date":"2023-07-07","last_action":"Chapter
+        No. 2023-337","title":"Sarasota County","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"29","type":"bill","attributes":{"state":"FL","bill_number":"H1083","bill_id":1719625,"text_url":"https://legiscan.com/FL/text/H1083/2023","last_action_date":"2023-07-07","last_action":"Chapter
+        No. 2023-335","title":"Manatee County","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"30","type":"bill","attributes":{"state":"FL","bill_number":"H7011","bill_id":1719409,"text_url":"https://legiscan.com/FL/text/H7011/2023","last_action_date":"2023-03-16","last_action":"Laid
+        on Table; companion bill(s) passed, see SB 32 (Ch. 2023-8)","title":"Florida
+        Statutes","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"31","type":"bill","attributes":{"state":"FL","bill_number":"H0425","bill_id":1677330,"text_url":"https://legiscan.com/FL/text/H0425/2023","last_action_date":"2023-06-06","last_action":"Chapter
+        No. 2023-197; companion bill(s) passed, see CS/CS/CS/HB 1305 (Ch. 2023-70)","title":"Transportation","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"32","type":"bill","attributes":{"state":"FL","bill_number":"H0009","bill_id":1696141,"text_url":"https://legiscan.com/FL/text/H0009/2023/X2","last_action_date":"2023-03-16","last_action":"Chapter
+        No. 2023-5","title":"Reedy Creek Improvement District, Orange and Osceola
+        Counties","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"33","type":"bill","attributes":{"state":"FL","bill_number":"S0064","bill_id":1638337,"text_url":"https://legiscan.com/FL/text/S0064/2023","last_action_date":"2023-05-03","last_action":"Laid
+        on Table, companion bill(s) passed, see CS/CS/CS/HB 425 (Ch. 2023-197), CS/CS/CS/HB
+        1305 (Ch. 2023-70)","title":"Transportation","status":null,"description":null,"sponsors":null,"texts":null}}]}'
+  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/user_bills?user_id=245
@@ -127,15 +461,15 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 70133327-49f7-4cb8-ae41-e8949e475209
+      - a26d04a4-5c94-43be-af75-f4e123e7a0a1
       X-Runtime:
-      - '0.006192'
+      - '0.004535'
       Server-Timing:
-      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.67, process_action.action_controller;dur=1.79
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.50, process_action.action_controller;dur=1.28
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Tue, 01 Aug 2023 22:18:26 GMT
+  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
 recorded_with: VCR 6.2.0

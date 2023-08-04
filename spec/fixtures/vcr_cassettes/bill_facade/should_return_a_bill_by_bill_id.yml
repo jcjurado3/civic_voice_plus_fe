@@ -35,15 +35,15 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"ff4c6912d23dcaeaad5e7bccc298e218"
+      - W/"71fe0a5e24e156de60112f5a91c59134"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8a2c1e64-8ff9-4c78-8744-f79263d7505b
+      - 2ce401a4-914b-4b6b-99d2-e6b276b54ffe
       X-Runtime:
-      - '0.453186'
+      - '0.193033'
       Server-Timing:
-      - start_processing.action_controller;dur=0.50, process_action.action_controller;dur=431.43
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.24, process_action.action_controller;dur=189.67
       Transfer-Encoding:
       - chunked
     body:
@@ -58,8 +58,8 @@ http_interactions:
         for certain offenses when committed with an assault weapon or a large-capacity
         magazine, etc.","sponsors":[{"people_id":12363,"person_hash":"z9j4lnrg","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Lori
         Berman","first_name":"Lori","middle_name":"B.","last_name":"Berman","suffix":"","nickname":"","district":"SD-026","ftm_eid":28610,"votesmart_id":117031,"opensecrets_id":"","knowwho_pid":291114,"ballotpedia":"Lori_Berman","bioguide_id":"","sponsor_type_id":1,"sponsor_order":1,"committee_sponsor":0,"committee_id":0,"state_federal":0},{"people_id":19940,"person_hash":"eq7666uu","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Tina
-        Polsky","first_name":"Tina","middle_name":"","last_name":"Polsky","suffix":"","nickname":"","district":"SD-030","ftm_eid":15916244,"votesmart_id":184461,"opensecrets_id":"","knowwho_pid":652562,"ballotpedia":"Tina_Polsky","bioguide_id":"","sponsor_type_id":2,"sponsor_order":2,"committee_sponsor":0,"committee_id":0,"state_federal":0}],"text":[{"doc_id":2674589,"date":"2023-02-01","type":"Introduced","type_id":1,"mime":"text/html","mime_id":1,"url":"https://legiscan.com/FL/text/S0462/id/2674589","state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/HTML","text_size":49049,"text_hash":"b5249d4719bae9374bb591d596592e1c","alt_bill_text":1,"alt_mime":"application/pdf","alt_mime_id":2,"alt_state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/PDF","alt_text_size":208277,"alt_text_hash":"e5efe99165f0d520b2f45d3522918092"}]}}}'
-  recorded_at: Thu, 03 Aug 2023 00:38:23 GMT
+        Polsky","first_name":"Tina","middle_name":"","last_name":"Polsky","suffix":"","nickname":"","district":"SD-030","ftm_eid":15916244,"votesmart_id":184461,"opensecrets_id":"","knowwho_pid":652562,"ballotpedia":"Tina_Polsky","bioguide_id":"","sponsor_type_id":2,"sponsor_order":2,"committee_sponsor":0,"committee_id":0,"state_federal":0}],"texts":[{"doc_id":2674589,"date":"2023-02-01","type":"Introduced","type_id":1,"mime":"text/html","mime_id":1,"url":"https://legiscan.com/FL/text/S0462/id/2674589","state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/HTML","text_size":49049,"text_hash":"b5249d4719bae9374bb591d596592e1c","alt_bill_text":1,"alt_mime":"application/pdf","alt_mime_id":2,"alt_state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/PDF","alt_text_size":208277,"alt_text_hash":"e5efe99165f0d520b2f45d3522918092"}]}}}'
+  recorded_at: Fri, 04 Aug 2023 14:00:52 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/bills/1689711
@@ -95,15 +95,15 @@ http_interactions:
       Vary:
       - Accept
       Etag:
-      - W/"ff4c6912d23dcaeaad5e7bccc298e218"
+      - W/"71fe0a5e24e156de60112f5a91c59134"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '09330c74-93fa-475e-ab8c-6bc383014a5e'
+      - 1df75c91-0039-4de1-a18e-661b9dce3fa3
       X-Runtime:
-      - '0.233071'
+      - '0.195192'
       Server-Timing:
-      - start_processing.action_controller;dur=0.16, process_action.action_controller;dur=221.60
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.80, process_action.action_controller;dur=190.39
       Transfer-Encoding:
       - chunked
     body:
@@ -118,6 +118,126 @@ http_interactions:
         for certain offenses when committed with an assault weapon or a large-capacity
         magazine, etc.","sponsors":[{"people_id":12363,"person_hash":"z9j4lnrg","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Lori
         Berman","first_name":"Lori","middle_name":"B.","last_name":"Berman","suffix":"","nickname":"","district":"SD-026","ftm_eid":28610,"votesmart_id":117031,"opensecrets_id":"","knowwho_pid":291114,"ballotpedia":"Lori_Berman","bioguide_id":"","sponsor_type_id":1,"sponsor_order":1,"committee_sponsor":0,"committee_id":0,"state_federal":0},{"people_id":19940,"person_hash":"eq7666uu","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Tina
-        Polsky","first_name":"Tina","middle_name":"","last_name":"Polsky","suffix":"","nickname":"","district":"SD-030","ftm_eid":15916244,"votesmart_id":184461,"opensecrets_id":"","knowwho_pid":652562,"ballotpedia":"Tina_Polsky","bioguide_id":"","sponsor_type_id":2,"sponsor_order":2,"committee_sponsor":0,"committee_id":0,"state_federal":0}],"text":[{"doc_id":2674589,"date":"2023-02-01","type":"Introduced","type_id":1,"mime":"text/html","mime_id":1,"url":"https://legiscan.com/FL/text/S0462/id/2674589","state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/HTML","text_size":49049,"text_hash":"b5249d4719bae9374bb591d596592e1c","alt_bill_text":1,"alt_mime":"application/pdf","alt_mime_id":2,"alt_state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/PDF","alt_text_size":208277,"alt_text_hash":"e5efe99165f0d520b2f45d3522918092"}]}}}'
-  recorded_at: Thu, 03 Aug 2023 00:38:23 GMT
+        Polsky","first_name":"Tina","middle_name":"","last_name":"Polsky","suffix":"","nickname":"","district":"SD-030","ftm_eid":15916244,"votesmart_id":184461,"opensecrets_id":"","knowwho_pid":652562,"ballotpedia":"Tina_Polsky","bioguide_id":"","sponsor_type_id":2,"sponsor_order":2,"committee_sponsor":0,"committee_id":0,"state_federal":0}],"texts":[{"doc_id":2674589,"date":"2023-02-01","type":"Introduced","type_id":1,"mime":"text/html","mime_id":1,"url":"https://legiscan.com/FL/text/S0462/id/2674589","state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/HTML","text_size":49049,"text_hash":"b5249d4719bae9374bb591d596592e1c","alt_bill_text":1,"alt_mime":"application/pdf","alt_mime_id":2,"alt_state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/PDF","alt_text_size":208277,"alt_text_hash":"e5efe99165f0d520b2f45d3522918092"}]}}}'
+  recorded_at: Fri, 04 Aug 2023 14:00:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/bills/1689711
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"71fe0a5e24e156de60112f5a91c59134"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e30b0a92-29bd-4e22-a998-394d87f1320b
+      X-Runtime:
+      - '0.198160'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.20, process_action.action_controller;dur=193.64
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1689711","type":"bill","attributes":{"state":"FL","bill_number":"S0462","bill_id":1689711,"text_url":null,"last_action_date":null,"last_action":null,"title":"Assault
+        Weapons and Large-capacity Magazines","status":6,"description":"Prohibiting
+        the sale or transfer of an assault weapon or a large-capacity magazine; prohibiting
+        possession of an assault weapon or a large-capacity magazine; requiring certificates
+        of possession for assault weapons or large-capacity magazines lawfully possessed
+        before a specified date; providing conditions for continued possession of
+        such weapons or large-capacity magazines; providing enhanced criminal penalties
+        for certain offenses when committed with an assault weapon or a large-capacity
+        magazine, etc.","sponsors":[{"people_id":12363,"person_hash":"z9j4lnrg","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Lori
+        Berman","first_name":"Lori","middle_name":"B.","last_name":"Berman","suffix":"","nickname":"","district":"SD-026","ftm_eid":28610,"votesmart_id":117031,"opensecrets_id":"","knowwho_pid":291114,"ballotpedia":"Lori_Berman","bioguide_id":"","sponsor_type_id":1,"sponsor_order":1,"committee_sponsor":0,"committee_id":0,"state_federal":0},{"people_id":19940,"person_hash":"eq7666uu","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Tina
+        Polsky","first_name":"Tina","middle_name":"","last_name":"Polsky","suffix":"","nickname":"","district":"SD-030","ftm_eid":15916244,"votesmart_id":184461,"opensecrets_id":"","knowwho_pid":652562,"ballotpedia":"Tina_Polsky","bioguide_id":"","sponsor_type_id":2,"sponsor_order":2,"committee_sponsor":0,"committee_id":0,"state_federal":0}],"texts":[{"doc_id":2674589,"date":"2023-02-01","type":"Introduced","type_id":1,"mime":"text/html","mime_id":1,"url":"https://legiscan.com/FL/text/S0462/id/2674589","state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/HTML","text_size":49049,"text_hash":"b5249d4719bae9374bb591d596592e1c","alt_bill_text":1,"alt_mime":"application/pdf","alt_mime_id":2,"alt_state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/PDF","alt_text_size":208277,"alt_text_hash":"e5efe99165f0d520b2f45d3522918092"}]}}}'
+  recorded_at: Fri, 04 Aug 2023 14:00:53 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/bills/1689711
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"71fe0a5e24e156de60112f5a91c59134"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b9faea65-2ae0-440d-bb13-a90665d64099
+      X-Runtime:
+      - '0.196107'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.46, process_action.action_controller;dur=191.31
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1689711","type":"bill","attributes":{"state":"FL","bill_number":"S0462","bill_id":1689711,"text_url":null,"last_action_date":null,"last_action":null,"title":"Assault
+        Weapons and Large-capacity Magazines","status":6,"description":"Prohibiting
+        the sale or transfer of an assault weapon or a large-capacity magazine; prohibiting
+        possession of an assault weapon or a large-capacity magazine; requiring certificates
+        of possession for assault weapons or large-capacity magazines lawfully possessed
+        before a specified date; providing conditions for continued possession of
+        such weapons or large-capacity magazines; providing enhanced criminal penalties
+        for certain offenses when committed with an assault weapon or a large-capacity
+        magazine, etc.","sponsors":[{"people_id":12363,"person_hash":"z9j4lnrg","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Lori
+        Berman","first_name":"Lori","middle_name":"B.","last_name":"Berman","suffix":"","nickname":"","district":"SD-026","ftm_eid":28610,"votesmart_id":117031,"opensecrets_id":"","knowwho_pid":291114,"ballotpedia":"Lori_Berman","bioguide_id":"","sponsor_type_id":1,"sponsor_order":1,"committee_sponsor":0,"committee_id":0,"state_federal":0},{"people_id":19940,"person_hash":"eq7666uu","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Tina
+        Polsky","first_name":"Tina","middle_name":"","last_name":"Polsky","suffix":"","nickname":"","district":"SD-030","ftm_eid":15916244,"votesmart_id":184461,"opensecrets_id":"","knowwho_pid":652562,"ballotpedia":"Tina_Polsky","bioguide_id":"","sponsor_type_id":2,"sponsor_order":2,"committee_sponsor":0,"committee_id":0,"state_federal":0}],"texts":[{"doc_id":2674589,"date":"2023-02-01","type":"Introduced","type_id":1,"mime":"text/html","mime_id":1,"url":"https://legiscan.com/FL/text/S0462/id/2674589","state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/HTML","text_size":49049,"text_hash":"b5249d4719bae9374bb591d596592e1c","alt_bill_text":1,"alt_mime":"application/pdf","alt_mime_id":2,"alt_state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/PDF","alt_text_size":208277,"alt_text_hash":"e5efe99165f0d520b2f45d3522918092"}]}}}'
+  recorded_at: Fri, 04 Aug 2023 14:00:53 GMT
 recorded_with: VCR 6.2.0

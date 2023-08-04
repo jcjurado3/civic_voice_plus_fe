@@ -26,7 +26,7 @@
         position: relative;
         background: #a0aec0;
     }
-  
+
     #nav-mobile-btn.close span:nth-child(2) {
         transform: rotate(-45deg);
         margin-top: 0px;
@@ -54,6 +54,12 @@
   background-color: #f8d7da; /* Light red */
   color: #721c24; /* Dark red */
 }
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+}
   </style>
     <header class="top-0 z-50 w-full h-20 bg-black flex items-center justify-between">
     <a href="/" class="relative flex items-center h-full font-black leading-none">
@@ -75,10 +81,8 @@
     <% flash.each do |type, msg| %>
   <%= content_tag :div, msg, class: "flash #{type}" %>
 <% end %>
-<main class="container mx-auto mt-28 px-5 flex">
   <%= yield %>
-    </main>
-    <footer>
+    <footer class="footer">
     <!-- Your footer content goes here -->
     <p>&copy; 2023 CivicVoice+</p>
   </footer>
