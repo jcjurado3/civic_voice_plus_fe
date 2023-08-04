@@ -1,29 +1,84 @@
-<br />
-<%= form_with url: bills_path, method: :get, local: true do |f| %>
-  <%= f.label :search, "Search by topic" %>
-  <%= f.text_field :search %>
-  <%= f.label :state, "Select region" %>
-  <%= f.select :state, options_for_select(us_states, '') %>
+<style>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* You can choose a different trendy font */
+}
 
-  <%= f.submit 'Search' %>
-<% end %>
-<br /><br />
-<% if !params[:search].nil? %>
-  <center><b style="border: solid black; padding:50px; float:left">
-    <b style="font-size:30px;">Search Results</b>
-    <% @results.each do |result| %>
-      <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
-      <p>Description: <%= result[:attributes][:title] %></p>
-      <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
-        <%= f.hidden_field :user_id, value: @user.id %>
-        <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
-        <%= f.submit "save #{result[:attributes][:bill_number]} to my dashboard" %>
-      <% end %>
-      <%= form_with url: user_bill_path("#{result[:attributes][:bill_number]}"), method: :delete, local: true do |f| %>
-        <%= f.hidden_field :user_id, value: @user.id %>
-        <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
-        <%= f.submit "unsave #{result[:attributes][:bill_number]} to my dashboard" %>
-      <% end %>
+.above-fold,
+.search_results {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.image-container,
+.images-container {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.images-container img:first-child {
+  margin-bottom: 5px; /* Stagger the images */
+}
+
+.content-container {
+  flex: 2;
+  padding: 20px;
+  font-size: 18px; /* Larger font size for content */
+}
+
+h1, h2 {
+  font-size: 36px; /* Larger font size for headers */
+  color: #333;
+}
+
+.section-separator {
+  border-bottom: 1px solid #ccc;
+  margin: 40px 0;
+}
+
+</style>
+
+
+<br />
+<div class="container">
+  <section class="above_fold">
+    <%= form_with url: bills_path, method: :get, local: true do |f| %>
+      <%= f.label :search, "Search by topic" %>
+      <%= f.text_field :search %>
+      <%= f.label :state, "Select region" %>
+      <%= f.select :state, options_for_select(us_states, '') %>
+
+      <%= f.submit 'Search' %>
     <% end %>
-  </b>
-<% end %>
+  </section>
+
+<div class="section-separator"></div>
+  <section class="search_results">
+    <div class="content-container">
+      <% if !params[:search].nil? %>
+        <center><b style="border: solid black; padding:50px; float:left">
+          <b style="font-size:30px;">Search Results</b>
+          <% @results.each do |result| %>
+            <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
+            <p>Description: <%= result[:attributes][:title] %></p>
+            <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
+              <%= f.hidden_field :user_id, value: @user.id %>
+              <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
+              <%= f.submit "save #{result[:attributes][:bill_number]} to my dashboard" %>
+            <% end %>
+            <%= form_with url: user_bill_path("#{result[:attributes][:bill_number]}"), method: :delete, local: true do |f| %>
+              <%= f.hidden_field :user_id, value: @user.id %>
+              <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
+              <%= f.submit "unsave #{result[:attributes][:bill_number]} to my dashboard" %>
+            <% end %>
+          <% end %>
+        </b>
+      <% end %>
+    </div>
+  </section>
+</div>

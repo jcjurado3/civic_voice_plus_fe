@@ -1,10 +1,10 @@
 class CvpService
-  def conn
+  def d_conn
     Faraday.new(url: "http://localhost:3000") do |f|
     end
   end
 
-  def d_conn
+  def conn
     Faraday.new(url: "https://civic-voice-plus-api.onrender.com") do |f|
     end
   end

@@ -68,7 +68,9 @@ h1, h2 {
       <h1>Discover Bills That Matter</h1>
       <p>At CivicVoice+, we understand the vital role that well-informed citizens play in shaping our government and society. Take charge of your civic engagement journey like never before.</p>
       <br>
-      <%= link_to "Login", "/auth/google_oauth2", class: "py-1 px-10 bg-transparent text-black font-semibold border border-black  hover:bg-black hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 mb-4 " %>
+      <% if !current_user %>
+        <%= link_to "Login", "/auth/google_oauth2", class: "py-1 px-10 bg-transparent text-black font-semibold border border-black  hover:bg-black hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 mb-4 " %>
+      <% end %>
     </div>
   </section>
 <div class="section-separator"></div>

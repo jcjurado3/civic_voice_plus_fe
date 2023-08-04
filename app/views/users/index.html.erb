@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+  .bill-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  .bill-box a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  .bill-box a:hover {
+    text-decoration: underline;
+  }
+  .bill-status {
+    font-weight: bold;
+  }
+</style>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Index Page</title>
-  <link rel="stylesheet" href="path/to/your/css/style.css">
-</head>
+
 <body class="bg-white text-black">
   <div class="container mx-auto px-4">
     <h1 class="text-2xl font-bold mb-4"> Welcome <%= @user.name %> </h1>
@@ -41,27 +53,25 @@
         <h3 class="text-2xl font-bold mb-2"> <strong> My Saved Bills</strong></h3>
         <ul>
           <% @saved_bills.each do |bill| %>
-            <li class="mb-1"><%= link_to "Bill Name: #{bill[:bill_number]}", bill_path(bill[:bill_id]) %></li>
-            <li class="mb-1"> Bill Title: <%= bill[:title] %> </li>
-            <li class="mb-1"> Bill Status:
-              <% if bill[:status] == 1 %>
-              Introduced
-            <% end %>
-            <% if bill[:status] == 2 %>
-              Engrossed
-            <% end %>
-            <% if bill[:status] == 3 %>
-              Enrolled
-            <% end %>
-            <% if bill[:status] == 4 %>
-              Passed
-            <% end %>
-            <% if bill[:status] == 5 %>
-              Vetoed
-            <% end %>
-            <% if bill[:status] == 6 %>
-              Failed
-            <% end %>
+            <li class="bill-box">
+              <div class="mb-1"><%= link_to "Bill Name: #{bill[:bill_number]}", bill_path(bill[:bill_id]) %></div>
+              <div class="mb-1"> Bill Title: <%= bill[:title] %> </div>
+              <div class="mb-1 bill-status"> Bill Status:
+                <% case bill[:status] %>
+                  <% when 1 %>
+                    Introduced
+                  <% when 2 %>
+                    Engrossed
+                  <% when 3 %>
+                    Enrolled
+                  <% when 4 %>
+                    Passed
+                  <% when 5 %>
+                    Vetoed
+                  <% when 6 %>
+                    Failed
+                <% end %>
+              </div>
             </li>
           <% end %>
         </ul>
