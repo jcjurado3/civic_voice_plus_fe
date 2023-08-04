@@ -82,9 +82,10 @@ h1, h2 {
         <ul style="float:left; padding:20px;">
           <% @result[:sponsors][0..3].each do |sponsor| %>
             <li>Sen/Rep <%= sponsor[:name]%></li>
-            <li>Contact <%= link_to "#{sponsor[:name]}", "https://ballotpedia.org/#{sponsor[:ballotpedia]}" %></li>
-          <% end %><br /><br>
-        </ul><br /><br>
+            <li>Click here to Contact <%= link_to "#{sponsor[:name]}", "https://ballotpedia.org/#{sponsor[:ballotpedia]}" %></li><br />
+          <% end %><br />
+        </ul>
+        <br /><br>
         <br /><br>
         <div class="images-container">
           <%= image_tag "cartoon megaphone.png", alt: "cartoon person with megaphone" %>
