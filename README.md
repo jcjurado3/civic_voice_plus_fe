@@ -80,14 +80,14 @@ Github repositories:
 * [![Tailwind][Tailwind]][Tailwind-url]
 * [![Postgres][Postgres]][Postgres-url]
 * [![Render][Render]][Render-url]
-* [![Heroku][Heroku]][Heroku-url]
-* [![CircleCI][CircleCI]][CircleCI-url]
+<!-- * [![Heroku][Heroku]][Heroku-url]
+* [![CircleCI][CircleCI]][CircleCI-url] -->
 
 CivicVoicePlus front end application uses these integrations:
 * OAuth with Google for user authentication and log in
-    * Gem: omniauth-google-oauth2, more information [here](https://github.com/zquestz/omniauth-google-oauth2)
+  * Gem: omniauth-google-oauth2, more information [here](https://github.com/zquestz/omniauth-google-oauth2)
 * Tailwind was used for CSS styling
-    * Gem: tailwindcss-rails, more information [here](https://github.com/rails/tailwindcss-rails)
+   * Gem: tailwindcss-rails, more information [here](https://github.com/rails/tailwindcss-rails)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,7 +129,7 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 
 <!-- DB Design -->
 # DB Design
-![database design](<CVP BE schema.png>)
+![database design](<CVP FE schema.png>)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,237 +144,38 @@ To demo CivicVoicePlus on your local machine, follow these steps:
 </details>
 <br>
 <details>
-<summary>GET <code>/api/v1/bills/id</code></summary>
+<summary>`route: "/dashboard" `</summary>
 <br>
 
-    {
-      "data": {
-        "id": "1722281",
-        "type": "bill",
-        "attributes": {
-            "state": "FL",
-            "bill_number": "H1234",
-            "bill_id": 1234567,
-            "text_url": null,
-            "last_action_date": null,
-            "last_action": null,
-            "title": "HealthCare District Chapter",
-            "status": 4,
-            "description": "simple description of bill.",
-            "sponsors": [
-                {
-                "people_id": 2345,
-                "name": "Taylor Doe",
-                "first_name": "Taylor",
-                "last_name": "Doe",
-                "ballotpedia": "Taylor_Doe"
-                }, ...],
-            "texts": [
-                {
-                "doc_id": 3456789,
-                "url": "https://legiscan.com/FL/text/H1234/id/3456789"
-                }, ...]
-        }
-      }
-    }
+   (insert photo of dashboard page)
 
 </details>
 <br>
 <details>
-<summary>GET <code>/api/v1/user_bills?user_id=''</code></summary>
+<summary>`route: "/users/:id`</summary>
 <br>
 
-    {
-      "data": [{
-        "id": "1722281",
-        "type": "bill",
-        "attributes": {
-            "state": "FL",
-            "bill_number": "H1234",
-            "bill_id": 1234567,
-            "text_url": null,
-            "last_action_date": null,
-            "last_action": null,
-            "title": "HealthCare District Chapter",
-            "status": 4,
-            "description": "simple description of bill.",
-            "sponsors": [
-                {
-                "people_id": 2345,
-                "name": "Taylor Doe",
-                "first_name": "Taylor",
-                "last_name": "Doe",
-                "ballotpedia": "Taylor_Doe"
-                }, ...],
-            "texts": [
-                {
-                "doc_id": 3456789,
-                "url": "https://legiscan.com/FL/text/H1234/id/3456789"
-                }, ...]
-        }
-      }]
-    }
-
+(insert photo of users show (edit profile) page)
 
 </details>
 <br>
 <details>
-<summary>POST<code>/api/v1/user_bills?user_id=''&bill_id=''</code></summary>
+<summary>`route: "/bills"`</summary>
 <br>
 
-    {
-      data:{
-        id: "25",
-        type: "user_bill",
-        attributes: {
-          user_id: 1,
-          bill_id: 25
-        }
-      }
-    }
-
+(insert photo of bills index search page)
 
 </details>
 <br>
 
 <details>
-<summary>DELETE<code>/api/v1/user_bills?user_id=''&bill_id=''</code></summary>
+<summary>`route: "/bills/:id`</summary>
 <br>
 
-    {   }
+(insert photo of bills show page)
 
 </details>
 <br>
-
-<details>
-<summary>GET <code>/api/v1/user_categories?user_id=''</code></summary>
-<br>
-
-    {
-      data: [
-        {
-          id: "1",
-          type: "category",
-          attributes: {
-            :name=>"artificial intelligence"
-            }
-        },
-        {
-          id: "2",
-          type: "category",
-          attributes: {
-            :name=>"climate"
-            }
-        }
-      ]
-    }
-
-
-</details>
-<br>
-
-<details>
-<summary>POST <code>/api/v1/user_categories?user_id=''&category_id=''</code></summary>
-<br>
-
-    {
-      data: {
-        id: "5",
-        type: "user_category",
-        attributes: {
-          user_id: 1,
-          category_id: 5
-          }
-      }
-    }
-
-
-</details>
-<br>
-
-<details>
-<summary>DELETE <code>/api/v1/user_categories?user_id=''&category_id=''</code></summary>
-<br>
-
-    {   }
-
-</details>
-<br>
-
-<details>
-<summary>GET<code>/api/v1/categories</code></summary>
-<br>
-
-    {
-      data: [{
-        id: "1",
-        type: "category",
-        attributes: {
-          name: "climate"
-        }
-      },
-      ...
-      ]
-    }
-
-</details>
-<br>
-
-<details>
-<summary>GET<code>/api/v1/states</code></summary>
-<br>
-
-    {
-      data: [{
-        id: "1",
-        type: "state",
-        attributes: {
-          state_abbr: "ND",
-          state_name: "North Dakota"
-        }
-      },
-      ...]
-    }
-
-</details>
-<br>
-
-<details>
-<summary>GET<code>/api/v1/user_states?user_id=''</code></summary>
-<br>
-
-    {
-      data: [{
-        id: "39",
-        type: "state",
-        attributes: {
-          state_abbr: "ND",
-          state_name: "North Dakota"
-        }
-      },
-      ...]
-    }
-
-</details>
-<br>
-
-<details>
-<summary>POST<code>/api/v1/user_states?user_id=''state_id=''</code></summary>
-<br>
-
-    {
-      data: {
-        id: "1",
-        type: "user_state",
-        attributes: {
-          user_id: 1,
-          state_id: 39
-        }
-      }
-    }
-
-</details>
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -391,11 +192,13 @@ As part of the Consultancy project requirements, the CivicVoicePlus team challen
 <!-- Roadmap -->
 ## Roadmap
 Additional features, functionality, and potential refactors:
-  * Consume additional APIs to allow users to find nearest polling/voting stations and dates
+  * Standard user registration and log in (to be added to the OAuth workflow)
   * Allow users to create custom search parameters to render on their user digest
   * Create functionality to allow users to opt into email or push notification on status updates of their saved bills
   * Consume OpenAI API and add functionality to a bills show page to read and summarize the entire bill's text document
-  * Additional back end database validations
+  * Add in easy to contact officials via email or access petition information that they can send right to the elected officials from the app
+  * Add nearest voting stations, dates, and updates for users and allow them to add calendar reminders that include the location and details of the polling site
+  * Expanded error handling
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
