@@ -1,6 +1,10 @@
 <a name="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
+<a href="https://civic-voice-plus-fe.onrender.com/">
+  <img src="app/assets/images/cvp_logo.png" alt="Logo" width="100" height="100">
+</a>
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -12,10 +16,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/jcjurado3/civic_voice_plus_fe">
-    <img src="app/assets/images/cvp_logo.png" alt="Logo" width="200" height="200">
+    <img src="app/assets/images/CVP main.png" alt="main page">
   </a>
 
-<h3 align="center">CivicVoice+</h3>
+<h3 align="center">CivicVoice Plus</h3>
 
   <p align="center">
     Welcome to the front end repository for CivicVoicePlus!
