@@ -39,12 +39,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d138eaac-7b7f-40eb-b84c-a77cd9abc479
+      - ca50ce24-26b7-4fd6-8d13-56715bb3b549
       X-Runtime:
-      - '0.005848'
+      - '0.007826'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.32, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=2.52
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.50, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=2.92
       Transfer-Encoding:
       - chunked
     body:
@@ -52,7 +52,7 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"category","attributes":{"name":"artificial
         intelligence"}},{"id":"4","type":"category","attributes":{"name":"conservation
         energy"}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+  recorded_at: Fri, 04 Aug 2023 17:32:18 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/user_states?user_id=245
@@ -92,18 +92,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f0eeecf3-ca49-4add-81ee-7d7f11ea1b8d
+      - e31f59c0-b62c-457a-a9cf-1bb865acfb0e
       X-Runtime:
-      - '0.006268'
+      - '0.007091'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.03, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=2.10
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.11, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=2.37
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"9","type":"state","attributes":{"state_abbr":"FL","state_name":"Florida"}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+  recorded_at: Fri, 04 Aug 2023 17:32:18 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/bills?query=artificial%20intelligence%20or%20conservation%20energy&state=FL&user_id=245
@@ -143,13 +143,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0bc7582d-dbc5-46bd-a956-5f94f4ef9d6d
+      - 21742982-cdfa-4a68-be23-853280f94e9b
       X-Runtime:
-      - '0.210227'
+      - '0.324037'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, cache_read.active_support;dur=0.01,
-        cache_generate.active_support;dur=171.92, cache_write.active_support;dur=0.42,
-        sql.active_record;dur=19.90, instantiation.active_record;dur=0.77, process_action.action_controller;dur=206.78
+      - start_processing.action_controller;dur=0.09, cache_read.active_support;dur=0.02,
+        cache_generate.active_support;dur=254.07, cache_write.active_support;dur=0.72,
+        sql.active_record;dur=39.00, instantiation.active_record;dur=1.41, process_action.action_controller;dur=319.13
       Transfer-Encoding:
       - chunked
     body:
@@ -210,7 +210,7 @@ http_interactions:
         Counties","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"33","type":"bill","attributes":{"state":"FL","bill_number":"S0064","bill_id":1638337,"text_url":"https://legiscan.com/FL/text/S0064/2023","last_action_date":"2023-05-03","last_action":"Laid
         on Table, companion bill(s) passed, see CS/CS/CS/HB 425 (Ch. 2023-197), CS/CS/CS/HB
         1305 (Ch. 2023-70)","title":"Transportation","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+  recorded_at: Fri, 04 Aug 2023 17:32:19 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/user_categories?user_id=245
@@ -250,12 +250,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0ffedcc5-624b-483f-b81c-df410f2988c7
+      - 68b31e9a-9954-4375-af72-a89e809a852f
       X-Runtime:
-      - '0.005846'
+      - '0.009060'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=1.12, instantiation.active_record;dur=0.04,
-        process_action.action_controller;dur=2.29
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=1.62, instantiation.active_record;dur=0.05,
+        process_action.action_controller;dur=3.80
       Transfer-Encoding:
       - chunked
     body:
@@ -263,7 +263,7 @@ http_interactions:
       string: '{"data":[{"id":"1","type":"category","attributes":{"name":"artificial
         intelligence"}},{"id":"4","type":"category","attributes":{"name":"conservation
         energy"}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+  recorded_at: Fri, 04 Aug 2023 17:32:19 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/user_states?user_id=245
@@ -303,18 +303,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 67109763-5990-4665-ae9d-9d6f0706f5cc
+      - 07461547-42a1-4a33-a5dd-983ad00cec93
       X-Runtime:
-      - '0.007061'
+      - '0.007871'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, sql.active_record;dur=1.03, instantiation.active_record;dur=0.03,
-        process_action.action_controller;dur=2.27
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=1.32, instantiation.active_record;dur=0.04,
+        process_action.action_controller;dur=3.12
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"9","type":"state","attributes":{"state_abbr":"FL","state_name":"Florida"}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+  recorded_at: Fri, 04 Aug 2023 17:32:19 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/bills?query=artificial%20intelligence%20or%20conservation%20energy&state=FL&user_id=245
@@ -354,13 +354,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c6311c60-dbfd-4414-a68e-7141b37a3565
+      - 2d799ae1-8d0f-4a5e-90ec-9223beb812b3
       X-Runtime:
-      - '0.220801'
+      - '0.426164'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, cache_read.active_support;dur=0.01,
-        cache_generate.active_support;dur=183.43, cache_write.active_support;dur=0.51,
-        sql.active_record;dur=20.84, instantiation.active_record;dur=1.23, process_action.action_controller;dur=217.50
+      - start_processing.action_controller;dur=0.09, cache_read.active_support;dur=0.02,
+        cache_generate.active_support;dur=264.78, cache_write.active_support;dur=0.65,
+        sql.active_record;dur=120.39, instantiation.active_record;dur=2.17, process_action.action_controller;dur=421.44
       Transfer-Encoding:
       - chunked
     body:
@@ -421,7 +421,7 @@ http_interactions:
         Counties","status":null,"description":null,"sponsors":null,"texts":null}},{"id":"33","type":"bill","attributes":{"state":"FL","bill_number":"S0064","bill_id":1638337,"text_url":"https://legiscan.com/FL/text/S0064/2023","last_action_date":"2023-05-03","last_action":"Laid
         on Table, companion bill(s) passed, see CS/CS/CS/HB 425 (Ch. 2023-197), CS/CS/CS/HB
         1305 (Ch. 2023-70)","title":"Transportation","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+  recorded_at: Fri, 04 Aug 2023 17:32:19 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/user_bills?user_id=245
@@ -461,15 +461,3168 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a26d04a4-5c94-43be-af75-f4e123e7a0a1
+      - bf8fc3a7-ea25-493f-8457-002018f35f04
       X-Runtime:
-      - '0.004535'
+      - '0.009712'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.50, process_action.action_controller;dur=1.28
+      - start_processing.action_controller;dur=0.21, sql.active_record;dur=0.81, process_action.action_controller;dur=2.28
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:58 GMT
+  recorded_at: Fri, 04 Aug 2023 17:32:19 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=246
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fe68693e-4689-49d6-ba3b-91a0c2175397
+      X-Runtime:
+      - '0.006605'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.71, process_action.action_controller;dur=1.95
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:35:46 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=246
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f4e34a39-490a-4e85-993b-d0d2e930386c
+      X-Runtime:
+      - '0.005778'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.94, process_action.action_controller;dur=1.77
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:35:46 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=246
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7b5d5327-005d-449f-844f-c7532416879e
+      X-Runtime:
+      - '0.005573'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.51, process_action.action_controller;dur=1.39
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:35:46 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=265
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 02c5be81-af28-4869-ac8a-035c15ebeea3
+      X-Runtime:
+      - '0.006077'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.56, process_action.action_controller;dur=1.60
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:36:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=265
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bcb0d318-7db0-48a5-8d95-8d3c641a74aa
+      X-Runtime:
+      - '0.004826'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.53, process_action.action_controller;dur=1.30
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:36:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=265
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 365d1751-f530-4f02-84ea-5716e15afa5d
+      X-Runtime:
+      - '0.006277'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.95, process_action.action_controller;dur=2.00
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:36:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=270
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5c95d4f4-b9d7-4f91-8b35-f578d1379352
+      X-Runtime:
+      - '0.011167'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=4.28, process_action.action_controller;dur=5.99
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:36:55 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=270
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2e0907ae-3249-40cb-a04b-996a25bb33e2
+      X-Runtime:
+      - '0.006156'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.66, process_action.action_controller;dur=1.68
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:36:55 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=270
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f6aaa247-33f1-44ae-9548-9c22634b84f1
+      X-Runtime:
+      - '0.008773'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.72, process_action.action_controller;dur=1.75
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:36:55 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=275
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3ffdc27f-09f7-41ad-b5f9-b80e07303edc
+      X-Runtime:
+      - '0.008762'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.77, process_action.action_controller;dur=1.79
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:37:32 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=275
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1d0c3009-9397-41e5-8899-bdfa5cc1ce80
+      X-Runtime:
+      - '0.008005'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=0.90, process_action.action_controller;dur=2.07
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:37:32 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=275
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6ac2a6b6-d04d-4cc0-b745-e1311ef864c8
+      X-Runtime:
+      - '0.005498'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.61, process_action.action_controller;dur=1.55
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:37:32 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=280
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8876d15f-cd50-489f-a4bb-2ff136b921fa
+      X-Runtime:
+      - '0.010861'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.12, sql.active_record;dur=0.88, process_action.action_controller;dur=2.11
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:38:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=280
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f7d05724-4373-4c09-baf6-507619ed2a9f
+      X-Runtime:
+      - '0.005935'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.57, process_action.action_controller;dur=1.61
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:38:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=280
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ff31cfa2-4862-4e61-ad18-859cc4e2a5d8
+      X-Runtime:
+      - '0.005630'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=0.75, process_action.action_controller;dur=1.83
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:38:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=286
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 53831d7b-e714-4a58-a207-77fe5ef438ff
+      X-Runtime:
+      - '0.007910'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=0.59, process_action.action_controller;dur=1.61
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:39:09 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=286
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a24654c0-647f-4779-9dd6-4a82033aee1d
+      X-Runtime:
+      - '0.008433'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=0.86, process_action.action_controller;dur=3.27
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:39:09 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=286
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1a022426-1676-44a1-bff2-7277c6bc95ef
+      X-Runtime:
+      - '0.005062'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.65, process_action.action_controller;dur=1.74
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:39:09 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=291
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1da3b483-c027-4edd-aac2-1d7ed712aa64
+      X-Runtime:
+      - '0.006784'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.63, process_action.action_controller;dur=1.95
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:39:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=291
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1bbf1146-6de9-4149-9192-3140b0e2e90f
+      X-Runtime:
+      - '0.006819'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.78, process_action.action_controller;dur=2.52
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:39:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=291
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ebadb71b-e0e0-4d3b-a4da-46953726c17e
+      X-Runtime:
+      - '0.005474'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.86, process_action.action_controller;dur=1.97
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:39:25 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f02bfbcf-3b0d-4c3b-9374-773cb6556093
+      X-Runtime:
+      - '0.007044'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=1.14, process_action.action_controller;dur=2.19
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:40:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b0a46f4a-886f-496f-81ce-f533a8196eb1
+      X-Runtime:
+      - '0.005103'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.74, process_action.action_controller;dur=1.71
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:40:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3681fa9c-d79b-4598-bd00-e69592068b59
+      X-Runtime:
+      - '0.005915'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.50, process_action.action_controller;dur=1.42
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:40:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=304
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1d28f725-f703-4bf5-986d-3c2ae180ad54
+      X-Runtime:
+      - '0.033616'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=24.69,
+        process_action.action_controller;dur=26.12
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:41:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=304
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 287265c1-6212-407e-8bc3-37617e4ae3e2
+      X-Runtime:
+      - '0.006345'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.55, process_action.action_controller;dur=1.44
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:41:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=304
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 422dda95-38fb-48f6-bd4a-a7a424116b24
+      X-Runtime:
+      - '0.009436'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=0.91, process_action.action_controller;dur=2.33
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:41:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=312
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0a530260-0547-4f4b-aa22-30a5728cf958
+      X-Runtime:
+      - '0.007028'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.11, sql.active_record;dur=0.94, process_action.action_controller;dur=1.94
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:43:04 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=312
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2bd1d251-f61f-4e7e-8dbb-cb6144c6211a
+      X-Runtime:
+      - '0.006945'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=2.22, process_action.action_controller;dur=3.07
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:43:04 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=312
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4a4a08b5-18d1-45e9-8fa3-d9aa33461aaf
+      X-Runtime:
+      - '0.005374'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.52, process_action.action_controller;dur=1.38
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:43:04 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=320
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 010235ca-b0ac-4d19-b5d9-566554e73b9c
+      X-Runtime:
+      - '0.008875'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=1.09, process_action.action_controller;dur=2.21
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:44:11 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=320
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e11c8090-1833-4cb8-a576-055ffea64d45
+      X-Runtime:
+      - '0.008525'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.34, sql.active_record;dur=1.16, process_action.action_controller;dur=3.41
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:44:11 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=320
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fe16faac-dfeb-4bbf-b9f2-bd96767c3bc2
+      X-Runtime:
+      - '0.006704'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.61, process_action.action_controller;dur=1.65
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:44:11 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=328
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6e0862b0-be35-47e5-bb62-a227872804c8
+      X-Runtime:
+      - '0.011721'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.63, process_action.action_controller;dur=7.15
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:44:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=328
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 18ba4f62-2a22-463b-87cf-61b01b17ffcf
+      X-Runtime:
+      - '0.006665'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.71, process_action.action_controller;dur=2.28
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:44:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=328
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e076d9b3-64b7-4601-89e5-c63c84daf9a4
+      X-Runtime:
+      - '0.005665'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.74, process_action.action_controller;dur=1.83
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:44:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=336
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4322880e-5f0f-4ca6-830a-f8b0ec734e27
+      X-Runtime:
+      - '0.005470'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.54, process_action.action_controller;dur=1.47
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:45:21 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=336
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f9bf1d82-716d-4655-a64f-293aa3c49a68
+      X-Runtime:
+      - '0.005432'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.61, process_action.action_controller;dur=1.56
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:45:21 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=336
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b12c920b-eb57-4f6f-8076-844b07ef5167
+      X-Runtime:
+      - '0.016043'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=5.49, process_action.action_controller;dur=10.27
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:45:21 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=344
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3e8cfc95-6d1a-4880-919e-06ac3a75453f
+      X-Runtime:
+      - '0.007722'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.77, process_action.action_controller;dur=2.26
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:46:29 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=344
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c7a61959-6b18-4cd1-bd29-3e2edf365663
+      X-Runtime:
+      - '0.006591'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.80, process_action.action_controller;dur=1.97
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:46:29 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=344
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 32e47d6e-af2a-41bc-9499-b163afb23531
+      X-Runtime:
+      - '0.006316'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.76, process_action.action_controller;dur=1.97
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:46:29 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=352
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 34265bc8-9a9c-4de7-b015-d9e19ae2618a
+      X-Runtime:
+      - '0.021084'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=12.13,
+        process_action.action_controller;dur=15.85
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:46:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=352
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1b6b2372-3577-42d6-bfb1-3f74e4a53d31
+      X-Runtime:
+      - '0.013280'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.13, sql.active_record;dur=1.20, process_action.action_controller;dur=8.17
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:46:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=352
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2310170b-ccfd-41d5-b468-e69eab573520
+      X-Runtime:
+      - '0.009786'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.13, sql.active_record;dur=0.99, process_action.action_controller;dur=2.15
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:46:52 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=360
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3723da2a-0c05-41db-a96e-a43da53920b5
+      X-Runtime:
+      - '0.007046'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.62, process_action.action_controller;dur=1.56
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:48:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=360
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e1feae9e-1311-4cf7-a4d5-bea365e5021a
+      X-Runtime:
+      - '0.004797'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.80, process_action.action_controller;dur=1.55
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:48:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=360
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f01d2b67-5c90-47a7-be2f-5973fd3e295c
+      X-Runtime:
+      - '0.009721'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.55, process_action.action_controller;dur=1.54
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:48:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=368
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b1cfb4e3-e4cc-42da-945b-22e718692174
+      X-Runtime:
+      - '0.006164'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=1.08, process_action.action_controller;dur=2.18
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:48:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=368
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 806369a9-53c3-437f-a307-863b89626448
+      X-Runtime:
+      - '0.007868'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.09, sql.active_record;dur=0.60, process_action.action_controller;dur=3.80
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:48:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=368
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7de28420-9170-48dd-ba16-86d6682f4d4d
+      X-Runtime:
+      - '0.005670'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.70, process_action.action_controller;dur=1.62
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:48:23 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=376
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4765b618-2277-47aa-aca5-4c3cf5a31cc7
+      X-Runtime:
+      - '0.007551'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.15, sql.active_record;dur=0.85, process_action.action_controller;dur=2.48
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:49:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=376
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '012591de-0b61-4235-a615-1c1a0139241e'
+      X-Runtime:
+      - '0.005597'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=0.68, process_action.action_controller;dur=1.61
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:49:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=376
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9fd66ea0-a7cc-4328-9278-6d5559eb7d5b
+      X-Runtime:
+      - '0.005210'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=0.56, process_action.action_controller;dur=1.46
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:49:51 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=384
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 06ca475f-016d-4970-a964-624c64b81d40
+      X-Runtime:
+      - '0.007118'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.56, process_action.action_controller;dur=3.04
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:50:18 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=384
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8a376c32-81ed-47c7-abc9-28b64625deae
+      X-Runtime:
+      - '0.005682'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.49, process_action.action_controller;dur=1.16
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:50:18 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=384
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a9c49a8d-3abf-4ea8-8c21-09f12572a3a3
+      X-Runtime:
+      - '0.006659'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=2.26, process_action.action_controller;dur=3.25
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:50:18 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=392
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cf0831b0-186a-4329-96de-57b507a8e707
+      X-Runtime:
+      - '0.006471'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.08, sql.active_record;dur=0.64, process_action.action_controller;dur=2.42
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:51:20 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=392
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d1f1d9e0-e039-4d2f-840d-abac3339c32f
+      X-Runtime:
+      - '0.006540'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=2.65, process_action.action_controller;dur=3.32
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:51:20 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=392
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - fc96512c-f7d0-406c-99c3-7a06f6b165cd
+      X-Runtime:
+      - '0.004854'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.53, process_action.action_controller;dur=1.30
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:51:20 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=400
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f42830c5-a1a2-4dea-aa88-9e4ba2bc8e67
+      X-Runtime:
+      - '0.017638'
+      Server-Timing:
+      - start_processing.action_controller;dur=1.63, sql.active_record;dur=4.44, process_action.action_controller;dur=5.52
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:51:43 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_categories?user_id=400
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4da355ae-aa4f-437e-88ff-16901d999a20
+      X-Runtime:
+      - '0.013674'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.10, sql.active_record;dur=3.81, process_action.action_controller;dur=4.84
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:51:43 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/user_bills?user_id=400
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 506b3881-5c7e-4928-ac5f-6a31c982e480
+      X-Runtime:
+      - '0.017039'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=12.37,
+        process_action.action_controller;dur=13.26
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Fri, 04 Aug 2023 17:51:43 GMT
 recorded_with: VCR 6.2.0

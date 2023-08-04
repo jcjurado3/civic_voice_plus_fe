@@ -39,11 +39,11 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b86afe96-f003-403f-8e10-a91936029928
+      - 56f96156-30df-4868-8371-475e13570cbd
       X-Runtime:
-      - '0.193911'
+      - '0.259456'
       Server-Timing:
-      - start_processing.action_controller;dur=0.06, sql.active_record;dur=0.86, process_action.action_controller;dur=190.87
+      - start_processing.action_controller;dur=0.07, sql.active_record;dur=1.27, process_action.action_controller;dur=255.54
       Transfer-Encoding:
       - chunked
     body:
@@ -59,7 +59,7 @@ http_interactions:
         magazine, etc.","sponsors":[{"people_id":12363,"person_hash":"z9j4lnrg","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Lori
         Berman","first_name":"Lori","middle_name":"B.","last_name":"Berman","suffix":"","nickname":"","district":"SD-026","ftm_eid":28610,"votesmart_id":117031,"opensecrets_id":"","knowwho_pid":291114,"ballotpedia":"Lori_Berman","bioguide_id":"","sponsor_type_id":1,"sponsor_order":1,"committee_sponsor":0,"committee_id":0,"state_federal":0},{"people_id":19940,"person_hash":"eq7666uu","party_id":"1","state_id":9,"party":"D","role_id":2,"role":"Sen","name":"Tina
         Polsky","first_name":"Tina","middle_name":"","last_name":"Polsky","suffix":"","nickname":"","district":"SD-030","ftm_eid":15916244,"votesmart_id":184461,"opensecrets_id":"","knowwho_pid":652562,"ballotpedia":"Tina_Polsky","bioguide_id":"","sponsor_type_id":2,"sponsor_order":2,"committee_sponsor":0,"committee_id":0,"state_federal":0}],"texts":[{"doc_id":2674589,"date":"2023-02-01","type":"Introduced","type_id":1,"mime":"text/html","mime_id":1,"url":"https://legiscan.com/FL/text/S0462/id/2674589","state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/HTML","text_size":49049,"text_hash":"b5249d4719bae9374bb591d596592e1c","alt_bill_text":1,"alt_mime":"application/pdf","alt_mime_id":2,"alt_state_link":"https://www.flsenate.gov/Session/Bill/2023/462/BillText/Filed/PDF","alt_text_size":208277,"alt_text_hash":"e5efe99165f0d520b2f45d3522918092"}]}}}'
-  recorded_at: Fri, 04 Aug 2023 14:00:55 GMT
+  recorded_at: Fri, 04 Aug 2023 17:49:49 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/members/1689711
@@ -99,11 +99,11 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '08aa8a78-15f4-45d6-8490-162e65953192'
+      - 44c1e753-7361-4844-aae0-e705e750fa3c
       X-Runtime:
-      - '0.186649'
+      - '0.381573'
       Server-Timing:
-      - start_processing.action_controller;dur=0.09, process_action.action_controller;dur=182.01
+      - start_processing.action_controller;dur=0.17, process_action.action_controller;dur=376.14
       Transfer-Encoding:
       - chunked
     body:
@@ -111,5 +111,5 @@ http_interactions:
       string: '{"data":[{"id":"12363","type":"member","attributes":{"first_name":"Lori","last_name":"Berman","email":null,"image_url":null,"full_name":"Lori
         Berman","party":null}},{"id":"19940","type":"member","attributes":{"first_name":"Tina","last_name":"Polsky","email":null,"image_url":null,"full_name":"Tina
         Polsky","party":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:55 GMT
+  recorded_at: Fri, 04 Aug 2023 17:49:49 GMT
 recorded_with: VCR 6.2.0

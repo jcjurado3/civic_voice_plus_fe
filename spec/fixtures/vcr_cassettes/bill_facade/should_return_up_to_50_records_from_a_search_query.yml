@@ -39,13 +39,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 346d956f-8265-4265-8f20-cb4b8613250a
+      - 7ba7a3ce-bf82-4847-bdf2-44b935cce370
       X-Runtime:
-      - '0.342984'
+      - '0.458376'
       Server-Timing:
-      - start_processing.action_controller;dur=0.31, cache_read.active_support;dur=0.07,
-        cache_generate.active_support;dur=225.66, cache_write.active_support;dur=1.91,
-        sql.active_record;dur=65.32, instantiation.active_record;dur=1.52, process_action.action_controller;dur=324.53
+      - start_processing.action_controller;dur=0.48, cache_read.active_support;dur=0.36,
+        cache_generate.active_support;dur=305.03, cache_write.active_support;dur=2.93,
+        sql.active_record;dur=66.66, instantiation.active_record;dur=1.40, process_action.action_controller;dur=436.83
       Transfer-Encoding:
       - chunked
     body:
@@ -119,7 +119,7 @@ http_interactions:
         2023-240), SB 2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243),
         SB 7018 (Ch. 2023-244), SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"General
         Appropriations Act","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:51 GMT
+  recorded_at: Fri, 04 Aug 2023 17:49:43 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/bills?query=guns&state=FL
@@ -159,13 +159,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 59e3f1ee-4c5c-4574-8bbb-ee1c80b90849
+      - bf5096ed-de0b-4724-bf60-fe3d8c222363
       X-Runtime:
-      - '0.237418'
+      - '0.342404'
       Server-Timing:
-      - start_processing.action_controller;dur=0.08, cache_read.active_support;dur=0.01,
-        cache_generate.active_support;dur=183.68, cache_write.active_support;dur=0.83,
-        sql.active_record;dur=28.81, instantiation.active_record;dur=0.80, process_action.action_controller;dur=233.76
+      - start_processing.action_controller;dur=0.10, cache_read.active_support;dur=0.02,
+        cache_generate.active_support;dur=269.02, cache_write.active_support;dur=0.85,
+        sql.active_record;dur=41.99, instantiation.active_record;dur=1.57, process_action.action_controller;dur=333.82
       Transfer-Encoding:
       - chunked
     body:
@@ -239,7 +239,7 @@ http_interactions:
         2023-240), SB 2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243),
         SB 7018 (Ch. 2023-244), SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"General
         Appropriations Act","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:51 GMT
+  recorded_at: Fri, 04 Aug 2023 17:49:43 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/bills?query=guns&state=FL
@@ -279,13 +279,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8a41e0b2-7399-49f6-81e6-42ab3ef97529
+      - 2cfe30dd-f0d4-4121-b3b6-122dc7145f50
       X-Runtime:
-      - '0.219659'
+      - '0.321041'
       Server-Timing:
-      - start_processing.action_controller;dur=0.14, cache_read.active_support;dur=0.02,
-        cache_generate.active_support;dur=175.12, cache_write.active_support;dur=0.48,
-        sql.active_record;dur=23.85, instantiation.active_record;dur=0.82, process_action.action_controller;dur=215.74
+      - start_processing.action_controller;dur=0.26, cache_read.active_support;dur=0.02,
+        cache_generate.active_support;dur=266.10, cache_write.active_support;dur=0.48,
+        sql.active_record;dur=33.24, instantiation.active_record;dur=0.93, process_action.action_controller;dur=315.41
       Transfer-Encoding:
       - chunked
     body:
@@ -359,7 +359,7 @@ http_interactions:
         2023-240), SB 2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243),
         SB 7018 (Ch. 2023-244), SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"General
         Appropriations Act","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:52 GMT
+  recorded_at: Fri, 04 Aug 2023 17:49:44 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/bills?query=guns&state=FL
@@ -399,13 +399,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 494306bb-a927-40fb-9b6f-bd2c34ecd000
+      - ffaa7bcb-3e59-4d8c-b6e1-8dad9aa34883
       X-Runtime:
-      - '0.207029'
+      - '0.349897'
       Server-Timing:
-      - start_processing.action_controller;dur=0.07, cache_read.active_support;dur=0.01,
-        cache_generate.active_support;dur=170.79, cache_write.active_support;dur=0.41,
-        sql.active_record;dur=19.44, instantiation.active_record;dur=0.74, process_action.action_controller;dur=203.27
+      - start_processing.action_controller;dur=0.08, cache_read.active_support;dur=0.02,
+        cache_generate.active_support;dur=264.86, cache_write.active_support;dur=2.18,
+        sql.active_record;dur=49.26, instantiation.active_record;dur=1.38, process_action.action_controller;dur=344.01
       Transfer-Encoding:
       - chunked
     body:
@@ -479,7 +479,7 @@ http_interactions:
         2023-240), SB 2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243),
         SB 7018 (Ch. 2023-244), SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"General
         Appropriations Act","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:52 GMT
+  recorded_at: Fri, 04 Aug 2023 17:49:44 GMT
 - request:
     method: get
     uri: http://localhost:3000/api/v1/bills?query=guns&state=FL
@@ -519,13 +519,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ca0cd8e4-e314-433d-b091-b1f0d1199c71
+      - aa829b87-8636-471b-a6f7-c86461bc9b1e
       X-Runtime:
-      - '0.211900'
+      - '0.402675'
       Server-Timing:
-      - start_processing.action_controller;dur=0.09, cache_read.active_support;dur=0.04,
-        cache_generate.active_support;dur=168.56, cache_write.active_support;dur=1.40,
-        sql.active_record;dur=20.83, instantiation.active_record;dur=0.86, process_action.action_controller;dur=207.94
+      - start_processing.action_controller;dur=0.10, cache_read.active_support;dur=0.02,
+        cache_generate.active_support;dur=276.17, cache_write.active_support;dur=2.14,
+        sql.active_record;dur=89.24, instantiation.active_record;dur=2.82, process_action.action_controller;dur=398.04
       Transfer-Encoding:
       - chunked
     body:
@@ -599,5 +599,5 @@ http_interactions:
         2023-240), SB 2504 (Ch. 2023-241), SB 2506 (Ch. 2023-242), SB 2510 (Ch. 2023-243),
         SB 7018 (Ch. 2023-244), SB 7024 (Ch. 2023-193), SB 7030 (Ch. 2023-265)","title":"General
         Appropriations Act","status":null,"description":null,"sponsors":null,"texts":null}}]}'
-  recorded_at: Fri, 04 Aug 2023 14:00:52 GMT
+  recorded_at: Fri, 04 Aug 2023 17:49:45 GMT
 recorded_with: VCR 6.2.0
