@@ -7,7 +7,7 @@ class UserBillsController < ApplicationController
     CvpService.new.save_bill(@user.id, bill_id)
     flash[:notice] = 'Bill saved successfully.'
 
-    redirect_to bills_path
+    redirect_to dashboard_path
   end
 
   def destroy
