@@ -34,4 +34,3 @@
 !/app/assets/builds/.keep
 /coverage
 /config/application.yml
-/spec/fixtures/vcr_cassettes
