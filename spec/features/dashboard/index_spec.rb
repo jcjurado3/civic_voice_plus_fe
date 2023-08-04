@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "dashboard index page" do 
   describe "happy path" do
     before(:each) do
-      @user1 = User.create!(name: "tester", id: 245)
+      @user1 = User.create!(name: "tester")
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
 
     end
@@ -55,13 +55,14 @@ RSpec.describe "dashboard index page" do
       within("#digest-section") do
         expect(page).to have_content("Digest")
         expect(page).to_not have_button("select bill topics")
-        expect(page).to have_content("Appropriations.")
+        expect(page).to have_content("Bill Title: Appropriations ")
       end
     end
 
     xit "has saved bill section", :vcr do
       visit dashboard_path
-
+      click_button("Search Bills")
+      save_and_open_page
       within("#saved-bills") do
         expect(page).to have_content("Saved Bill 1")
         expect(page).to have_content("Saved Bill 2")
