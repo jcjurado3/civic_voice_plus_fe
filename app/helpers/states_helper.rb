@@ -1,8 +1,65 @@
 module StatesHelper
-  def us_states
+  def us_states_str
+    [
+      ['Everything', ''],
+      ['Alabama', 'AL'],
+      ['Alaska', 'AK'],
+      ['Arizona', 'AZ'],
+      ['Arkansas', 'AR'],
+      ['California', 'CA'],
+      ['Colorado', 'CO'],
+      ['Connecticut', 'CT'],
+      ['Delaware', 'DE'],
+      ['District of Columbia', 'DC'],
+      ['Florida', 'FL'],
+      ['Georgia', 'GA'],
+      ['Hawaii', 'HI'],
+      ['Idaho', 'ID'],
+      ['Illinois', 'IL'],
+      ['Indiana', 'IN'],
+      ['Iowa', 'IA'],
+      ['Kansas', 'KS'],
+      ['Kentucky', 'KY'],
+      ['Louisiana', 'LA'],
+      ['Maine', 'ME'],
+      ['Maryland', 'MD'],
+      ['Massachusetts', 'MA'],
+      ['Michigan', 'MI'],
+      ['Minnesota', 'MN'],
+      ['Mississippi', 'MS'],
+      ['Missouri', 'MO'],
+      ['Montana', 'MT'],
+      ['Nebraska', 'NE'],
+      ['Nevada', 'NV'],
+      ['New Hampshire', 'NH'],
+      ['New Jersey', 'NJ'],
+      ['New Mexico', 'NM'],
+      ['New York', 'NY'],
+      ['North Carolina', 'NC'],
+      ['North Dakota', 'ND'],
+      ['Ohio', 'OH'],
+      ['Oklahoma', 'OK'],
+      ['Oregon', 'OR'],
+      ['Pennsylvania', 'PA'],
+      ['Rhode Island', 'RI'],
+      ['South Carolina', 'SC'],
+      ['South Dakota', 'SD'],
+      ['Tennessee', 'TN'],
+      ['Texas', 'TX'],
+      ['Utah', 'UT'],
+      ['Vermont', 'VT'],
+      ['Virginia', 'VA'],
+      ['Washington', 'WA'],
+      ['West Virginia', 'WV'],
+      ['Wisconsin', 'WI'],
+      ['Wyoming', 'WY']
+    ]
+  end
+
+  def us_states_int
     [
           ['Everywhere', ''],
-          ['Alabama', 1],
+          ['Alabama', ],
           ['Alaska', 2],
           ['Arizona', 3],
           ['Arkansas', 4],
@@ -11,7 +68,7 @@ module StatesHelper
           ['Connecticut', 7],
           ['Delaware', 8],
           ['Florida', 9],
-          ['Georgia', 10],
+          ['Georgia', 10,],
           ['Hawaii', 11],
           ['Idaho', 12],
           ['Illinois', 13],
@@ -52,7 +109,8 @@ module StatesHelper
           ['West Virginia', 48],
           ['Wisconsin', 49],
           ['Wyoming', 50],
-          ['Wyoming', 52]
-                              ]
+          ['Washington DC', 51]
+                              
+        ]
   end
 end
