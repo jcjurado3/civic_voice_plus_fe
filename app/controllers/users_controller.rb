@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
   def index
     @user = current_user
+    # require 'pry'; binding.pry
     if @user.present?
-      @digest_bills = CategoryBillFacade.new(@user.id).get_user_category_bills
-      @selected_categories = CategoryBillFacade.new(@user.id).get_user_category_bills
-      @saved_bills = UserBillFacade.new(@user.id).get_user_saved_bills
+      @digest_bills = CategoryBillFacade.new(@user.id).get_digest_bills
+      @selected_categories = CategoryBillFacade.new(@user.id).get_categories
+      @saved_bills = UserBillFacade.new(@user.id).get_bills
     else
       redirect_to root_path
       flash[:error] = "You must be logged in to view this page"

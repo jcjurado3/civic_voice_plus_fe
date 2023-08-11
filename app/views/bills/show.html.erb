@@ -50,27 +50,27 @@ h1, h2 {
     <br /><br>
 
   <div class="content-container">
-    <h2>Bill Name: <%= @result[:title] %></h2>
+    <h2>Bill Name: <%= @result.bill_number %></h2>
     <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
       <%= f.hidden_field :user_id, value: @user.id %>
-      <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
-      <%= f.submit "save #{@result[:bill_number]} to my dashboard" %>
+      <%= f.hidden_field :bill_id, value: "#{@result.bill_id}" %>
+      <%= f.submit "save #{@result.bill_id} to my dashboard" %>
     <% end %>
-    <%= form_with url: user_bill_path("#{@result[:bill_number]}"), method: :delete, local: true do |f| %>
+    <%= form_with url: user_bill_path("#{@result.bill_id}"), method: :delete, local: true do |f| %>
             <%= f.hidden_field :user_id, value: @user.id %>
-            <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
-            <%= f.submit "unsave #{@result[:bill_number]} to my dashboard" %>
+            <%= f.hidden_field :bill_id, value: "#{@result.bill_id}" %>
+            <%= f.submit "unsave #{@result.bill_id} to my dashboard" %>
           <% end %>
     <br />
-    Status: <%= @result[:texts][0][:type] %>
+    Status: <%#= @result.texts.last.type %>
     <br /><br>
-    Summary: <%= @result[:description] %>
+    Summary: <%= @result.description %>
     <br /><br>
 
-    <% bill_num = @result[:bill_id] %>
-    <% state = @result[:state] %>
-    <% doc_id = @result[:texts][0][:doc_id] %>
-    <h3>Want to know more? <%= button_to 'Check out the Full Text Here!', "https://legiscan.com/#{state}/text/#{bill_num}/id/#{doc_id}" %></h3>
+    <% bill_num = @result.bill_id %>
+    <% state = @result.state %>
+    <%# doc_id = @result.texts.last.doc_id%>
+    <h3>Want to know more? <%#= button_to 'Check out the Full Text Here!', "https://legiscan.com/#{state}/text/#{bill_num}/id/#{doc_id}" %></h3>
   </div>
 
   <div class="section-separator"></div>
@@ -80,7 +80,7 @@ h1, h2 {
 
         <br />
         <ul style="float:left; padding:20px;">
-          <% @result[:sponsors][0..3].each do |sponsor| %>
+          <% @result.sponsors[0..3].each do |sponsor| %>
             <% if sponsor[:name].downcase.include?("association" || "committee" || "department") %>
               <li>Department: <%= sponsor[:name] %> | No Contact Info Available at This Time </li>
             <% else %>

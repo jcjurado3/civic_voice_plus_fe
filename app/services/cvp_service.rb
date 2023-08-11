@@ -1,5 +1,5 @@
 class CvpService
-  def d_conn
+  def dconn
     Faraday.new(url: "http://localhost:3000") do |f|
     end
   end
@@ -51,7 +51,9 @@ class CvpService
   end
 
   def search_url(state, search)
-    get_url("/api/v1/bills?state=#{state}&query=#{search}")
+    state_id = state.to_i
+ 
+    get_url("/api/v1/bills?state=#{state_id}&query=#{search}")
   end
 
   def bill_url(bill_id)

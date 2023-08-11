@@ -1,7 +1,7 @@
 module StatesHelper
   def us_states
     [
-          ['Everywhere', ''],
+          ['Everywhere', 52],
           ['Alabama', 1],
           ['Alaska', 2],
           ['Arizona', 3],
@@ -51,8 +51,7 @@ module StatesHelper
           ['Washington', 47],
           ['West Virginia', 48],
           ['Wisconsin', 49],
-          ['Wyoming', 50],
-          ['Wyoming', 52]
+          ['Wyoming', 50]
                               ]
   end
 end

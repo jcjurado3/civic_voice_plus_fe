@@ -18,6 +18,8 @@ RSpec.describe "bills index", type: :feature do
     expect(page).to have_content("Search by topic")
     expect(page).to have_content("Select region")
     expect(page).to have_button("Search")
+
+    fill_in("Search by topic")
   end
 
   it 'returns a *paginated* search results after fields have been selected', :vcr do
