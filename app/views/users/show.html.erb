@@ -34,7 +34,7 @@
       <% end %>
     <% end %>
   <% end %>
-  <%= select_tag 'state', options_for_select(us_states, @selected_state), include_blank: false, class: "w-full h-10 transition-all duration-300 text-black bg-white border border-gray-300 rounded shadow-sm"  %>
+  <%= select_tag 'state', options_for_select(us_states_int, @selected_state), include_blank: false, class: "w-full h-10 transition-all duration-300 text-black bg-white border border-gray-300 rounded shadow-sm"  %>
 <div class="mt-4">
   <%= submit_tag "Save", class: "py-1 px-10 bg-transparent text-black font-semibold border border-black  hover:bg-black hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0 mb-4 float-center" %>
 </div>

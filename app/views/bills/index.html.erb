@@ -51,7 +51,7 @@ h1, h2 {
       <%= f.label :search, "Search by topic" %>
       <%= f.text_field :search %>
       <%= f.label :state, "Select region" %>
-      <%= f.select :state, options_for_select(us_states, '') %>
+      <%= f.select :state, options_for_select(us_states_str, '') %>
 
       <%= f.submit 'Search' %>
     <% end %>
@@ -63,7 +63,7 @@ h1, h2 {
       <% if !params[:search].nil? %>
         <center><b style="border: solid black; padding:50px; float:left">
           <b style="font-size:30px;">Search Results</b>
-          <% if @results.empty? %>
+          <% if @results.empty? || !@results.present? %>
             <p> no search results match this query </p>
             <% else %>
               <% @results.each do |result| %>
