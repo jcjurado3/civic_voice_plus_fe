@@ -63,10 +63,10 @@
             <% @saved_bills.each do |bill| %>
               <% cache bill do %>
                 <li class="bill-box">
-                  <div class="mb-1"><%= link_to "Bill Name: #{bill[:bill_number]}", bill_path(bill[:bill_id]) %></div>
-                  <div class="mb-1"> Bill Title: <%= bill[:title] %> </div>
+                  <div class="mb-1"><%= link_to "Bill Name: #{bill.bill_number}", bill_path(bill.bill_id) %></div>
+                  <div class="mb-1"> Bill Title: <%= bill.name %> </div>
                   <div class="mb-1 bill-status"> Bill Status:
-                    <% case bill[:status] %>
+                    <% case bill.status %>
                       <% when 1 %>
                         Introduced
                       <% when 2 %>

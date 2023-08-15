@@ -1,5 +1,5 @@
 class CategoryBillFacade
-  
+
   def initialize(user_id)
     @user_id = user_id
   end
@@ -21,13 +21,13 @@ class CategoryBillFacade
         digest_bills_data = service.get_digest_bills(@user_id, categories, state)
   # require 'pry'; binding.pry
         digest_bills = digest_bills_data[:data]
-    
+
         digest_bills.map do |bill|
-          UserBill.new(bill)
+          Bill.new(bill)
         end
       end
     end
-    
+
   end
 
   private

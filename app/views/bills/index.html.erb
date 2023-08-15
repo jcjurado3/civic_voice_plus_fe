@@ -66,24 +66,27 @@ h1, h2 {
           <% if @results.empty? || !@results.present? %>
             <p> no search results match this query </p>
             <% else %>
-              <% @results.each do |result| %>
+              <% @results[0..14].each do |result| %>
                 <div class='bill_name'>
-                  <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
+                  <p>Bill Name: <%= link_to "#{result.bill_number}", bill_path(result.bill_id) %></p>
                 </div>
                 <div class='bill_description'>
-                  <p>Description: <%= result[:attributes][:title] %></p>
-                </div>
+                  <p>Description: <%= result.name %></p>
+                </div><br>
                 <div class="buttons">
-                  <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
-                    <%= f.hidden_field :user_id, value: @user.id %>
-                    <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
-                    <%= f.submit "save #{result[:attributes][:bill_number]} to my dashboard" %>
+                  <% if !@saved_bills.include?(result.bill_id)%>
+                    <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
+                      <%= f.hidden_field :user_id, value: @user.id %>
+                      <%= f.hidden_field :bill_id, value: "#{result.bill_id}" %>
+                      <%= f.submit "save #{result.bill_number} to my dashboard" %>
+                    <% end %><hr class="my-2"><br>
+                  <% else %>
+                    <%= form_with url: user_bill_path("#{result.bill_number}"), method: :delete, local: true do |f| %>
+                      <%= f.hidden_field :user_id, value: @user.id %>
+                      <%= f.hidden_field :bill_id, value: "#{result.bill_id}" %>
+                      <%= f.submit "unsave #{result.bill_number} to my dashboard" %>
+                    <% end %><hr class="my-2"><br>
                   <% end %>
-                  <%= form_with url: user_bill_path("#{result[:attributes][:bill_number]}"), method: :delete, local: true do |f| %>
-                    <%= f.hidden_field :user_id, value: @user.id %>
-                    <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
-                    <%= f.submit "unsave #{result[:attributes][:bill_number]} to my dashboard" %>
-                  <% end %><br>
                 </div>
               <% end %>
           <% end %>
