@@ -78,7 +78,7 @@ h1, h2 {
                   <%= f.hidden_field :user_id, value: @user.id %>
                   <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
                   <%= f.submit "unsave #{result[:attributes][:bill_number]} to my dashboard" %>
-                <% end %>
+                <% end %><br>
               <% end %>
           <% end %>
         </b>
