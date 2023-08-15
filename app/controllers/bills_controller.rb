@@ -2,7 +2,7 @@ class BillsController < ApplicationController
   def index
     @user = current_user
     @results = BillFacade.new.bill_search(params[:state], params[:search]).search_results
-
+    @saved_bills = UserBillFacade.new(@user.id).get_user_saved_bills
   end
 
   def show
