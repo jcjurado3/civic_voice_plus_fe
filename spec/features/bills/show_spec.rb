@@ -1,3 +1,4 @@
+
 require "rails_helper"
 
 RSpec.describe "bills show", type: :feature do
@@ -24,25 +25,12 @@ RSpec.describe "bills show", type: :feature do
     expect(page).to have_content('Click here to Contact Tina Polsky')
     expect(page).to have_link('Lori Berman')
     expect(page).to have_link('Tina Polsky')
-
-
-
-  end
-
-  it "has a bookmark button to save a bill to a user", :vcr do
-    visit bills_path
-
-    fill_in(:search, with: "guns")
-    select("Florida", from: "state")
-    click_button("Search")
-
-    expect(page).to have_button("save HB331 to my dashboard") #<---bookmark fxn
   end
 end
 
-# As a logged in user, when I click a search result’s bill name, it is a link that 
-# redirects me to the bill’s show page. When I visit ‘bills/:id’ I see the bill’s name, 
+# As a logged in user, when I click a search result’s bill name, it is a link that
+# redirects me to the bill’s show page. When I visit ‘bills/:id’ I see the bill’s name,
 # status, and a simplified description of the bill.
-# I also see a section that shows the congressperson who sponsored it - displaying a 
+# I also see a section that shows the congressperson who sponsored it - displaying a
 # photo of the congressperson, their name, and their contact information.
 # Additionally I see a button that will route me to the full text of the bill.

@@ -20,15 +20,19 @@
 <body>
   <div style="margin-top: 2rem;">
     <%= form_with(url: user_categories_path(@user), method: "post", local: true) do |form| %>
-  <% @all_categories.each do |category| %>
-    <div class="custom-checkbox flex items-center bg-black p-2">
-      <%= hidden_field_tag "categories[#{category.id}]", "0" %>
-      <%= check_box_tag "categories[#{category.id}]", "1", @selected_category_ids.include?(category.id.to_i), class: "hidden peer", id: "category_#{category.id}" %>
-      <label for="category_<%= category.id %>" class="custom-label flex items-center justify-center text-white cursor-pointer">
-        <span class="custom-box border border-white rounded w-6 h-6 mr-2"></span>
-        <%= category.name %>
-      </label>
-    </div>
+  <% cache @all_categories do %>
+    <% @all_categories.each do |category| %>
+      <% cache category do %>
+        <div class="custom-checkbox flex items-center bg-black p-2">
+          <%= hidden_field_tag "categories[#{category.id}]", "0" %>
+          <%= check_box_tag "categories[#{category.id}]", "1", @selected_category_ids.include?(category.id.to_i), class: "hidden peer", id: "category_#{category.id}" %>
+          <label for="category_<%= category.id %>" class="custom-label flex items-center justify-center text-white cursor-pointer">
+            <span class="custom-box border border-white rounded w-6 h-6 mr-2"></span>
+            <%= category.name %>
+          </label>
+        </div>
+      <% end %>
+    <% end %>
   <% end %>
   <%= select_tag 'state', options_for_select(us_states_int, @selected_state), include_blank: false, class: "w-full h-10 transition-all duration-300 text-black bg-white border border-gray-300 rounded shadow-sm"  %>
 <div class="mt-4">
