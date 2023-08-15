@@ -69,16 +69,18 @@ h1, h2 {
               <% @results.each do |result| %>
                 <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
                 <p>Description: <%= result[:attributes][:title] %></p>
-                <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
-                  <%= f.hidden_field :user_id, value: @user.id %>
-                  <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
-                  <%= f.submit "save #{result[:attributes][:bill_number]} to my dashboard" %>
-                <% end %>
-                <%= form_with url: user_bill_path("#{result[:attributes][:bill_number]}"), method: :delete, local: true do |f| %>
-                  <%= f.hidden_field :user_id, value: @user.id %>
-                  <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
-                  <%= f.submit "unsave #{result[:attributes][:bill_number]} to my dashboard" %>
-                <% end %><br>
+                <div class="buttons">
+                  <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
+                    <%= f.hidden_field :user_id, value: @user.id %>
+                    <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
+                    <%= f.submit "save #{result[:attributes][:bill_number]} to my dashboard" %>
+                  <% end %>
+                  <%= form_with url: user_bill_path("#{result[:attributes][:bill_number]}"), method: :delete, local: true do |f| %>
+                    <%= f.hidden_field :user_id, value: @user.id %>
+                    <%= f.hidden_field :bill_id, value: "#{result[:attributes][:bill_id]}" %>
+                    <%= f.submit "unsave #{result[:attributes][:bill_number]} to my dashboard" %>
+                  <% end %><br>
+                </div>
               <% end %>
           <% end %>
         </b>
