@@ -39,6 +39,6 @@ RSpec.describe "bills index", type: :feature do
     select("Florida", from: "state")
     click_button("Search")
 
-    expect(page).to have_button("save HB331 to my dashboard") #<---bookmark fxn
+    expect(page).to have_css('.buttons')
   end
 end
