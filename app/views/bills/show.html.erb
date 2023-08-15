@@ -50,17 +50,21 @@ h1, h2 {
     <br /><br>
 
   <div class="content-container">
+  <% cache @result do %>
     <h2>Bill Name: <%= @result[:title] %></h2>
-    <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
-      <%= f.hidden_field :user_id, value: @user.id %>
-      <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
-      <%= f.submit "save #{@result[:bill_number]} to my dashboard" %>
-    <% end %>
-    <%= form_with url: user_bill_path("#{@result[:bill_number]}"), method: :delete, local: true do |f| %>
-            <%= f.hidden_field :user_id, value: @user.id %>
-            <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
-            <%= f.submit "unsave #{@result[:bill_number]} to my dashboard" %>
-          <% end %>
+      <% if !@saved_bills.include?(@result) %>
+        <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
+          <%= f.hidden_field :user_id, value: @user.id %>
+          <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
+          <%= f.submit "save #{@result[:bill_number]} to my dashboard" %>
+        <% end %>
+      <% else %>
+        <%= form_with url: user_bill_path("#{@result[:bill_number]}"), method: :delete, local: true do |f| %>
+          <%= f.hidden_field :user_id, value: @user.id %>
+          <%= f.hidden_field :bill_id, value: "#{@result[:bill_id]}" %>
+          <%= f.submit "unsave #{@result[:bill_number]} to my dashboard" %>
+        <% end %>
+      <% end %>
     <br />
     Status: <%= @result[:texts][0][:type] %>
     <br /><br>
@@ -71,6 +75,7 @@ h1, h2 {
     <% state = @result[:state] %>
     <% doc_id = @result[:texts][0][:doc_id] %>
     <h3>Want to know more? <%= button_to 'Check out the Full Text Here!', "https://legiscan.com/#{state}/text/#{bill_num}/id/#{doc_id}" %></h3>
+  <% end %>
   </div>
 
   <div class="section-separator"></div>
@@ -80,20 +85,24 @@ h1, h2 {
 
         <br />
         <ul style="float:left; padding:20px;">
+        <% cache @result do %>
           <% @result[:sponsors][0..3].each do |sponsor| %>
-            <% if sponsor[:name].downcase.include?("association" || "committee" || "department") %>
-              <li>Department: <%= sponsor[:name] %> | No Contact Info Available at This Time </li>
-            <% else %>
-              <li>Sen/Rep <%= sponsor[:name]%></li>
-              <li>Click here to Contact <%= link_to "#{sponsor[:name]}", "https://ballotpedia.org/#{sponsor[:ballotpedia]}" %></li><br />
+            <% cache sponsor do %>
+              <% if sponsor[:name].downcase.include?("association" || "committee" || "department") %>
+                <li>Department: <%= sponsor[:name] %> | No Contact Info Available at This Time </li>
+              <% else %>
+                <li>Sen/Rep <%= sponsor[:name]%></li>
+                <li>Click here to Contact <%= link_to "#{sponsor[:name]}", "https://ballotpedia.org/#{sponsor[:ballotpedia]}" %></li><br />
+              <% end %>
             <% end %>
           <% end %><br />
-        </ul>
-        <br /><br>
-        <br /><br>
-        <div class="images-container">
-          <%= image_tag "cartoon megaphone.png", alt: "cartoon person with megaphone" %>
-        </div>
+          </ul>
+          <br /><br>
+          <br /><br>
+          <div class="images-container">
+            <%= image_tag "cartoon megaphone.png", alt: "cartoon person with megaphone" %>
+          </div>
+        <% end %>
       </div>
     </section>
   </div>

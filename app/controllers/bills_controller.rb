@@ -11,5 +11,6 @@ class BillsController < ApplicationController
     # require 'pry'; binding.pry
     @members = MemberFacade.new.member_result(params[:id]).member_deets
     # require 'pry'; binding.pry
+    @saved_bills = UserBillFacade.new(@user.id).get_user_saved_bills
   end
 end
