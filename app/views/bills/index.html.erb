@@ -67,8 +67,12 @@ h1, h2 {
             <p> no search results match this query </p>
             <% else %>
               <% @results.each do |result| %>
-                <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
-                <p>Description: <%= result[:attributes][:title] %></p>
+                <div class='bill_name'>
+                  <p>Bill Name: <%= link_to "#{result[:attributes][:bill_number]}", bill_path(result[:attributes][:bill_id]) %></p>
+                </div>
+                <div class='bill_description'>
+                  <p>Description: <%= result[:attributes][:title] %></p>
+                </div>
                 <div class="buttons">
                   <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
                     <%= f.hidden_field :user_id, value: @user.id %>
