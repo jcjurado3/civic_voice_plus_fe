@@ -8,19 +8,37 @@ describe 'bill facade' do
   end
 
   it 'should return up to 50 records from a search query', :vcr do
-    expect(BillFacade.new.bill_search('FL', 'guns')).to be_a(Object)
-    expect(BillFacade.new.bill_search('FL', 'guns').search_results).to be_a(Array)
-    expect(BillFacade.new.bill_search('FL', 'guns').search_results.count).to eq(41)
-    expect(BillFacade.new.bill_search('FL', 'guns').search_results[0]).to have_key(:attributes)
-    expect(BillFacade.new.bill_search('FL', 'guns').search_results[0]).to have_value("bill")
+    bills = BillFacade.new.bill_search('FL', 'guns')
+
+    expect(bills).to be_an(Array)
+
+    bills.each do |bill|
+      expect(bill).to be_a(Bill)
+      expect(bill.type).to eq("bill")
+      expect(bill.id).to be_a(String)
+      expect(bill.bill_id).to be_an(Integer)
+      expect(bill.bill_number).to be_a(String)
+      expect(bill.name).to be_a(String)
+      expect(bill.state).to be_a(String)
+      expect(bill.status).to be_a(String)
+      expect(bill.description).to eq(nil)
+      expect(bill.sponsors).to eq(nil)
+      expect(bill.texts).to eq(nil)
+    end
   end
 
   it 'should return a bill by bill_id', :vcr do
-    expect(BillFacade.new.bill_result(1689711)).to be_a(Object)
-    expect(BillFacade.new.bill_result(1689711).bill_results).to be_a(Hash)
-    expect(BillFacade.new.bill_result(1689711).bill_results).to have_key(:bill_number)
-    expect(BillFacade.new.bill_result(1689711).bill_results).to have_value("S0462")
-    expect(BillFacade.new.service).to be_a(Object)
+    bill = BillFacade.new.bill_result(1689711)
+    expect(bill).to be_a(Bill)
+    expect(bill.type).to eq("bill")
+    expect(bill.id).to be_a(String)
+    expect(bill.bill_id).to be_an(Integer)
+    expect(bill.bill_number).to be_a(String)
+    expect(bill.name).to be_a(String)
+    expect(bill.state).to be_a(String)
+    expect(bill.status).to eq(nil)
+    expect(bill.description).to be_a(String)
+    expect(bill.sponsors).to be_an(Array)
+    expect(bill.texts).to be_an(Array)
   end
-
 end
