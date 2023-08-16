@@ -41,6 +41,16 @@ h1, h2 {
   margin: 40px 0;
 }
 
+.bookmark-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 16px 16px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+
 </style>
 
 
@@ -48,50 +58,68 @@ h1, h2 {
 <div class="container">
   <section class="above_fold">
     <%= form_with url: bills_path, method: :get, local: true do |f| %>
-      <%= f.label :search, "Search by topic" %>
-      <%= f.text_field :search %>
-      <%= f.label :state, "Select region" %>
-      <%= f.select :state, options_for_select(us_states_str, '') %>
+      <div class="max-w-xl w-full flex items-center space-x-4">
+        
+        <div class="flex-grow relative">
+          <div class="absolute top-1 left-2 inline-flex items-center p-2">
+            <i class="fas fa-search text-gray-400"></i>
+          </div>
+          <%= f.text_field :search, class: "w-full h-10 pl-10 pr-4 py-1 text-base placeholder-black border bg-gray-200 rounded-full focus:shadow-outline", placeholder: "Search by topic" %>
+        </div>
 
-      <%= f.submit 'Search' %>
+    
+        <div class="relative">
+          <%= f.select :state, options_for_select(us_states_str), {}, class: "w-40 py-2 text-sm font-semibold bg-gray-200 rounded-lg appearance-none" %>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          </div>
+        </div>
+
+        <%= f.submit 'Search', class: "py-2 px-4 bg-black text-white rounded hover:bg-white hover:text-black" %>
+      </div>
     <% end %>
-  </section>
+  
+
 
 <div class="section-separator"></div>
-  <section class="search_results">
-    <div class="content-container">
-      <% if !params[:search].nil? %>
-        <center><b style="border: solid black; padding:50px; float:left">
-          <b style="font-size:30px;">Search Results</b>
-          <% if @results.empty? || !@results.present? %>
-            <p> no search results match this query </p>
-            <% else %>
-              <% @results[0..14].each do |result| %>
+<section class="search_results">
+  <div class="content-container mx-auto p-4">
+    <% if !params[:search].nil? %>
+      <div class="border p-4 rounded mb-4">
+        <h2 class="text-2xl font-bold mb-4 text-center">Search Results</h2>
+        <% if @results.empty? || !@results.present? %>
+          <p class="text-center">No search results match this query.</p>
+        <% else %>
+          <% @results[0..14].each do |result| %>
+            <div class="mb-4 flex items-center justify-between">
+              <div>
                 <div class='bill_name'>
-                  <p>Bill Name: <%= link_to "#{result.bill_number}", bill_path(result.bill_id) %></p>
+                  <p class="font-semibold">Bill Name: <%= link_to "#{result.bill_number}", bill_path(result.bill_id) %></p>
                 </div>
                 <div class='bill_description'>
                   <p>Description: <%= result.name %></p>
-                </div><br>
-                <div class="buttons">
-                  <% if !@saved_bills.include?(result.bill_id)%>
-                    <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
-                      <%= f.hidden_field :user_id, value: @user.id %>
-                      <%= f.hidden_field :bill_id, value: "#{result.bill_id}" %>
-                      <%= f.submit "save #{result.bill_number} to my dashboard" %>
-                    <% end %><hr class="my-2"><br>
-                  <% else %>
-                    <%= form_with url: user_bill_path("#{result.bill_number}"), method: :delete, local: true do |f| %>
-                      <%= f.hidden_field :user_id, value: @user.id %>
-                      <%= f.hidden_field :bill_id, value: "#{result.bill_id}" %>
-                      <%= f.submit "unsave #{result.bill_number} to my dashboard" %>
-                    <% end %><hr class="my-2"><br>
-                  <% end %>
                 </div>
-              <% end %>
+              </div>
+              <div class="buttons mt-2">
+                <% if !@saved_bills.include?(result.bill_id)%>
+                  <%= form_with url: user_bills_path, method: :post, local: true do |f| %>
+                    <%= f.hidden_field :user_id, value: @user.id %>
+                    <%= f.hidden_field :bill_id, value: "#{result.bill_id}" %>
+                    <%= f.submit "Save", class: "py-1 px-3 bg-black text-white rounded-t hover:bg-white hover:text-black relative bookmark-btn" %>
+                  <% end %>
+                <% else %>
+                  <%= form_with url: user_bill_path("#{result.bill_number}"), method: :delete, local: true do |f| %>
+                    <%= f.hidden_field :user_id, value: @user.id %>
+                    <%= f.hidden_field :bill_id, value: "#{result.bill_id}" %>
+                    <%= f.submit "Unsave", class: "py-1 px-3 bg-red-500 text-white rounded-t hover:bg-black hover:text-white relative bookmark-btn" %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+            <hr class="my-2">
           <% end %>
-        </b>
-      <% end %>
-    </div>
-  </section>
-</div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
