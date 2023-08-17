@@ -59,7 +59,7 @@ h1, h2 {
   <section class="above_fold">
     <%= form_with url: bills_path, method: :get, local: true do |f| %>
       <div class="max-w-xl w-full flex items-center space-x-4">
-        
+
         <div class="flex-grow relative">
           <div class="absolute top-1 left-2 inline-flex items-center p-2">
             <i class="fas fa-search text-gray-400"></i>
@@ -67,7 +67,7 @@ h1, h2 {
           <%= f.text_field :search, class: "w-full h-10 pl-10 pr-4 py-1 text-base placeholder-black border bg-gray-200 rounded-full focus:shadow-outline", placeholder: "Search by topic" %>
         </div>
 
-    
+
         <div class="relative">
           <%= f.select :state, options_for_select(us_states_str), {}, class: "w-40 py-2 text-sm font-semibold bg-gray-200 rounded-lg appearance-none" %>
           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -77,7 +77,7 @@ h1, h2 {
         <%= f.submit 'Search', class: "py-2 px-4 bg-black text-white rounded hover:bg-white hover:text-black" %>
       </div>
     <% end %>
-  
+
 
 
 <div class="section-separator"></div>
@@ -86,10 +86,10 @@ h1, h2 {
     <% if !params[:search].nil? %>
       <div class="border p-4 rounded mb-4">
         <h2 class="text-2xl font-bold mb-4 text-center">Search Results</h2>
-        <% if @results.empty? || !@results.present? %>
+        <% if @paginated_bills.empty? || !@paginated_bills.present? %>
           <p class="text-center">No search results match this query.</p>
         <% else %>
-          <% @results[0..14].each do |result| %>
+          <% @paginated_bills.each do |result| %>
             <div class="mb-4 flex items-center justify-between">
               <div>
                 <div class='bill_name'>
@@ -118,6 +118,8 @@ h1, h2 {
             <hr class="my-2">
           <% end %>
         <% end %>
+        <%= link_to_prev_page @paginated_bills, 'Previous Page' %> || 
+        <%= link_to_next_page @paginated_bills, 'Next Page' %>
       </div>
     <% end %>
   </div>

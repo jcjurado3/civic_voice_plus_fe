@@ -1,7 +1,8 @@
 class BillsController < ApplicationController
   def index
     @user = current_user
-    @results = BillFacade.new.bill_search(params[:state], params[:search])
+    results = BillFacade.new.bill_search(params[:state], params[:search])
+    @paginated_bills = Kaminari.paginate_array(results).page(params[:page])
     @saved_bills = UserBillFacade.new(@user.id).user_bill_ids
   end
 
