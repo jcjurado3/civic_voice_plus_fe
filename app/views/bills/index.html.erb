@@ -118,8 +118,10 @@ h1, h2 {
             <hr class="my-2">
           <% end %>
         <% end %>
-        <%= link_to_prev_page @paginated_bills, 'Previous Page' %> || 
-        <%= link_to_next_page @paginated_bills, 'Next Page' %>
+        <div class="buttons mt-2">
+          <%= link_to_prev_page @paginated_bills, 'Previous Page', class: "py-1 px-3 bg-black text-white rounded-t hover:bg-white hover:text-black relative bookmark-btn" %>
+          <%= link_to_next_page @paginated_bills, 'Next Page', class: "py-1 px-3 bg-black text-white rounded-t hover:bg-white hover:text-black relative bookmark-btn float-right " %>
+        </div>
       </div>
     <% end %>
   </div>
