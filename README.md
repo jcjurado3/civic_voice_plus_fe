@@ -73,9 +73,9 @@ Github repositories:
 * Front End: [![Github][Github]][project-fe-gh-url]
 * Back End:  [![Github][Github]][project-be-gh-url]
 
-Video Walkthrough:  
-https://github.com/jcjurado3/civic_voice_plus_fe/assets/125082037/ac65f1d0-7e38-4232-b2e7-a1b915e8494e
+Video Walkthrough:
 
+<video src="https://github.com/jcjurado3/civic_voice_plus_fe/assets/125082037/ac65f1d0-7e38-4232-b2e7-a1b915e8494e" controls title="CVP demo"></video>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
