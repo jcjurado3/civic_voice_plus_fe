@@ -75,7 +75,14 @@ Github repositories:
 
 Video Walkthrough:
 
-<video src="https://github.com/jcjurado3/civic_voice_plus_fe/assets/125082037/ac65f1d0-7e38-4232-b2e7-a1b915e8494e" controls title="CVP demo"></video>
+
+
+
+https://github.com/jcjurado3/civic_voice_plus_fe/assets/125082037/e575075e-f065-4a73-8ef1-171ad6de592b
+
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
